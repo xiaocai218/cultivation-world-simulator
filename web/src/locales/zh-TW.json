@@ -27,7 +27,12 @@
     "return_to_main": "回到主選單",
     "return_to_main_desc": "返回標題畫面（未儲存的進度將丟失）",
     "quit_game": "結束遊戲",
-    "quit_game_desc": "關閉程式並結束到桌面"
+    "quit_game_desc": "關閉程式並結束到桌面",
+    "about": "關於",
+    "about_github": "GitHub 源碼支持",
+    "about_github_desc": "本項目是開源項目，如果你有 GitHub 帳號，請多多點 Star 支持！",
+    "about_contributors": "貢獻者名單",
+    "about_contributors_desc": "感謝所有參與了開源的創作者們！"
   },
   "save_load": {
     "loading": "載入中...",

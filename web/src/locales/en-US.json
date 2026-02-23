@@ -27,7 +27,12 @@
     "return_to_main": "Return to Main Menu",
     "return_to_main_desc": "Return to title screen (Unsaved progress will be lost)",
     "quit_game": "Quit Game",
-    "quit_game_desc": "Close application and exit to desktop"
+    "quit_game_desc": "Close application and exit to desktop",
+    "about": "About",
+    "about_github": "Support on GitHub",
+    "about_github_desc": "This is an open-source project. If you have a GitHub account, please support us with a Star!",
+    "about_contributors": "Contributors",
+    "about_contributors_desc": "Thanks to all the creators who contributed to this open-source project!"
   },
   "save_load": {
     "loading": "Loading...",

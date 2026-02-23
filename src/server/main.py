@@ -984,7 +984,13 @@ async def shutdown_server():
     def _shutdown():
         time.sleep(1) # 给前端一点时间接收 200 OK 响应
         # 这种方式适用于 uvicorn 运行环境，或者直接杀进程
-        os.kill(os.getpid(), signal.SIGINT)
+        if IS_DEV_MODE:
+            try:
+                os.kill(os.getpid(), signal.SIGINT)
+                time.sleep(1)
+            except Exception:
+                pass
+        os._exit(0)
     
     # 异步执行关闭，确保先返回响应
     threading.Thread(target=_shutdown).start()
@@ -1939,9 +1945,15 @@ def start():
     print(f"Starting GUI window loading {target_url}...")
     webview.start(debug=False)
 
-    # 4. 窗口关闭后，通过杀进程方式确保 uvicorn 和 subprocess (npm) 彻底关闭
+    # 4. 窗口关闭后，通过杀进程方式确保 uvicorn 和 subprocess彻底关闭
     print("Window closed, shutting down...")
-    os.kill(os.getpid(), signal.SIGINT)
+    if IS_DEV_MODE:
+        try:
+            os.kill(os.getpid(), signal.SIGINT)
+            time.sleep(1)
+        except Exception:
+            pass
+    os._exit(0)
 
 if __name__ == "__main__":
     start()

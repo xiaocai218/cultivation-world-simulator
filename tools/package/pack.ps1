@@ -91,8 +91,8 @@ $argsList = @(
     "--onedir",
     "--clean",
     "--noconfirm",
-    # "--windowed",  <-- REMOVED: We want a console window for the server so user can close it
-    "--console",
+    "--windowed",
+    # "--console",
     "--distpath", $DistDir,
     "--workpath", $BuildDir,
     "--specpath", $SpecDir,

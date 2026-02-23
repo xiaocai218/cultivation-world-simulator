@@ -46,6 +46,7 @@ const menuOptions = computed(() => [
   { label: t('ui.load_game'), subLabel: 'Load Game', key: 'load', disabled: false },
   { label: t('ui.achievements'), subLabel: 'Achievements', key: 'achievements', disabled: true },
   { label: t('ui.settings'), subLabel: 'Settings', key: 'settings', disabled: false },
+  { label: t('ui.about'), subLabel: 'About', key: 'about', disabled: false },
   { label: t('ui.exit'), subLabel: 'Exit', key: 'exit', disabled: false }
 ])
 

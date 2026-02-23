@@ -14,7 +14,7 @@ const settingStore = useSettingStore()
 
 const props = defineProps<{
   visible: boolean
-  defaultTab?: 'save' | 'load' | 'create' | 'delete' | 'llm' | 'start' | 'settings' | 'other'
+  defaultTab?: 'save' | 'load' | 'create' | 'delete' | 'llm' | 'start' | 'settings' | 'about' | 'other'
   gameInitialized: boolean
   closable?: boolean
 }>()
@@ -26,7 +26,7 @@ const emit = defineEmits<{
   (e: 'exit-game'): void
 }>()
 
-const activeTab = ref<'save' | 'load' | 'create' | 'delete' | 'llm' | 'start' | 'settings' | 'other'>(props.defaultTab || 'load')
+const activeTab = ref<'save' | 'load' | 'create' | 'delete' | 'llm' | 'start' | 'settings' | 'about' | 'other'>(props.defaultTab || 'load')
 
 const languageOptions = [
   { label: '简体中文', value: 'zh-CN' },
@@ -36,6 +36,10 @@ const languageOptions = [
 
 function switchTab(tab: typeof activeTab.value) {
   activeTab.value = tab
+}
+
+function openLink(url: string) {
+  window.open(url, '_blank')
 }
 
 // 监听 defaultTab 变化
@@ -115,6 +119,13 @@ watch(() => props.visible, (val) => {
           v-sound:select
         >
           {{ t('ui.settings') }}
+        </button>
+        <button 
+          :class="{ active: activeTab === 'about' }"
+          @click="switchTab('about')"
+          v-sound:select
+        >
+          {{ t('ui.about') }}
         </button>
         <button 
           :class="{ active: activeTab === 'other' }"
@@ -215,6 +226,36 @@ watch(() => props.visible, (val) => {
               />
             </div>
           </div>
+        </div>
+
+        <div v-else-if="activeTab === 'about'" class="other-panel-container">
+           <div class="panel-header">
+             <h3>{{ t('ui.about') }}</h3>
+           </div>
+           
+           <div class="other-actions">
+              <button class="custom-action-btn" @click="openLink('https://github.com/4thfever/cultivation-world-simulator')" v-sound>
+                <div class="btn-content">
+                  <div class="btn-icon">⭐</div>
+                  <div class="btn-text-group">
+                    <span class="btn-title">{{ t('ui.about_github') }}</span>
+                    <span class="btn-desc">{{ t('ui.about_github_desc') }}</span>
+                  </div>
+                </div>
+                <div class="btn-arrow">❯</div>
+              </button>
+              
+              <button class="custom-action-btn" @click="openLink('https://github.com/4thfever/cultivation-world-simulator/blob/main/CONTRIBUTORS.md')" v-sound>
+                <div class="btn-content">
+                  <div class="btn-icon">👥</div>
+                  <div class="btn-text-group">
+                    <span class="btn-title">{{ t('ui.about_contributors') }}</span>
+                    <span class="btn-desc">{{ t('ui.about_contributors_desc') }}</span>
+                  </div>
+                </div>
+                <div class="btn-arrow">❯</div>
+              </button>
+           </div>
         </div>
 
         <div v-else-if="activeTab === 'other'" class="other-panel-container">

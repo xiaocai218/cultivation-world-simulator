@@ -128,6 +128,9 @@ async function handleSplashAction(key: string) {
   } else if (key === 'settings') {
     menuDefaultTab.value = 'settings'
     showMenu.value = true
+  } else if (key === 'about') {
+    menuDefaultTab.value = 'about'
+    showMenu.value = true
   }
 }
 
