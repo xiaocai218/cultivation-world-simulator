@@ -407,7 +407,7 @@ async def init_game_async():
             try:
                 history_mgr = HistoryManager(world)
                 await history_mgr.apply_history_influence(world_history)
-                print("历史背景应用完成 ✓")
+                print("历史背景应用完成")
             except Exception as e:
                 print(f"[警告] 历史背景应用失败: {e}")
         
@@ -453,7 +453,7 @@ async def init_game_async():
             game_instance["llm_check_failed"] = True
             game_instance["llm_error_message"] = error_msg
         else:
-            print("LLM 连通性检测通过 ✓")
+            print("LLM 连通性检测通过")
             game_instance["llm_check_failed"] = False
             game_instance["llm_error_message"] = ""
 
@@ -465,7 +465,7 @@ async def init_game_async():
         game_instance["is_paused"] = False
         try:
             await sim.step()
-            print("初始事件生成完成 ✓")
+            print("初始事件生成完成")
         except Exception as e:
             print(f"[警告] 初始事件生成失败: {e}")
         finally:
@@ -1643,7 +1643,7 @@ async def save_llm_config(req: LLMConfigDTO):
             game_instance["llm_error_message"] = ""
             game_instance["is_paused"] = False
             
-            print("Simulator 已恢复运行 ✓")
+            print("Simulator 已恢复运行")
             
             # 通知所有客户端刷新
             await manager.broadcast({
