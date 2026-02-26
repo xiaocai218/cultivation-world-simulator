@@ -18,7 +18,3 @@ msgstr ""
 "Select the most interesting aspect or a single bid to describe, without "
 "needing to cover everything. Focus on describing the tense atmosphere during"
 " the bidding process."
-
-# LLM Prompt
-msgid "fortune_story_prompt"
-msgstr "Please write a 100-300 word short story based on this."

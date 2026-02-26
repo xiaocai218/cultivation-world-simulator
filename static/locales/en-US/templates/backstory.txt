@@ -4,7 +4,7 @@ World Background:
 {world_info}
 
 Requirements:
-1. Based on the character's attributes, relationships, cultivation age, identity, etc., deduce the reason they embarked on the path of cultivation and their backstory.
+1. Based on the character's attributes, relationships, cultivation age, identity, etc., deduce their life background before Qi Refinement (mortal period) and the story of how they successfully embarked on the path of cultivation (reaching the Qi Refinement stage).
 2. Be concise and clear, around 30-40 words.
 3. Similar to: "Once the wealthiest merchant's daughter in Shazhou City, kidnapped by villains at fifteen and forced to practice demonic arts." or "Originally a cowherd boy, yearning for immortality after witnessing immortals fighting, sought immortal fate for ten years before finally entering a sect."
 4. Must fit the style of the Xianxia world and the character's current traits (e.g., spiritual root, personality, sect, alignment).

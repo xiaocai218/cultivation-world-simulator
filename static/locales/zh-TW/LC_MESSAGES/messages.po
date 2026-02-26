@@ -1120,8 +1120,8 @@ msgid "feedback_attack"
 msgstr "戰鬥"
 
 # Fortune messages
-msgid "Encountered fortune ({theme}), {result}"
-msgstr "遭遇奇遇（{theme}），{result}"
+msgid "fortune_event_base"
+msgstr "遭遇奇遇（{title}），{result}"
 
 msgid "Found weapon '{weapon}', {exchange_result}"
 msgstr "發現了兵器『{weapon}』，{exchange_result}"
@@ -1162,87 +1162,31 @@ msgstr "你在奇遇中領悟了上品功法『{technique}』。"
 msgid " This conflicts with your current technique '{current_technique}'."
 msgstr " 這與你當前主修的『{current_technique}』衝突。"
 
-# ============================================================================
-# Fortune 系統 - 奇遇
-# ============================================================================
-# 奇遇主題
-msgid "fortune_theme_wandered_into_cave"
-msgstr "誤入洞府"
+msgid "fortune_dynamic_story_prompt"
+msgstr ""
+"角色當前境界是{realm}。TA剛纔正在{location}執行操作：【{action_desc}】。最終的結果是：【{result}】。\n"
+"任務：請你結合角色的境界、背景以及TA【正在執行的行爲】，自動推理出一個合理、連貫且富有創意的奇遇事由作爲橋樑，解釋爲什麼這個行爲會導致這個結果。描寫豐富的環境細節和角色的心理活動，字數控制在100-200字之間。"
 
-msgid "fortune_theme_found_divine_weapon"
-msgstr "巧撿神兵"
+msgid "fortune_title_weapon"
+msgstr "神兵天降"
 
-msgid "fortune_theme_entered_trial"
-msgstr "誤入試煉"
+msgid "fortune_title_auxiliary"
+msgstr "異寶出世"
 
-msgid "fortune_theme_phenomenon_appeared"
-msgstr "異象出世"
+msgid "fortune_title_technique"
+msgstr "功法頓悟"
 
-msgid "fortune_theme_gifted_by_master"
-msgstr "高人贈予"
+msgid "fortune_title_find_master"
+msgstr "名師指路"
 
-msgid "fortune_theme_found_treasure"
-msgstr "巧撿奇物"
+msgid "fortune_title_spirit_stone"
+msgstr "意外橫財"
 
-msgid "fortune_theme_guided_by_master"
-msgstr "高人指點"
+msgid "fortune_title_cultivation"
+msgstr "修爲精進"
 
-msgid "fortune_theme_profound_insight"
-msgstr "玄妙感悟"
-
-msgid "fortune_theme_rescued_from_danger"
-msgstr "危難相救"
-
-msgid "fortune_theme_impressed_by_character"
-msgstr "品行打動"
-
-msgid "fortune_theme_showed_talent"
-msgstr "展露天賦"
-
-msgid "fortune_theme_chance_encounter"
-msgstr "機緣巧合"
-
-msgid "fortune_theme_passed_test"
-msgstr "通過考驗"
-
-msgid "fortune_theme_found_spirit_vein"
-msgstr "偶遇靈礦"
-
-msgid "fortune_theme_cave_treasure"
-msgstr "洞府遺財"
-
-msgid "fortune_theme_slayed_beast"
-msgstr "擊殺妖獸"
-
-msgid "fortune_theme_trade_profit"
-msgstr "交易獲利"
-
-msgid "fortune_theme_stone_gambling"
-msgstr "賭石得寶"
-
-msgid "fortune_theme_found_cache"
-msgstr "拾遺藏寶"
-
-msgid "fortune_theme_sudden_enlightenment"
-msgstr "頓悟玄機"
-
-msgid "fortune_theme_ancient_stele"
-msgstr "古碑感悟"
-
-msgid "fortune_theme_consumed_spirit_herb"
-msgstr "服食靈藥"
-
-msgid "fortune_theme_secret_realm"
-msgstr "祕境修煉"
-
-msgid "fortune_theme_empowerment"
-msgstr "前輩灌頂"
-
-msgid "fortune_theme_spirit_spring"
-msgstr "靈泉淬體"
-
-msgid "fortune_theme_inherited_memory"
-msgstr "傳承記憶"
+msgid "fortune_title_mystery"
+msgstr "神祕奇遇"
 
 # ============================================================================
 # Gathering 系統 - 拍賣會
@@ -1383,10 +1327,6 @@ msgstr "丹藥"
 # LLM Prompt
 msgid "auction_story_prompt"
 msgstr "選取其中最有趣的一個側面或一次競價進行描寫，無需面面俱到。重點描寫競價過程中的緊張氣氛。"
-
-# LLM Prompt
-msgid "fortune_story_prompt"
-msgstr "請據此寫100~300字小故事。"
 
 # ============================================================================
 # Map & Region & Others (New)
@@ -1778,8 +1718,8 @@ msgid "Item: {item_name}, Description: {description}"
 msgstr "物品：{item_name}，介紹：{description}"
 
 # Misfortune messages
-msgid "Encountered misfortune ({theme}), {result}"
-msgstr "遭遇黴運（{theme}），{result}"
+msgid "misfortune_event_base"
+msgstr "遭遇黴運（{title}），{result}"
 
 msgid "{name} lost {amount} spirit stones"
 msgstr "{name} 損失靈石 {amount} 枚"
@@ -1790,13 +1730,6 @@ msgstr "{name} 受到傷害 {damage} 點，剩餘HP {current}/{max}"
 msgid "{name} cultivation regressed by {amount} points"
 msgstr "{name} 修爲倒退 {amount} 點"
 
-# Misfortune System
-msgid "misfortune_event_format"
-msgstr "遭遇黴運（{theme}），{result}"
-
-msgid "misfortune_story_prompt"
-msgstr "請據此寫100~300字小故事。只描述倒黴事件本身，不要描述角色的心理活動或者愈挫愈勇，不要有數值。"
-
 msgid "misfortune_result_loss_spirit_stone"
 msgstr "{name} 損失靈石 {amount} 枚"
 
@@ -1806,53 +1739,22 @@ msgstr "{name} 受到傷害 {damage} 點，剩餘HP {current}/{max}"
 msgid "misfortune_result_backlash"
 msgstr "{name} 修爲倒退 {amount} 點"
 
-msgid "misfortune_theme_pickpocket"
-msgstr "遭遇扒手"
+msgid "misfortune_dynamic_story_prompt"
+msgstr ""
+"角色當前境界是{realm}。TA剛纔正在{location}執行操作：【{action_desc}】。最終的結果是：【{result}】。\n"
+"任務：請你結合角色的境界、背景以及TA【正在執行的行爲】，自動推理出一個合理、連貫且富有創意的倒黴事由作爲橋樑，解釋爲什麼這個行爲會導致這個結果。描寫豐富的環境細節和角色的心理活動，字數控制在100-200字之間。"
 
-msgid "misfortune_theme_fake_goods"
-msgstr "誤買假貨"
+msgid "misfortune_title_loss_spirit_stone"
+msgstr "破財消災"
 
-msgid "misfortune_theme_blackmail"
-msgstr "遭人勒索"
+msgid "misfortune_title_injury"
+msgstr "意外受傷"
 
-msgid "misfortune_theme_theft"
-msgstr "洞府失竊"
+msgid "misfortune_title_backlash"
+msgstr "修爲倒退"
 
-msgid "misfortune_theme_gambling_loss"
-msgstr "賭石慘敗"
-
-msgid "misfortune_theme_bad_investment"
-msgstr "投資失敗"
-
-msgid "misfortune_theme_cultivation_accident"
-msgstr "修煉岔氣"
-
-msgid "misfortune_theme_trip_fall"
-msgstr "出門摔傷"
-
-msgid "misfortune_theme_beast_ambush"
-msgstr "妖獸偷襲"
-
-msgid "misfortune_theme_enemy_attack"
-msgstr "仇家悶棍"
-
-msgid "misfortune_theme_trap"
-msgstr "誤觸機關"
-
-msgid "misfortune_theme_disaster"
-msgstr "天降橫禍"
-
-msgid "misfortune_theme_heart_demon"
-msgstr "心魔滋生"
-
-msgid "misfortune_theme_qi_deviation"
-msgstr "靈氣逆行"
-
-msgid "misfortune_theme_confusion"
-msgstr "感悟錯亂"
-
-msgid "misfortune_theme_anxiety"
-msgstr "急火攻心"
+msgid "misfortune_title_mystery"
+msgstr "神祕黴運"
 
 # MutualAction Base
 msgid "mutual_action_name"

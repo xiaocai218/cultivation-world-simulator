@@ -34,63 +34,6 @@ class FortuneKind(Enum):
     CULTIVATION = "cultivation"     # 修为奇遇
 
 
-# Fortune theme msgids (for i18n)
-F_WEAPON_THEME_IDS: list[str] = [
-    "fortune_theme_wandered_into_cave",
-    "fortune_theme_found_divine_weapon",
-    "fortune_theme_entered_trial",
-    "fortune_theme_phenomenon_appeared",
-    "fortune_theme_gifted_by_master",
-]
-
-F_AUXILIARY_THEME_IDS: list[str] = [
-    "fortune_theme_wandered_into_cave",
-    "fortune_theme_found_treasure",
-    "fortune_theme_entered_trial",
-    "fortune_theme_phenomenon_appeared",
-    "fortune_theme_guided_by_master",
-]
-
-F_TECHNIQUE_THEME_IDS: list[str] = [
-    "fortune_theme_wandered_into_cave",
-    "fortune_theme_found_treasure",
-    "fortune_theme_entered_trial",
-    "fortune_theme_guided_by_master",
-    "fortune_theme_profound_insight",
-]
-
-F_FIND_MASTER_THEME_IDS: list[str] = [
-    "fortune_theme_rescued_from_danger",
-    "fortune_theme_impressed_by_character",
-    "fortune_theme_showed_talent",
-    "fortune_theme_chance_encounter",
-    "fortune_theme_passed_test",
-]
-
-F_SPIRIT_STONE_THEME_IDS: list[str] = [
-    "fortune_theme_found_spirit_vein",
-    "fortune_theme_cave_treasure",
-    "fortune_theme_slayed_beast",
-    "fortune_theme_trade_profit",
-    "fortune_theme_stone_gambling",
-    "fortune_theme_found_cache",
-]
-
-F_CULTIVATION_THEME_IDS: list[str] = [
-    "fortune_theme_sudden_enlightenment",
-    "fortune_theme_ancient_stele",
-    "fortune_theme_consumed_spirit_herb",
-    "fortune_theme_secret_realm",
-    "fortune_theme_empowerment",
-    "fortune_theme_spirit_spring",
-    "fortune_theme_inherited_memory",
-]
-
-
-def _get_fortune_theme(theme_id: str) -> str:
-    """获取翻译后的奇遇主题文本"""
-    from src.i18n import t
-    return t(theme_id)
 
 
 def _has_master(avatar: Avatar) -> bool:
@@ -199,60 +142,60 @@ def _can_get_cultivation(avatar: Avatar) -> bool:
     return not avatar.cultivation_progress.is_in_bottleneck()
 
 
-def _choose_kind(avatar: Avatar) -> FortuneKind:
+def _choose_fortune_record(avatar: Avatar) -> Optional[dict]:
     """
-    从所有可能的奇遇中随机选择一个。
-    可能的奇遇取决于角色当前状态。
+    从所有可能的奇遇中随机选择一个配置记录。
+    可能的奇遇取决于角色当前状态和境界。
     """
-    possible_kinds: list[FortuneKind] = []
+    from src.utils.df import game_configs
     
-    # 兵器奇遇：当前兵器是普通级时可触发
-    if _can_get_weapon(avatar):
-        possible_kinds.append(FortuneKind.WEAPON)
+    possible_records = []
     
-    # 辅助装备奇遇：无辅助装备或辅助装备非法宝级时可触发
-    if _can_get_auxiliary(avatar):
-        possible_kinds.append(FortuneKind.AUXILIARY)
-    
-    # 功法奇遇：任何人功法非上品都可以（实际获得时会有限制）
-    if _can_get_technique(avatar):
-        possible_kinds.append(FortuneKind.TECHNIQUE)
-    
-    # 拜师奇遇：无师傅且世界中有合适的师傅
-    if _can_get_master(avatar):
-        possible_kinds.append(FortuneKind.FIND_MASTER)
-    
-    # 灵石奇遇：任何人都可以
-    if _can_get_spirit_stone(avatar):
-        possible_kinds.append(FortuneKind.SPIRIT_STONE)
-    
-    # 修为奇遇：未达到瓶颈的人可以
-    if _can_get_cultivation(avatar):
-        possible_kinds.append(FortuneKind.CULTIVATION)
-    
-    if not possible_kinds:
+    records = game_configs.get("fortune", [])
+    for record in records:
+        kind_str = record.get("kind")
+        if not kind_str:
+            continue
+            
+        try:
+            kind = FortuneKind(kind_str.lower())
+        except ValueError:
+            continue
+            
+        min_realm_str = record.get("min_realm", "QI_REFINEMENT")
+        max_realm_str = record.get("max_realm", "NASCENT_SOUL")
+        
+        min_realm = Realm.from_str(min_realm_str)
+        max_realm = Realm.from_str(max_realm_str)
+        
+        if not (min_realm <= avatar.cultivation_progress.realm <= max_realm):
+            continue
+            
+        # 检查前置条件
+        can_trigger = False
+        if kind == FortuneKind.WEAPON:
+            can_trigger = _can_get_weapon(avatar)
+        elif kind == FortuneKind.AUXILIARY:
+            can_trigger = _can_get_auxiliary(avatar)
+        elif kind == FortuneKind.TECHNIQUE:
+            can_trigger = _can_get_technique(avatar)
+        elif kind == FortuneKind.FIND_MASTER:
+            can_trigger = _can_get_master(avatar)
+        elif kind == FortuneKind.SPIRIT_STONE:
+            can_trigger = _can_get_spirit_stone(avatar)
+        elif kind == FortuneKind.CULTIVATION:
+            can_trigger = _can_get_cultivation(avatar)
+            
+        if can_trigger:
+            possible_records.append(record)
+            
+    if not possible_records:
         return None
-    
-    return random.choice(possible_kinds)
+        
+    weights = [float(r.get("weight", 10)) for r in possible_records]
+    return random.choices(possible_records, weights=weights, k=1)[0]
 
 
-def _pick_theme(kind: FortuneKind) -> str:
-    """选择并返回翻译后的主题文本"""
-    theme_id = ""
-    if kind == FortuneKind.WEAPON:
-        theme_id = random.choice(F_WEAPON_THEME_IDS)
-    elif kind == FortuneKind.AUXILIARY:
-        theme_id = random.choice(F_AUXILIARY_THEME_IDS)
-    elif kind == FortuneKind.TECHNIQUE:
-        theme_id = random.choice(F_TECHNIQUE_THEME_IDS)
-    elif kind == FortuneKind.FIND_MASTER:
-        theme_id = random.choice(F_FIND_MASTER_THEME_IDS)
-    elif kind == FortuneKind.SPIRIT_STONE:
-        theme_id = random.choice(F_SPIRIT_STONE_THEME_IDS)
-    elif kind == FortuneKind.CULTIVATION:
-        theme_id = random.choice(F_CULTIVATION_THEME_IDS)
-    
-    return _get_fortune_theme(theme_id) if theme_id else ""
 
 
 def _get_weapon_for_avatar(avatar: Avatar) -> Optional[Weapon]:
@@ -395,11 +338,12 @@ async def try_trigger_fortune(avatar: Avatar) -> list[Event]:
         return []
 
     # 从所有可能的奇遇中选择
-    kind = _choose_kind(avatar)
-    if kind is None:
+    record = _choose_fortune_record(avatar)
+    if not record:
         return []
+        
+    kind = FortuneKind(record["kind"].lower())
     
-    theme = _pick_theme(kind)
     res_text: str = ""
     related_avatars = [avatar.id]
     actors_for_story = [avatar]  # 用于生成故事的角色列表
@@ -413,7 +357,7 @@ async def try_trigger_fortune(avatar: Avatar) -> list[Event]:
         if weapon is None:
             # 回退到功法
             kind = FortuneKind.TECHNIQUE
-            theme = _pick_theme(kind)
+            record["title_id"] = "fortune_title_technique"
         else:
             from src.i18n import t
             # 使用 str() 来触发 Realm 的 __str__ 方法进行 i18n 翻译。
@@ -437,7 +381,7 @@ async def try_trigger_fortune(avatar: Avatar) -> list[Event]:
         if auxiliary is None:
             # 回退到功法
             kind = FortuneKind.TECHNIQUE
-            theme = _pick_theme(kind)
+            record["title_id"] = "fortune_title_technique"
         else:
             from src.i18n import t
             # 使用 str() 来触发 Realm 的 __str__ 方法进行 i18n 翻译。
@@ -506,11 +450,23 @@ async def try_trigger_fortune(avatar: Avatar) -> list[Event]:
         res_text = t("{avatar_name} gained {exp_gain} cultivation experience",
                     avatar_name=avatar.name, exp_gain=exp_gain)
 
+    # 提取角色正在进行的行为
+    action_desc = t("wandering aimlessly")
+    if avatar.current_action and avatar.current_action.action:
+        action_name = avatar.current_action.action.__class__.__name__
+        action_desc = f"{action_name} ({avatar.current_action.params})"
+        
+    location_name = avatar.tile.region.name if avatar.tile and avatar.tile.region else t("unknown location")
+
     # 生成故事（异步，等待完成）
-    from src.i18n import t
-    event_text = t("Encountered fortune ({theme}), {result}",
-                   theme=theme, result=res_text)
-    story_prompt = t("fortune_story_prompt")
+    title_text = t(record.get("title_id", "fortune_title_mystery"))
+    event_text = t("fortune_event_base",
+                   title=title_text, result=res_text)
+                   
+    story_prompt = t("fortune_dynamic_story_prompt",
+                     realm=str(avatar.cultivation_progress.realm),
+                     location=location_name,
+                     action_desc=action_desc)
 
     month_at_finish = avatar.world.month_stamp
     base_event = Event(month_at_finish, event_text, related_avatars=related_avatars, is_major=True)
@@ -531,69 +487,52 @@ class MisfortuneKind(Enum):
     CULTIVATION_BACKLASH = "backlash"       # 修为倒退
 
 
-MF_LOSS_SPIRIT_STONE_THEME_IDS: list[str] = [
-    "misfortune_theme_pickpocket",
-    "misfortune_theme_fake_goods",
-    "misfortune_theme_blackmail",
-    "misfortune_theme_theft",
-    "misfortune_theme_gambling_loss",
-    "misfortune_theme_bad_investment",
-]
-
-MF_INJURY_THEME_IDS: list[str] = [
-    "misfortune_theme_cultivation_accident",
-    "misfortune_theme_trip_fall",
-    "misfortune_theme_beast_ambush",
-    "misfortune_theme_enemy_attack",
-    "misfortune_theme_trap",
-    "misfortune_theme_disaster",
-]
-
-MF_BACKLASH_THEME_IDS: list[str] = [
-    "misfortune_theme_heart_demon",
-    "misfortune_theme_qi_deviation",
-    "misfortune_theme_confusion",
-    "misfortune_theme_anxiety",
-]
 
 
-def _choose_misfortune_kind(avatar: Avatar) -> Optional[MisfortuneKind]:
-    """选择霉运类型"""
-    candidates = []
+def _choose_misfortune_record(avatar: Avatar) -> Optional[dict]:
+    """选择霉运配置记录"""
+    from src.utils.df import game_configs
     
-    # 破财：必须有灵石
-    if avatar.magic_stone.value > 0:
-        candidates.append(MisfortuneKind.LOSS_SPIRIT_STONE)
+    possible_records = []
+    records = game_configs.get("misfortune", [])
     
-    # 受伤：任何人都可以受伤
-    candidates.append(MisfortuneKind.INJURY)
-    
-    # 修为倒退：只有修炼者（有修为且未满？）或者任何人都可以？
-    # 简单处理：任何人都可以走火入魔
-    candidates.append(MisfortuneKind.CULTIVATION_BACKLASH)
-    
-    if not candidates:
+    for record in records:
+        kind_str = record.get("kind")
+        if not kind_str:
+            continue
+            
+        try:
+            kind = MisfortuneKind(kind_str.lower())
+        except ValueError:
+            continue
+            
+        min_realm_str = record.get("min_realm", "QI_REFINEMENT")
+        max_realm_str = record.get("max_realm", "NASCENT_SOUL")
+        
+        min_realm = Realm.from_str(min_realm_str)
+        max_realm = Realm.from_str(max_realm_str)
+        
+        if not (min_realm <= avatar.cultivation_progress.realm <= max_realm):
+            continue
+            
+        can_trigger = False
+        if kind == MisfortuneKind.LOSS_SPIRIT_STONE:
+            can_trigger = avatar.magic_stone.value > 0
+        elif kind == MisfortuneKind.INJURY:
+            can_trigger = True
+        elif kind == MisfortuneKind.CULTIVATION_BACKLASH:
+            can_trigger = True
+            
+        if can_trigger:
+            possible_records.append(record)
+            
+    if not possible_records:
         return None
         
-    return random.choice(candidates)
+    weights = [float(r.get("weight", 10)) for r in possible_records]
+    return random.choices(possible_records, weights=weights, k=1)[0]
 
 
-def _get_misfortune_theme(theme_id: str) -> str:
-    """获取翻译后的霉运主题文本"""
-    from src.i18n import t
-    return t(theme_id)
-
-
-def _pick_misfortune_theme(kind: MisfortuneKind) -> str:
-    theme_id = ""
-    if kind == MisfortuneKind.LOSS_SPIRIT_STONE:
-        theme_id = random.choice(MF_LOSS_SPIRIT_STONE_THEME_IDS)
-    elif kind == MisfortuneKind.INJURY:
-        theme_id = random.choice(MF_INJURY_THEME_IDS)
-    elif kind == MisfortuneKind.CULTIVATION_BACKLASH:
-        theme_id = random.choice(MF_BACKLASH_THEME_IDS)
-    
-    return _get_misfortune_theme(theme_id) if theme_id else ""
 
 
 async def try_trigger_misfortune(avatar: Avatar) -> list[Event]:
@@ -619,11 +558,11 @@ async def try_trigger_misfortune(avatar: Avatar) -> list[Event]:
     if random.random() >= prob:
         return []
         
-    kind = _choose_misfortune_kind(avatar)
-    if kind is None:
+    record = _choose_misfortune_record(avatar)
+    if not record:
         return []
         
-    theme = _pick_misfortune_theme(kind)
+    kind = MisfortuneKind(record["kind"].lower())
     res_text: str = ""
     
     from src.i18n import t
@@ -662,9 +601,22 @@ async def try_trigger_misfortune(avatar: Avatar) -> list[Event]:
         
         res_text = t("misfortune_result_backlash", name=avatar.name, amount=actual_loss)
         
+    # 提取角色正在进行的行为
+    action_desc = t("wandering aimlessly")
+    if avatar.current_action and avatar.current_action.action:
+        action_name = avatar.current_action.action.__class__.__name__
+        action_desc = f"{action_name} ({avatar.current_action.params})"
+        
+    location_name = avatar.tile.region.name if avatar.tile and avatar.tile.region else t("unknown location")
+
     # 生成故事
-    event_text = t("misfortune_event_format", theme=theme, result=res_text)
-    story_prompt = t("misfortune_story_prompt")
+    title_text = t(record.get("title_id", "misfortune_title_mystery"))
+    event_text = t("misfortune_event_base", title=title_text, result=res_text)
+    
+    story_prompt = t("misfortune_dynamic_story_prompt",
+                     realm=str(avatar.cultivation_progress.realm),
+                     location=location_name,
+                     action_desc=action_desc)
     
     month_at_finish = avatar.world.month_stamp
     base_event = Event(month_at_finish, event_text, related_avatars=[avatar.id], is_major=True)
