@@ -808,6 +808,12 @@ msgstr "長期目標"
 msgid "Short-term Goal"
 msgstr "短期目標"
 
+msgid "Current Action"
+msgstr "當前動作"
+
+msgid "Current Action: {action}"
+msgstr "當前動作：{action}"
+
 msgid "Current Effects"
 msgstr "當前效果"
 

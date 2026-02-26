@@ -101,6 +101,7 @@ def get_avatar_info(avatar: "Avatar", detailed: bool = False) -> dict:
         t("Weapon"): weapon_info,
         t("Auxiliary"): auxiliary_info,
         t("Emotion"): t(avatar.emotion.value),
+        t("Current Action"): avatar.current_action_name,
         t("Long-term Goal"): avatar.long_term_objective.content if avatar.long_term_objective else t("None"),
         t("Short-term Goal"): avatar.short_term_objective if avatar.short_term_objective else t("None"),
     }
@@ -383,6 +384,7 @@ def get_avatar_desc(avatar: "Avatar", detailed: bool = False) -> str:
     lines = [t("【{name}】 {gender} {age} years old", name=avatar.name, gender=avatar.gender, age=avatar.age)]
     lines.append(t("Origin: {origin}", origin=born_region_name))
     lines.append(t("Realm: {realm}", realm=avatar.cultivation_progress.get_info()))
+    lines.append(t("Current Action: {action}", action=avatar.current_action_name))
     if avatar.sect:
         lines.append(t("Identity: {identity}", identity=avatar.get_sect_str()))
     

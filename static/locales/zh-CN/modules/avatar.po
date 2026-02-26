@@ -79,6 +79,12 @@ msgstr "长期目标"
 msgid "Short-term Goal"
 msgstr "短期目标"
 
+msgid "Current Action"
+msgstr "当前动作"
+
+msgid "Current Action: {action}"
+msgstr "当前动作：{action}"
+
 msgid "Current Effects"
 msgstr "当前效果"
 

@@ -79,6 +79,12 @@ msgstr "Long-term Goal"
 msgid "Short-term Goal"
 msgstr "Short-term Goal"
 
+msgid "Current Action"
+msgstr "Current Action"
+
+msgid "Current Action: {action}"
+msgstr "Current Action: {action}"
+
 msgid "Current Effects"
 msgstr "Current Effects"
 
