@@ -306,6 +306,7 @@
         "dead_with_reason": "已故 ({reason})",
         "unknown_reason": "未知原因",
         "long_term_objective": "長期目標",
+        "backstory": "身世",
         "short_term_objective": "短期目標",
         "stats": {
           "realm": "境界",

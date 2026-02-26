@@ -140,6 +140,10 @@ async function handleClearObjective() {
     <div class="content-scroll">
       <!-- Objectives -->
       <div v-if="!data.is_dead" class="objectives-banner">
+        <div class="objective-item backstory-item" v-if="data.backstory">
+          <span class="label">{{ t('game.info_panel.avatar.backstory') }}</span>
+          <span class="value">{{ data.backstory }}</span>
+        </div>
         <div class="objective-item">
           <span class="label">{{ t('game.info_panel.avatar.long_term_objective') }}</span>
           <span class="value">{{ data.long_term_objective || t('common.none') }}</span>

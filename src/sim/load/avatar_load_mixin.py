@@ -160,6 +160,9 @@ class AvatarLoadMixin:
         from src.classes.nickname_data import Nickname
         avatar.nickname = Nickname.from_dict(data.get("nickname"))
 
+        # 恢复身世
+        avatar.backstory = data.get("backstory")
+
         # 恢复情绪
         from src.classes.emotions import EmotionType
         emotion_str = data.get("emotion", "emotion_calm")

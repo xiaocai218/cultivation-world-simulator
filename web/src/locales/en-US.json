@@ -306,6 +306,7 @@
         "dead_with_reason": "Deceased ({reason})",
         "unknown_reason": "Unknown",
         "long_term_objective": "Long-term",
+        "backstory": "Backstory",
         "short_term_objective": "Short-term",
         "stats": {
           "realm": "Realm",

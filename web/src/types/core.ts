@@ -87,6 +87,7 @@ export interface AvatarDetail extends EntityBase {
   thinking: string;
   short_term_objective: string;
   long_term_objective: string;
+  backstory?: string | null;
   
   // 关联实体
   sect?: SectInfo;

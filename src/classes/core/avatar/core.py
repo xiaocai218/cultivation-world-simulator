@@ -101,6 +101,7 @@ class Avatar(
     auxiliary: Optional[Auxiliary] = None
     spirit_animal: Optional[SpiritAnimal] = None
     nickname: Optional[Nickname] = None
+    backstory: Optional[str] = None
     emotion: EmotionType = EmotionType.CALM
     custom_pic_id: Optional[int] = None
     

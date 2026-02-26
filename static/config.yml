@@ -11,6 +11,7 @@ llm:
     story_teller: "fast"
     interaction_feedback: "fast"
     history_influence: "normal"
+    backstory: "fast"
 
 paths:
   locales: static/locales/
