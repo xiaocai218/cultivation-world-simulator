@@ -78,3 +78,9 @@ msgstr "修爲精進"
 
 msgid "fortune_title_mystery"
 msgstr "神祕奇遇"
+
+msgid "unknown location"
+msgstr "未知地點"
+
+msgid "wandering aimlessly"
+msgstr "四處遊蕩"

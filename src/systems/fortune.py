@@ -466,7 +466,8 @@ async def try_trigger_fortune(avatar: Avatar) -> list[Event]:
     story_prompt = t("fortune_dynamic_story_prompt",
                      realm=str(avatar.cultivation_progress.realm),
                      location=location_name,
-                     action_desc=action_desc)
+                     action_desc=action_desc,
+                     result=res_text)
 
     month_at_finish = avatar.world.month_stamp
     base_event = Event(month_at_finish, event_text, related_avatars=related_avatars, is_major=True)
@@ -616,7 +617,8 @@ async def try_trigger_misfortune(avatar: Avatar) -> list[Event]:
     story_prompt = t("misfortune_dynamic_story_prompt",
                      realm=str(avatar.cultivation_progress.realm),
                      location=location_name,
-                     action_desc=action_desc)
+                     action_desc=action_desc,
+                     result=res_text)
     
     month_at_finish = avatar.world.month_stamp
     base_event = Event(month_at_finish, event_text, related_avatars=[avatar.id], is_major=True)

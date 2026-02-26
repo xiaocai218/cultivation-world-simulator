@@ -76,8 +76,8 @@ Use this workflow when adding new items/events to CSV files (`static/game_config
 
 Before committing, run the following tools to ensure translation quality:
 
-### Check Duplicates
-Checks for duplicate `msgid` entries and inconsistencies between Chinese and English files.
+### Check Duplicates & Missing Keys
+Checks for duplicate `msgid` entries and inconsistencies (missing keys) among Chinese (zh-CN), Traditional Chinese (zh-TW), and English (en-US) files.
 
 ```bash
 python tools/i18n/check_po_duplicates.py

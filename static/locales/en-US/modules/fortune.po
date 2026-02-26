@@ -123,3 +123,9 @@ msgstr "{avatar_name} obtained {amount} spirit stones"
 
 msgid "{avatar_name} gained {exp_gain} cultivation experience"
 msgstr "{avatar_name} gained {exp_gain} cultivation experience"
+
+msgid "unknown location"
+msgstr "unknown location"
+
+msgid "wandering aimlessly"
+msgstr "wandering aimlessly"

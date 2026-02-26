@@ -60,7 +60,7 @@ async def test_try_trigger_fortune(dummy_avatar: Avatar, mock_game_configs, mock
             # In English/Chinese the prompt contains the action description
             # But during tests, if translations are missing, it might just be the msgid
             # So we check if it's the right msgid or contains the action
-            assert "Respire" in prompt or prompt == "fortune_dynamic_story_prompt"
+            assert "Respire" in prompt or "吐纳" in prompt or "吐納" in prompt or prompt == "fortune_dynamic_story_prompt"
 
 @pytest.mark.asyncio
 async def test_try_trigger_misfortune(dummy_avatar: Avatar, mock_game_configs, mock_story_teller):
