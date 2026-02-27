@@ -142,6 +142,8 @@ def _create_simple_avatar(
         born_region_id=born_region_id
     )
     
+    avatar.cultivation_start_month_stamp = world.month_stamp
+    
     avatar.magic_stone = MagicStone(10) # 少量灵石
     avatar.tile = world.map.get_tile(x, y)
     

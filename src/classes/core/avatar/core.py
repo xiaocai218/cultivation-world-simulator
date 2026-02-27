@@ -101,6 +101,7 @@ class Avatar(
     auxiliary: Optional[Auxiliary] = None
     spirit_animal: Optional[SpiritAnimal] = None
     nickname: Optional[Nickname] = None
+    backstory: Optional[str] = None
     emotion: EmotionType = EmotionType.CALM
     custom_pic_id: Optional[int] = None
     
@@ -129,6 +130,9 @@ class Avatar(
 
     # [新增] 出身地ID
     born_region_id: Optional[int] = None
+
+    # 记录成为练气/开始修道的年月时间戳
+    cultivation_start_month_stamp: Optional[MonthStamp] = None
 
     # [新增] 关系开始时间缓存
     # Key: 对方Avatar ID, Value: 开始时的 MonthStamp (int)

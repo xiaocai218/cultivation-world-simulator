@@ -194,7 +194,6 @@ docker-compose up -d --build
 - ✅ 多语言本地化
 - ✅ 开始游戏页
 - ✅ BGM & 音效
-- [ ] Mod支持
 
 ### 🗺️ 世界系统
 - ✅ 基础tile地块系统

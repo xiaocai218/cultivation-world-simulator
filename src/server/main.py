@@ -1,5 +1,20 @@
 import sys
 import os
+
+# ==============================================================================
+# 修复 PyInstaller 打包并在非中文 Windows (如英语环境) 运行时 print 导致的崩溃问题。
+# 系统默认可能回退至 cp1252 编码，此时如果 print 包含中文字符的路径就会抛出 UnicodeEncodeError。
+# 我们在此强制将标准输出/错误流重置为 UTF-8，并将无法转换的字符替换掉，以防报错崩溃。
+# ==============================================================================
+for stream_name in ('stdout', 'stderr'):
+    stream = getattr(sys, stream_name, None)
+    if stream is not None:
+        try:
+            stream.reconfigure(encoding='utf-8', errors='replace')
+        except Exception:
+            pass
+# ==============================================================================
+
 import asyncio
 import webview  # type: ignore
 import subprocess
@@ -407,7 +422,7 @@ async def init_game_async():
             try:
                 history_mgr = HistoryManager(world)
                 await history_mgr.apply_history_influence(world_history)
-                print("历史背景应用完成 ✓")
+                print("历史背景应用完成")
             except Exception as e:
                 print(f"[警告] 历史背景应用失败: {e}")
         
@@ -453,7 +468,7 @@ async def init_game_async():
             game_instance["llm_check_failed"] = True
             game_instance["llm_error_message"] = error_msg
         else:
-            print("LLM 连通性检测通过 ✓")
+            print("LLM 连通性检测通过")
             game_instance["llm_check_failed"] = False
             game_instance["llm_error_message"] = ""
 
@@ -465,7 +480,7 @@ async def init_game_async():
         game_instance["is_paused"] = False
         try:
             await sim.step()
-            print("初始事件生成完成 ✓")
+            print("初始事件生成完成")
         except Exception as e:
             print(f"[警告] 初始事件生成失败: {e}")
         finally:
@@ -1643,7 +1658,7 @@ async def save_llm_config(req: LLMConfigDTO):
             game_instance["llm_error_message"] = ""
             game_instance["is_paused"] = False
             
-            print("Simulator 已恢复运行 ✓")
+            print("Simulator 已恢复运行")
             
             # 通知所有客户端刷新
             await manager.broadcast({

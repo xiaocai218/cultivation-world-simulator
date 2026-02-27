@@ -66,6 +66,7 @@ class AvatarSaveMixin:
             "pos_x": self.pos_x,
             "pos_y": self.pos_y,
             "born_region_id": self.born_region_id,
+            "cultivation_start_month_stamp": int(self.cultivation_start_month_stamp) if self.cultivation_start_month_stamp is not None else None,
             
             # 修炼相关
             "age": self.age.to_dict(),
@@ -92,6 +93,7 @@ class AvatarSaveMixin:
             "persona_ids": [p.id for p in self.personas] if self.personas else [],
             "appearance": self.appearance.level,
             "nickname": self.nickname.to_dict() if self.nickname else None,
+            "backstory": self.backstory,
             "emotion": self.emotion.value,
             "is_dead": self.is_dead,
             "death_info": self.death_info,

@@ -79,6 +79,12 @@ msgstr "長期目標"
 msgid "Short-term Goal"
 msgstr "短期目標"
 
+msgid "Current Action"
+msgstr "當前動作"
+
+msgid "Current Action: {action}"
+msgstr "當前動作：{action}"
+
 msgid "Current Effects"
 msgstr "當前效果"
 
@@ -107,3 +113,9 @@ msgid ""
 "{name} has awakened their spiritual roots and embarked on the path of "
 "cultivation."
 msgstr "{name} 覺醒了靈根，踏上了修行之路。"
+
+msgid "Backstory"
+msgstr "身世"
+
+msgid "Backstory: {backstory}"
+msgstr "身世：{backstory}"

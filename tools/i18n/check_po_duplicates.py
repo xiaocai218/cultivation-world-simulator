@@ -6,6 +6,7 @@ import re
 import sys
 from pathlib import Path
 from collections import Counter
+import polib
 
 
 def extract_msgids(filepath: Path) -> list[str]:
@@ -16,18 +17,10 @@ def extract_msgids(filepath: Path) -> list[str]:
         filepath: po 文件路径
         
     Returns:
-        msgid 列表（不包含空字符串）
+        msgid 列表
     """
-    with open(filepath, 'r', encoding='utf-8') as f:
-        content = f.read()
-    
-    # 匹配 msgid "..." 模式
-    pattern = r'msgid\s+"([^"]*)"'
-    matches = re.findall(pattern, content)
-    
-    # 过滤掉空字符串（文件头的 msgid ""）
-    msgids = [m for m in matches if m]
-    
+    po = polib.pofile(str(filepath))
+    msgids = [entry.msgid for entry in po if entry.msgid]
     return msgids
 
 
@@ -89,10 +82,14 @@ def main():
     
     # po 文件路径
     zh_file = project_root / "static" / "locales" / "zh-CN" / "LC_MESSAGES" / "messages.po"
+    tw_file = project_root / "static" / "locales" / "zh-TW" / "LC_MESSAGES" / "messages.po"
     en_file = project_root / "static" / "locales" / "en-US" / "LC_MESSAGES" / "messages.po"
     
     # 检查中文文件
     zh_count, zh_dups = check_file(zh_file, "中文 (zh_CN)")
+    
+    # 检查繁体中文文件
+    tw_count, tw_dups = check_file(tw_file, "繁体中文 (zh_TW)")
     
     # 检查英文文件
     en_count, en_dups = check_file(en_file, "英文 (en_US)")
@@ -104,44 +101,56 @@ def main():
     
     has_error = False
     
-    if zh_dups or en_dups:
+    if zh_dups or tw_dups or en_dups:
         print("[ERROR] 发现重复条目，需要修复")
         has_error = True
     else:
-        print("[OK] 两个文件都没有重复的 msgid")
+        print("[OK] 所有文件都没有重复的 msgid")
     
-    if zh_count != en_count:
-        print(f"[WARNING] 中英文 msgid 数量不一致: 中文 {zh_count} 个, 英文 {en_count} 个")
+    if len({zh_count, tw_count, en_count}) != 1:
+        print(f"[WARNING] msgid 数量不一致: zh-CN {zh_count} 个, zh-TW {tw_count} 个, en-US {en_count} 个")
         has_error = True
     else:
-        print(f"[OK] 中英文 msgid 数量一致: {zh_count} 个")
+        print(f"[OK] 所有语言 msgid 数量一致: {zh_count} 个")
     
     # 检查 msgid 键是否匹配
-    if zh_count > 0 and en_count > 0:
+    if zh_count > 0 and tw_count > 0 and en_count > 0:
         zh_msgids = set(extract_msgids(zh_file))
+        tw_msgids = set(extract_msgids(tw_file))
         en_msgids = set(extract_msgids(en_file))
         
-        zh_only = zh_msgids - en_msgids
-        en_only = en_msgids - zh_msgids
+        all_msgids = zh_msgids | tw_msgids | en_msgids
         
-        if zh_only:
-            print(f"\n[WARNING] 只在中文中存在的 msgid ({len(zh_only)} 个):")
-            for msgid in sorted(zh_only)[:5]:
+        zh_missing = all_msgids - zh_msgids
+        tw_missing = all_msgids - tw_msgids
+        en_missing = all_msgids - en_msgids
+        
+        if zh_missing:
+            print(f"\n[WARNING] zh-CN 缺失的 msgid ({len(zh_missing)} 个):")
+            for msgid in sorted(zh_missing)[:5]:
                 print(f"  - '{msgid}'")
-            if len(zh_only) > 5:
-                print(f"  ... 还有 {len(zh_only) - 5} 个")
+            if len(zh_missing) > 5:
+                print(f"  ... 还有 {len(zh_missing) - 5} 个")
+            has_error = True
+
+        if tw_missing:
+            print(f"\n[WARNING] zh-TW 缺失的 msgid ({len(tw_missing)} 个):")
+            for msgid in sorted(tw_missing)[:5]:
+                print(f"  - '{msgid}'")
+            if len(tw_missing) > 5:
+                print(f"  ... 还有 {len(tw_missing) - 5} 个")
             has_error = True
         
-        if en_only:
-            print(f"\n[WARNING] 只在英文中存在的 msgid ({len(en_only)} 个):")
-            for msgid in sorted(en_only)[:5]:
+        if en_missing:
+            print(f"\n[WARNING] en-US 缺失的 msgid ({len(en_missing)} 个):")
+            for msgid in sorted(en_missing)[:5]:
                 print(f"  - '{msgid}'")
-            if len(en_only) > 5:
-                print(f"  ... 还有 {len(en_only) - 5} 个")
+            if len(en_missing) > 5:
+                print(f"  ... 还有 {len(en_missing) - 5} 个")
             has_error = True
         
-        if not zh_only and not en_only:
-            print("[OK] 中英文 msgid 键完全匹配")
+        if not zh_missing and not tw_missing and not en_missing:
+            print("[OK] 所有语言的 msgid 键完全匹配")
     
     # 返回状态码
     return 1 if has_error else 0

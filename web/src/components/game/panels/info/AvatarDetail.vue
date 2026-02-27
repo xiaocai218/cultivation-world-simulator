@@ -140,6 +140,10 @@ async function handleClearObjective() {
     <div class="content-scroll">
       <!-- Objectives -->
       <div v-if="!data.is_dead" class="objectives-banner">
+        <div class="objective-item backstory-item" v-if="data.backstory">
+          <span class="label">{{ t('game.info_panel.avatar.backstory') }}</span>
+          <span class="value">{{ data.backstory }}</span>
+        </div>
         <div class="objective-item">
           <span class="label">{{ t('game.info_panel.avatar.long_term_objective') }}</span>
           <span class="value">{{ data.long_term_objective || t('common.none') }}</span>
@@ -159,6 +163,11 @@ async function handleClearObjective() {
       <div class="stats-grid">
         <StatItem :label="t('game.info_panel.avatar.stats.realm')" :value="data.realm" :sub-value="data.level" />
         <StatItem :label="t('game.info_panel.avatar.stats.age')" :value="`${data.age} / ${data.lifespan}`" />
+        <StatItem 
+          v-if="data.cultivation_start_age !== undefined"
+          :label="t('game.info_panel.avatar.stats.awakened_age')" 
+          :value="`${data.cultivation_start_age}`" 
+        />
         <StatItem :label="t('game.info_panel.avatar.stats.origin')" :value="data.origin" />
         
         <StatItem :label="t('game.info_panel.avatar.stats.hp')" :value="formatHp(data.hp.cur, data.hp.max)" />

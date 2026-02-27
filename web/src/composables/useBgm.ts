@@ -23,6 +23,7 @@ let currentTrackIndex = 0; // 0 或 1
 let tracks: HTMLAudioElement[] = [];
 let initialized = false;
 let bag: string[] = []; // 随机播放池
+let currentSwitchId = 0; // 切换请求锁，用于防止并发竞争
 
 export function useBgm() {
     const settingStore = useSettingStore();
@@ -131,15 +132,26 @@ export function useBgm() {
         nextTrack.src = url;
         nextTrack.volume = 0; // 从静音开始淡入
         
+        currentSwitchId++;
+        const mySwitchId = currentSwitchId;
+        
         try {
             await nextTrack.play();
-            performCrossfade(nextTrack, currentTrack, crossfadeOutgoing);
+            // 如果在等待 play 的过程中发起了新的切换，丢弃当前切换
+            if (mySwitchId !== currentSwitchId) {
+                nextTrack.pause();
+                return;
+            }
+            performCrossfade(nextTrack, currentTrack, crossfadeOutgoing, mySwitchId);
             currentTrackIndex = nextIndex;
         } catch (e: any) {
             console.warn('Track switch failed', e);
+            if (mySwitchId !== currentSwitchId) return;
             
             // 自动播放策略被阻止
             if (e.name === 'NotAllowedError') {
+                // 如果切歌失败，旧音乐也停止，避免两首一起播或者残留
+                currentTrack.pause();
                 handleAutoPlayPolicy(songName, crossfadeOutgoing);
             }
         }
@@ -163,7 +175,7 @@ export function useBgm() {
     }
 
     // 淡入淡出动画
-    function performCrossfade(fadeIn: HTMLAudioElement, fadeOut: HTMLAudioElement, fadeOutEnabled: boolean) {
+    function performCrossfade(fadeIn: HTMLAudioElement, fadeOut: HTMLAudioElement, fadeOutEnabled: boolean, mySwitchId: number) {
         const start = performance.now();
         // remove static targetVol capture
         
@@ -171,6 +183,13 @@ export function useBgm() {
         if (fadeOutEnabled) fadeOut.dataset.fading = 'true';
 
         function step(now: number) {
+            // 如果有新的切歌请求，立刻中止当前淡入淡出动画
+            if (mySwitchId !== currentSwitchId) {
+                delete fadeIn.dataset.fading;
+                if (fadeOutEnabled) delete fadeOut.dataset.fading;
+                return;
+            }
+
             const elapsed = now - start;
             const progress = Math.min(elapsed / FADE_DURATION, 1);
             const currentTargetVol = settingStore.bgmVolume; // Dynamic volume check
@@ -210,6 +229,9 @@ export function useBgm() {
     function stop() {
         if (!initialized) return;
         currentType = null;
+        currentSwitchId++;
+        const mySwitchId = currentSwitchId;
+
         tracks.forEach(t => {
              // 快速淡出后停止
              const startVol = t.volume;
@@ -219,6 +241,11 @@ export function useBgm() {
              t.dataset.fading = 'true';
 
              function fade(now: number) {
+                 if (mySwitchId !== currentSwitchId) {
+                     delete t.dataset.fading;
+                     return;
+                 }
+
                  const progress = Math.min((now - start) / 1000, 1); // 1秒淡出
                  t.volume = Math.max(0, startVol * (1 - progress));
                  

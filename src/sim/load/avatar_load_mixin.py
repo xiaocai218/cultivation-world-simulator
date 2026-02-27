@@ -79,6 +79,8 @@ class AvatarLoadMixin:
             pos_y=data["pos_y"],
         )
         avatar.born_region_id = data.get("born_region_id")
+        stamp_val = data.get("cultivation_start_month_stamp")
+        avatar.cultivation_start_month_stamp = MonthStamp(stamp_val) if stamp_val is not None else None
         
         # 设置灵根
         avatar.root = Root[data["root"]]
@@ -157,6 +159,9 @@ class AvatarLoadMixin:
         # 恢复绰号
         from src.classes.nickname_data import Nickname
         avatar.nickname = Nickname.from_dict(data.get("nickname"))
+
+        # 恢复身世
+        avatar.backstory = data.get("backstory")
 
         # 恢复情绪
         from src.classes.emotions import EmotionType

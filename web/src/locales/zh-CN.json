@@ -309,11 +309,13 @@
         "dead_with_reason": "已故 ({reason})",
         "unknown_reason": "未知原因",
         "long_term_objective": "长期目标",
+        "backstory": "身世",
         "short_term_objective": "短期目标",
         "stats": {
           "realm": "境界",
           "origin": "出身",
           "age": "年龄",
+          "awakened_age": "修道年龄",
           "hp": "HP",
           "gender": "性别",
           "alignment": "阵营",

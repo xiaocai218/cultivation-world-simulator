@@ -449,6 +449,11 @@ class AvatarFactory:
             parents_list.append(plan.parent_avatar)
         avatar.born_region_id = get_born_region_id(world, parents=parents_list, sect=plan.sect)
 
+        # 在构造 Avatar 实例后计算并赋值：
+        if avatar.cultivation_start_month_stamp is None:
+            start_age = random.randint(16, max(16, age.age))
+            avatar.cultivation_start_month_stamp = MonthStamp(int(birth_month_stamp) + start_age * 12)
+
         SectRankAssigner.assign_one(avatar, world)
         EquipmentAllocator.assign_weapon(avatar)
         EquipmentAllocator.assign_auxiliary(avatar)
@@ -555,6 +560,11 @@ class AvatarFactory:
                          current_parents.append(avatars_by_index[p_idx])
             
             avatar.born_region_id = get_born_region_id(world, parents=current_parents, sect=sect)
+
+            # 在构造 Avatar 实例后计算并赋值：
+            if avatar.cultivation_start_month_stamp is None:
+                start_age = random.randint(16, max(16, age_years))
+                avatar.cultivation_start_month_stamp = MonthStamp(int(birth_month_stamp) + start_age * 12)
 
             if sect is not None:
                 avatar.alignment = sect.alignment

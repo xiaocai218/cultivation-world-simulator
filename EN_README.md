@@ -192,7 +192,6 @@ For more details on contributions, please see [CONTRIBUTORS.md](CONTRIBUTORS.md)
 - ✅ Support multi-language localization
 - ✅ Start Game Page
 - ✅ BGM & Audio
-- [ ] Mod Support
 
 ### 🗺️ World System
 - ✅ Basic tile mechanics

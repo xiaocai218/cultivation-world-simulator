@@ -101,12 +101,15 @@ def get_avatar_info(avatar: "Avatar", detailed: bool = False) -> dict:
         t("Weapon"): weapon_info,
         t("Auxiliary"): auxiliary_info,
         t("Emotion"): t(avatar.emotion.value),
+        t("Current Action"): avatar.current_action_name,
         t("Long-term Goal"): avatar.long_term_objective.content if avatar.long_term_objective else t("None"),
         t("Short-term Goal"): avatar.short_term_objective if avatar.short_term_objective else t("None"),
     }
     
     if detailed:
         info_dict[t("Current Effects")] = _get_effects_text(avatar)
+        if avatar.backstory:
+            info_dict[t("Backstory")] = avatar.backstory
 
     # 绰号：仅在存在时显示
     if avatar.nickname is not None:
@@ -131,11 +134,17 @@ def get_avatar_structured_info(avatar: "Avatar") -> dict:
          if r:
              born_region_name = r.name
 
+    start_age = None
+    if avatar.cultivation_start_month_stamp is not None:
+        start_age = (int(avatar.cultivation_start_month_stamp) - int(avatar.birth_month_stamp)) // 12
+
     info = {
         "id": avatar.id,
         "name": avatar.name,
         "origin": born_region_name,
         "born_region_id": avatar.born_region_id,
+        "cultivation_start_age": start_age,
+        "cultivation_start_month_stamp": int(avatar.cultivation_start_month_stamp) if avatar.cultivation_start_month_stamp else None,
         "gender": str(avatar.gender),
         "age": avatar.age.age,
         "lifespan": avatar.age.max_lifespan,
@@ -153,6 +162,7 @@ def get_avatar_structured_info(avatar: "Avatar") -> dict:
         "thinking": avatar.thinking,
         "short_term_objective": avatar.short_term_objective,
         "long_term_objective": avatar.long_term_objective.content if avatar.long_term_objective else "",
+        "backstory": avatar.backstory if avatar.backstory else None,
         "nickname": avatar.nickname.value if avatar.nickname else None,
         "nickname_reason": avatar.nickname.reason if avatar.nickname else None,
         "is_dead": avatar.is_dead,
@@ -376,10 +386,13 @@ def get_avatar_desc(avatar: "Avatar", detailed: bool = False) -> str:
     lines = [t("【{name}】 {gender} {age} years old", name=avatar.name, gender=avatar.gender, age=avatar.age)]
     lines.append(t("Origin: {origin}", origin=born_region_name))
     lines.append(t("Realm: {realm}", realm=avatar.cultivation_progress.get_info()))
+    lines.append(t("Current Action: {action}", action=avatar.current_action_name))
     if avatar.sect:
         lines.append(t("Identity: {identity}", identity=avatar.get_sect_str()))
     
     if detailed:
+        if avatar.backstory:
+            lines.append(t("Backstory: {backstory}", backstory=avatar.backstory))
         lines.append(t("\n--- Current Effects Detail ---"))
         breakdown = avatar.get_effect_breakdown()
         

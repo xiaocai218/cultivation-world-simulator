@@ -15,7 +15,3 @@ msgstr ""
 # LLM Prompt
 msgid "auction_story_prompt"
 msgstr "選取其中最有趣的一個側面或一次競價進行描寫，無需面面俱到。重點描寫競價過程中的緊張氣氛。"
-
-# LLM Prompt
-msgid "fortune_story_prompt"
-msgstr "請據此寫100~300字小故事。"

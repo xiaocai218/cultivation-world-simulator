@@ -13,8 +13,8 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # Misfortune messages
-msgid "Encountered misfortune ({theme}), {result}"
-msgstr "Encountered misfortune ({theme}), {result}"
+msgid "misfortune_event_base"
+msgstr "Encountered misfortune ({title}), {result}"
 
 msgid "{name} lost {amount} spirit stones"
 msgstr "{name} lost {amount} spirit stones"
@@ -25,15 +25,6 @@ msgstr "{name} took {damage} damage, HP remaining {current}/{max}"
 msgid "{name} cultivation regressed by {amount} points"
 msgstr "{name} cultivation regressed by {amount} points"
 
-# Misfortune System
-msgid "misfortune_event_format"
-msgstr "Encountered misfortune ({theme}), {result}"
-
-msgid "misfortune_story_prompt"
-msgstr ""
-"Please write a short story (100-300 words) about this unfortunate event. "
-"Focus on the incident itself, do not mention stats."
-
 msgid "misfortune_result_loss_spirit_stone"
 msgstr "{name} lost {amount} spirit stones"
 
@@ -43,50 +34,17 @@ msgstr "{name} took {damage} damage, HP remaining {current}/{max}"
 msgid "misfortune_result_backlash"
 msgstr "{name} cultivation regressed by {amount} points"
 
-msgid "misfortune_theme_pickpocket"
-msgstr "Encountered a pickpocket"
+msgid "misfortune_dynamic_story_prompt"
+msgstr "The character's current realm is {realm}. They were just at {location} performing the action: [{action_desc}]. The final result is: [{result}].\nTask: Based on the character's realm, background, and the [action they were performing], please automatically deduce a reasonable, coherent, and creative reason for the misfortune as a bridge to explain why this action led to this result. Describe rich environmental details and the character's psychological activities. Keep the word count between 100-200 words."
 
-msgid "misfortune_theme_fake_goods"
-msgstr "Bought fake goods"
+msgid "misfortune_title_loss_spirit_stone"
+msgstr "Financial Loss"
 
-msgid "misfortune_theme_blackmail"
-msgstr "Blackmailed"
+msgid "misfortune_title_injury"
+msgstr "Accidental Injury"
 
-msgid "misfortune_theme_theft"
-msgstr "Cave dwelling theft"
+msgid "misfortune_title_backlash"
+msgstr "Cultivation Backlash"
 
-msgid "misfortune_theme_gambling_loss"
-msgstr "Gambling loss"
-
-msgid "misfortune_theme_bad_investment"
-msgstr "Investment failure"
-
-msgid "misfortune_theme_cultivation_accident"
-msgstr "Cultivation accident"
-
-msgid "misfortune_theme_trip_fall"
-msgstr "Tripped and fell"
-
-msgid "misfortune_theme_beast_ambush"
-msgstr "Ambushed by beast"
-
-msgid "misfortune_theme_enemy_attack"
-msgstr "Attacked by enemy"
-
-msgid "misfortune_theme_trap"
-msgstr "Triggered trap"
-
-msgid "misfortune_theme_disaster"
-msgstr "Sudden disaster"
-
-msgid "misfortune_theme_heart_demon"
-msgstr "Heart demon emerged"
-
-msgid "misfortune_theme_qi_deviation"
-msgstr "Qi deviation"
-
-msgid "misfortune_theme_confusion"
-msgstr "Cultivation confusion"
-
-msgid "misfortune_theme_anxiety"
-msgstr "Anxiety attack"
+msgid "misfortune_title_mystery"
+msgstr "Mysterious Misfortune"

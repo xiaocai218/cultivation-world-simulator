@@ -1,5 +1,5 @@
 meta:
-  version: "1.7.0"
+  version: "1.7.1"
 
 llm:
   default_modes:
@@ -11,6 +11,7 @@ llm:
     story_teller: "fast"
     interaction_feedback: "fast"
     history_influence: "normal"
+    backstory: "fast"
 
 paths:
   locales: static/locales/

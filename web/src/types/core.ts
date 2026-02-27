@@ -50,6 +50,8 @@ export interface AvatarDetail extends EntityBase {
   gender: string;
   age: number;
   origin: string;
+  cultivation_start_age?: number;
+  cultivation_start_month_stamp?: number;
   lifespan: number;
   nickname?: string;
   appearance: string; // 外貌描述
@@ -85,6 +87,7 @@ export interface AvatarDetail extends EntityBase {
   thinking: string;
   short_term_objective: string;
   long_term_objective: string;
+  backstory?: string | null;
   
   // 关联实体
   sect?: SectInfo;
