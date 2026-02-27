@@ -8,5 +8,6 @@
    运行命令 `powershell ./tools/package/release.ps1`，等待成功完成。（速度较慢）
 4. **发布到 Steam**：
    运行命令 `powershell ./tools/package/upload_steam.ps1`。
+   这一步需要用户手动输入密码。
 
 注意：如果任何一步执行失败（Exit Code 不为 0），请立即停止后续步骤并向用户报告错误。
