@@ -313,4 +313,4 @@ For more details on contributions, please see [CONTRIBUTORS.md](CONTRIBUTORS.md)
 
 ### 🔭 Long-term
 - [ ] Novelization/imagery/video for history and events
-- [ ] Skill agentification, cultivators autonomously calling tools
+- [ ] Skill agentification, cultivators autonomously planning, analyzing, calling tools, and making decisions

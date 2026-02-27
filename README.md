@@ -312,4 +312,4 @@ docker-compose up -d --build
 
 ### 🔭 远期展望
 - [ ] 历史/事件的小说化&图片化&视频化
-- [ ] Skill agent化，修士自行调用工具
+- [ ] Skill agent化，修士自行规划、分析、调用工具、决策
