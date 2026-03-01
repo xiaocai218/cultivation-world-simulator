@@ -2256,6 +2256,64 @@ msgstr ""
 "{winner} gained slight advantage in sparring, defeated {loser}. ({winner} "
 "proficiency +{w_gain}, {loser} proficiency +{l_gain})"
 
+# MutualAction: Confess
+msgid "confess_action_name"
+msgstr "Confess"
+
+msgid "confess_description"
+msgstr ""
+"Confess love to a target within interaction range. If accepted, they become "
+"lovers."
+
+msgid "confess_requirements"
+msgstr "Target within interaction range, and not already lovers."
+
+msgid "confess_story_prompt"
+msgstr ""
+"Describe the process of {initiator} confessing their love to {target}. "
+"Include their inner feelings and the atmosphere. If accepted, describe the "
+"romance of them becoming lovers. If rejected, describe the gentle refusal "
+"and regret."
+
+msgid "Already lovers"
+msgstr "Already lovers"
+
+msgid "{initiator} confesses their love to {target}"
+msgstr "{initiator} confesses their love to {target}"
+
+msgid "{target} accepted {initiator}'s confession, they became lovers"
+msgstr "{target} accepted {initiator}'s confession, they became lovers"
+
+msgid "{target} rejected {initiator}'s confession"
+msgstr "{target} rejected {initiator}'s confession"
+
+msgid "swear_brotherhood_action_name"
+msgstr "Swear Brotherhood"
+
+msgid "swear_brotherhood_description"
+msgstr ""
+"Propose to become sworn siblings with a cultivator in interaction range."
+
+msgid "swear_brotherhood_requirements"
+msgstr "Target within interaction range; not already sworn siblings."
+
+msgid "swear_brotherhood_story_prompt"
+msgstr ""
+"This is a heroic swearing of brotherhood. Describe their mutual appreciation"
+" and their vow to live and die together."
+
+msgid "{initiator} proposes to become sworn siblings with {target}"
+msgstr "{initiator} proposes to become sworn siblings with {target}"
+
+msgid "{target} accepted {initiator}'s proposal, they became sworn siblings"
+msgstr "{target} accepted {initiator}'s proposal, they became sworn siblings"
+
+msgid "{target} rejected {initiator}'s proposal to become sworn siblings"
+msgstr "{target} rejected {initiator}'s proposal to become sworn siblings"
+
+msgid "Already sworn siblings"
+msgstr "Already sworn siblings"
+
 msgid ", sell old {label}『{old_name}』"
 msgstr ", sell old {label}『{old_name}』"
 
@@ -2398,8 +2456,9 @@ msgstr "[Establish Relation Rules]"
 
 msgid "relation_rule_friend_add"
 msgstr ""
-"[Friend] Friendly interactions (chat, spar without killing, heal). No "
-"substantial conflict of interest."
+"[Friend] Any friendly daily interactions (such as chatting, dual "
+"cultivation, sparring, healing, etc.) or a single display of goodwill is "
+"enough to establish this. No substantial conflict of interest."
 
 msgid "relation_rule_friend_cancel"
 msgstr ""
@@ -2437,6 +2496,21 @@ msgstr "Younger Sister"
 
 msgid "sibling"
 msgstr "Sibling"
+
+msgid "relation_sworn_older_brother"
+msgstr "Sworn Older Brother"
+
+msgid "relation_sworn_older_sister"
+msgstr "Sworn Older Sister"
+
+msgid "relation_sworn_younger_brother"
+msgstr "Sworn Younger Brother"
+
+msgid "relation_sworn_younger_sister"
+msgstr "Sworn Younger Sister"
+
+msgid "sworn_sibling"
+msgstr "Sworn Sibling"
 
 msgid "earth_element"
 msgstr "Earth"
