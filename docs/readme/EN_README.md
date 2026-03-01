@@ -257,9 +257,7 @@ For more details on contributions, please see [CONTRIBUTORS.md](../../CONTRIBUTO
   - ✅ Sect teaching
 - [ ] Sudden events
   - [ ] Treasure/cave emergence
-- [ ] Natural events:
   - [ ] Natural disasters
-  - [ ] Beast tides
 
 ### ⚔️ Combat
 - ✅ Advantages and counters
