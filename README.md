@@ -10,6 +10,7 @@
 # 修仙世界模拟器 (Cultivation World Simulator)
 
 ![GitHub stars](https://img.shields.io/github/stars/4thfever/cultivation-world-simulator?style=social)
+[![Steam](https://img.shields.io/badge/Steam-%E5%95%86%E5%BA%97%E9%A1%B5%E9%9D%A2-2a475e?logo=steam&logoColor=white)](https://store.steampowered.com/app/4443180)
 [![Bilibili](https://img.shields.io/badge/Bilibili-%E6%9F%A5%E7%9C%8B%E8%A7%86%E9%A2%91-FB7299?logo=bilibili)](https://space.bilibili.com/527346837)
 ![QQ Group](https://img.shields.io/badge/QQ%E7%BE%A4-1071821688-deepskyblue?logo=tencent-qq&logoColor=white)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Us-7289da?logo=discord&logoColor=white)](https://discord.gg/shhRWmZR)
@@ -104,6 +105,7 @@
 ## 📞 联系方式
 如果您对项目有任何问题或建议，欢迎提交 Issue。
 
+- **Steam**: [商店页面](https://store.steampowered.com/app/4443180)
 - **Bilibili**: [点击关注](https://space.bilibili.com/527346837)
 - **QQ群**: `1071821688` (入群答案：肥桥今天吃什么)
 - **Discord**: [加入社区](https://discord.gg/shhRWmZR)
