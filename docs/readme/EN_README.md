@@ -93,11 +93,10 @@ Cultivation games are either completely scripted or rely on simple state machine
 
 With the advent of Large Language Models, the goal of making "every character alive" seems reachable.
 
-I hope to create a pure, joyful, direct, and living sense of immersion in a cultivation world. Not a pure marketing tool for some game company, nor pure research like "Stanford Town", but an actual world that provides players with real immersion.
+I hope to create a pure, joyful, direct, and living sense of immersion in a cultivation world. Not a pure marketing tool for some game company, nor pure research like Stanford Town, but an actual world that provides players with real immersion.
 
 ## 📞 Contact
-
-If you have any questions or suggestions, feel free to open an Issue or Pull Request.
+If you have any questions or suggestions about the project, feel free to submit an Issue.
 
 - **Steam**: [Store Page](https://store.steampowered.com/app/4443180)
 - **Bilibili**: [Subscribe](https://space.bilibili.com/527346837)
@@ -106,7 +105,7 @@ If you have any questions or suggestions, feel free to open an Issue or Pull Req
 
 ## 🚀 Quick Start
 
-### Option 1: Docker (Recommended)
+### Option 1: Docker One-Click Deployment (Recommended)
 
 No environment configuration needed, just run:
 
@@ -116,9 +115,9 @@ cd cultivation-world-simulator
 docker-compose up -d --build
 ```
 
-Access: Frontend `http://localhost:8123` | Backend `http://localhost:8002`
+Access Address: Frontend `http://localhost:8123` | Backend `http://localhost:8002`
 
-### Option 2: Source Code (Development)
+### Option 2: Source Code Deployment (Development Mode)
 
 Suitable for developers who need to modify code or debug.
 
@@ -130,12 +129,12 @@ Suitable for developers who need to modify code or debug.
    # 2. Install frontend dependencies (Node.js required)
    cd web && npm install && cd ..
 
-   # 3. Start service (Automatically starts both backend and frontend)
+   # 3. Start service (Automatically pulls up frontend and backend)
    python src/server/main.py --dev
    ```
 
 2. **Model Configuration**
-   The browser will open automatically after startup. **It is recommended to select a preset (e.g., DeepSeek/Ollama) directly in the frontend settings page**, or manually modify `static/local_config.yml`.
+   The browser will open automatically after the service starts. **It is recommended to directly select presets (e.g., DeepSeek/Ollama) on the frontend settings page**, or manually modify `static/local_config.yml`.
 
 ---
 
@@ -144,14 +143,13 @@ Suitable for developers who need to modify code or debug.
 <details>
 <summary><b>LAN / Mobile Access Configuration (Click to expand)</b></summary>
 
-> ⚠️ Mobile UI is not yet fully optimized, for trial only.
+> ⚠️ Mobile UI is not fully adapted yet, for early access only.
 
 1. **Backend Config**: Modify `static/local_config.yml`, add `host: "0.0.0.0"`.
-2. **Frontend Config**: Modify `web/vite.config.ts`, add `host: '0.0.0.0'` in the `server` block.
-3. **Access**: Ensure phone and computer are on the same WiFi, access `http://<Computer-LAN-IP>:5173`.
+2. **Frontend Config**: Modify `web/vite.config.ts`, add `host: '0.0.0.0'` in the server block.
+3. **Access Method**: Ensure phone and computer are under the same WiFi, access `http://<Computer-LAN-IP>:5173`.
 
 </details>
-
 
 ## 📊 Project Status
 
@@ -159,7 +157,7 @@ Suitable for developers who need to modify code or debug.
 
 ## ⭐ Star History
 
-If you find this project interesting, please give us a Star ⭐! It will motivate us to keep improving and adding new features.
+If you find this project interesting, please give us a Star ⭐! This will inspire us to continuously improve and add new features.
 
 <div align="center">
   <a href="https://star-history.com/#4thfever/cultivation-world-simulator&Date">
@@ -173,138 +171,137 @@ If you find this project interesting, please give us a Star ⭐! It will motivat
   <img src="https://contrib.rocks/image?repo=4thfever/cultivation-world-simulator&max=100&columns=11" />
 </a>
 
-For more details on contributions, please see [CONTRIBUTORS.md](../../CONTRIBUTORS.md).
+For more contribution details, please see [CONTRIBUTORS.md](../../CONTRIBUTORS.md).
 
+## 📋 Feature Development Progress
 
-## 📋 Development Progress
-
-### 🏗️ Foundation
-- ✅ World map basics, time, event system
+### 🏗️ Foundation System
+- ✅ Basic world map, time, event system
 - ✅ Diverse terrain types (plain, mountain, forest, desert, water, etc.)
-- ✅ Web-based frontend interface
-- ✅ Simulation framework
+- ✅ Web frontend-based display interface
+- ✅ Basic simulator framework
 - ✅ Configuration files
-- ✅ Standalone release (packaged exe)
+- ✅ Release one-click playable exe
 - ✅ Menu bar & Save & Load
 - ✅ Flexible custom LLM interface
-- ✅ Support macOS
-- ✅ Support multi-language localization
-- ✅ Start Game Page
-- ✅ BGM & Audio
+- ✅ Support Mac OS
+- ✅ Multi-language localization
+- ✅ Start game page
+- ✅ BGM & Sound effects
 
 ### 🗺️ World System
-- ✅ Basic tile mechanics
-- ✅ Normal, cultivate, city, sect regions
-- ✅ Same-tile NPC interactions
-- ✅ Qi distribution and yields
-- ✅ World event
+- ✅ Basic tile system
+- ✅ Basic region, cultivation region, city region, sect region
+- ✅ Same-tile NPC interaction
+- ✅ Qi distribution and yield design
+- ✅ World events
 - ✅ Heaven, Earth, and Mortal Rankings
 
 ### 👤 Character System
-- ✅ Core attributes
-- ✅ Cultivation realms
-- ✅ Spiritual roots
+- ✅ Character basic attributes system
+- ✅ Cultivation realms system
+- ✅ Spiritual roots system
 - ✅ Basic movement actions
-- ✅ Trait & Personality
-- ✅ Breakthrough system
-- ✅ Relationships
-- ✅ Interaction range
-- ✅ Effect system: buffs/debuffs
-- ✅ Techniques
-- ✅ Combat equipment & auxiliary equipment
-- ✅ Elixir
-- ✅ Short/Long term memory
-- ✅ Character's short and long term objectives, supporting player active setting
-- ✅ Avatar nicknames
+- ✅ Character traits and personality
+- ✅ Realm breakthrough mechanism
+- ✅ Interpersonal relationships
+- ✅ Character interaction range
+- ✅ Character Effects system: buffs/debuffs
+- ✅ Character techniques
+- ✅ Character weapons & auxiliary equipment
+- ✅ Elixirs
+- ✅ Character short and long-term memory
+- ✅ Character's short and long-term goals, supporting player active setting
+- ✅ Character nicknames
 - [ ] Life Skills
   - ✅ Forging
-  - ✅ Refine
+  - ✅ Refining
   - [ ] Planting
   - [ ] Taming
-  - [ ] Evolving skills
-- ✅ People (Mortals)
+  - [ ] Evolvable skills
+- ✅ Mortals
 - [ ] Deity Transformation Realm
 
 ### 🏛️ Organizations
-- ✅ Sect system
-  - ✅ Settings, techniques, healing, base, styles
-  - ✅ Special sect actions: Hehuan Sect (dual cultivation), Hundred Beasts Sect (beast taming)
+- ✅ Sects
+  - ✅ Settings, techniques, healing, base, conduct style
+  - ✅ Sect special actions: Hehuan Sect (dual cultivation), Hundred Beasts Sect (beast taming), etc.
   - ✅ Sect tiers
   - ✅ Orthodoxy
 - [ ] Clans
-- [ ] Court/Empire (TBD)
+- [ ] Imperial Court
 - [ ] Organization Will AI
 - [ ] Organization tasks, resources, functions
-- [ ] Inter-organization relations
+- [ ] Inter-organization relations network
 
 ### ⚡ Action System
-- ✅ Basic movement
+- ✅ Basic movement actions
 - ✅ Action execution framework
-- ✅ Defined actions
-- ✅ Long-duration actions and settlement
-  - ✅ Multi-month actions (cultivate, breakthrough, play, etc.)
-  - ✅ Auto-settlement upon completion
-- ✅ Multiplayer actions: initiator + responder flow
-- ✅ LLM actions that affect relationships
+- ✅ Defined actions with explicit rules
+- ✅ Long-duration action execution and settlement system
+  - ✅ Support multi-month sustained actions (e.g., cultivation, breakthrough, playing, etc.)
+  - ✅ Automatic settlement mechanism upon action completion
+- ✅ Multiplayer actions: action initiation and response
+- ✅ LLM actions affecting interpersonal relationships
 - ✅ Systematic action registration and runtime logic
 
 ### 🎭 Event System
-- ✅ Heaven-earth Qi fluctuations
-- ✅ World-scale events:
+- ✅ Heaven and earth Qi fluctuations
+- ✅ Large multiplayer events:
   - ✅ Auctions
   - ✅ Hidden domain exploration
   - [ ] World Martial Arts Tournament
-  - ✅ Sect teaching
+  - ✅ Sect preaching convention
 - [ ] Sudden events
   - [ ] Treasure/cave emergence
   - [ ] Natural disasters
 
-### ⚔️ Combat
-- ✅ Advantages and counters
-- ✅ Win-rate estimation system
+### ⚔️ Combat System
+- ✅ Advantages and counters relationships
+- ✅ Win rate calculation system
 
-### 🎒 Items
-- ✅ Basic items and spirit stones
-- ✅ Trading mechanics
+### 🎒 Item System
+- ✅ Basic items, spirit stones framework
+- ✅ Item trading mechanism
 
-### 🌿 Ecology
+### 🌿 Ecosystem
 - ✅ Animals and plants
-- ✅ Hunting, gathering, materials
-- [ ] Beasts/monsters
+- ✅ Hunting, gathering, materials system
+- [ ] Demonic beasts
 
-### 🤖 AI Enhancements
+### 🤖 AI Enhancement System
 - ✅ LLM interface integration
-- ✅ Character AI (rules AI + LLM AI)
-- ✅ Coroutine decision making, async, multithreaded speedups
-- ✅ Long-term planning and goal-driven behavior
-- ✅ Reactive responses to external stimuli
-- ✅ LLM-driven NPC dialogue, thinking, interaction
-- ✅ LLM-generated micro-stories
-- ✅ Use different models (max/flash) per task needs
+- ✅ Character AI system (Rules AI + LLM AI)
+- ✅ Coroutine decision-making mechanism, asynchronous running, multi-threaded acceleration of AI decisions
+- ✅ Long-term planning and goal-oriented behavior
+- ✅ Sudden action response system (immediate reaction to external stimuli)
+- ✅ LLM-driven NPC dialogue, thinking, and interaction
+- ✅ LLM generated short story fragments
+- ✅ Separately connect max/flash models based on task requirements
 - ✅ Micro-theaters
-  - ✅ Battle micro-theaters
+  - ✅ Combat micro-theaters
   - ✅ Dialogue micro-theaters
-  - ✅ Multiple writing styles
-- ✅ One-off choices (e.g., switch techniques or not)
+  - ✅ Different text styles for micro-theaters
+- ✅ One-time choices (e.g., whether to switch techniques)
 
-### 🏛️ World Lore
+### 🏛️ World Lore System
 - ✅ Inject basic world knowledge
-- ✅ User input history, dynamic generation of techniques, equipment, sects, and region info
+- ✅ Dynamic generation of techniques, equipment, sects, and regional information based on user input history
 
 ### ✨ Specials
 - ✅ Fortuitous encounters
-- ✅ Tribulations & Heart devils
+- ✅ Heavenly Tribulations & Heart Devils
 - [ ] Possession & Rebirth
 - [ ] Opportunities & Karma
-- [ ] Divination & Prophecy
+- [ ] Divination & Prophecies
 - [ ] Character Secrets & Conspiracies
 - [ ] Ascension to Upper Realm
 - [ ] Formations
 - [ ] World Secrets & World Laws
-- [ ] Gu Refining
+- [ ] Gu
 - [ ] World-ending Crisis
 - [ ] Establish Sect/Clan
 
-### 🔭 Long-term
-- [ ] Novelization/imagery/video for history and events
+### 🔭 Long-term Prospects
+- [ ] Novelization & imagery & video of history/events
 - [ ] Skill agentification, cultivators autonomously planning, analyzing, calling tools, and making decisions
