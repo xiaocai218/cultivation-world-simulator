@@ -1,10 +1,7 @@
 <!-- 语言 / Language -->
 <h3 align="center">
-  <a href="README.md">🇨🇳 中文</a> · <a href="EN_README.md">🇺🇸 English</a>
+  <a href="README.md">🇨🇳 简体中文</a> · <a href="docs/readme/ZH-TW_README.md">🇭🇰 繁體中文</a> · <a href="docs/readme/EN_README.md">🇺🇸 English</a>
 </h3>
-<blockquote align="center">
-  This project now supports English. Don't hesitate to give it a try!
-</blockquote>
 <p align="center">— ✦ —</p>
 
 # 修仙世界模拟器 (Cultivation World Simulator)
