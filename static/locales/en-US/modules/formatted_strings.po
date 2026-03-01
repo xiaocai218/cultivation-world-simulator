@@ -12,115 +12,41 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid ""
-"\n"
-"--- Current Effects Detail ---"
-msgstr ""
-"\n"
-"--- Current Effects Detail ---"
+msgid " But you already have '{current_auxiliary}'."
+msgstr " But you already have '{current_auxiliary}'."
 
-msgid "Contains elements: {elements}"
-msgstr "Contains elements: {elements}"
+msgid " But you already have '{current_weapon}'."
+msgstr " But you already have '{current_weapon}'."
 
-msgid "Identity: {identity}"
-msgstr "Identity: {identity}"
+msgid " But you already have『{auxiliary_name}』."
+msgstr " But you already have『{auxiliary_name}』."
 
-msgid "No additional effects"
-msgstr "No additional effects"
+msgid " But you already have『{weapon_name}』."
+msgstr " But you already have『{weapon_name}』."
 
-msgid "Performing {action}"
-msgstr "Performing {action}"
+msgid " This conflicts with your current technique '{current_technique}'."
+msgstr " This conflicts with your current technique '{current_technique}'."
 
-msgid "Realm: {realm}"
-msgstr "Realm: {realm}"
+msgid " This conflicts with your current technique『{technique_name}』."
+msgstr " This conflicts with your current technique『{technique_name}』."
 
-msgid "{avatar} attempted to escape from {target}: {result}"
-msgstr "{avatar} attempted to escape from {target}: {result}"
+msgid "Comprehended technique '{technique}', {exchange_result}"
+msgstr "Comprehended technique '{technique}', {exchange_result}"
 
-msgid "{avatar} attempts to escape from {target}"
-msgstr "{avatar} attempts to escape from {target}"
+msgid "Comprehended technique『{technique_name}』, {exchange_text}"
+msgstr "Comprehended technique『{technique_name}』, {exchange_text}"
 
-msgid "{avatar} attempts to tame spirit beast at {location}"
-msgstr "{avatar} attempts to tame spirit beast at {location}"
+msgid "Discovered auxiliary『{auxiliary_name}』, {exchange_text}"
+msgstr "Discovered auxiliary『{auxiliary_name}』, {exchange_text}"
 
-msgid "{avatar} begins harvesting at {location}"
-msgstr "{avatar} begins harvesting at {location}"
+msgid "Discovered weapon『{weapon_name}』, {exchange_text}"
+msgstr "Discovered weapon『{weapon_name}』, {exchange_text}"
 
-msgid "{avatar} begins hunting at {location}"
-msgstr "{avatar} begins hunting at {location}"
+msgid "Found auxiliary equipment '{auxiliary}', {exchange_result}"
+msgstr "Found auxiliary equipment '{auxiliary}', {exchange_result}"
 
-msgid "{avatar} begins leaving {region}"
-msgstr "{avatar} begins leaving {region}"
-
-msgid "{avatar} begins mining at {location}"
-msgstr "{avatar} begins mining at {location}"
-
-msgid "{avatar} begins moving away from {target}"
-msgstr "{avatar} begins moving away from {target}"
-
-msgid "{avatar} begins moving toward {direction}"
-msgstr "{avatar} begins moving toward {direction}"
-
-msgid "{avatar} begins moving toward {region}"
-msgstr "{avatar} begins moving toward {region}"
-
-msgid "{avatar} begins moving toward {target}"
-msgstr "{avatar} begins moving toward {target}"
-
-msgid "{avatar} begins nurturing {weapon}"
-msgstr "{avatar} begins nurturing {weapon}"
-
-msgid "{avatar} begins respiring at {location}, {efficiency}"
-msgstr "{avatar} begins respiring at {location}, {efficiency}"
-
-msgid "{avatar} begins resting and healing at {location}"
-msgstr "{avatar} begins resting and healing at {location}"
-
-msgid "{avatar} breakthrough result: {result}"
-msgstr "{avatar} breakthrough result: {result}"
-
-msgid "{avatar} encountered {calamity} tribulation, breakthrough {result}"
-msgstr "{avatar} encountered {calamity} tribulation, breakthrough {result}"
-
-msgid "{avatar} finished harvesting, obtained: {materials}"
-msgstr "{avatar} finished harvesting, obtained: {materials}"
-
-msgid "{avatar} finished hunting, obtained: {materials}"
-msgstr "{avatar} finished hunting, obtained: {materials}"
-
-msgid "{avatar} finished mining, obtained: {materials}"
-msgstr "{avatar} finished mining, obtained: {materials}"
-
-msgid "{avatar} finished moving toward {direction}"
-msgstr "{avatar} finished moving toward {direction}"
-
-msgid "{avatar} spent {price} spirit stones in town, {action} {item}{suffix}"
-msgstr "{avatar} spent {price} spirit stones in town, {action} {item}{suffix}"
-
-msgid "{avatar} starts {action}"
-msgstr "{avatar} starts {action}"
-
-msgid "{label}: {names}"
-msgstr "{label}: {names}"
-
-# Complex Formatted String (get_other_avatar_info)
-msgid ""
-"{name}, Nickname: {nickname}, Realm: {realm}, Relation: {relation}, Sect: "
-"{sect}, Alignment: {alignment}, Appearance: {appearance}, Technique: "
-"{technique}, Weapon: {weapon}, Auxiliary: {aux}, HP: {hp}"
-msgstr ""
-"{name}, Nickname: {nickname}, Realm: {realm}, Relation: {relation}, Sect: "
-"{sect}, Alignment: {alignment}, Appearance: {appearance}, Technique: "
-"{technique}, Weapon: {weapon}, Auxiliary: {aux}, HP: {hp}"
-
-msgid "{name}, Realm: {realm}"
-msgstr "{name}, Realm: {realm}"
-
-msgid "{region} does not sell {item}"
-msgstr "{region} does not sell {item}"
-
-msgid "{sect} {rank}"
-msgstr "{sect} {rank}"
+msgid "Found weapon '{weapon}', {exchange_result}"
+msgstr "Found weapon '{weapon}', {exchange_result}"
 
 # Formatted Strings
 msgid "{weapon_name}, Proficiency: {proficiency}%"

@@ -12,9 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Disciple"
-msgstr "Disciple"
-
 # Default Values
 msgid "None"
 msgstr "None"
@@ -24,3 +21,6 @@ msgstr "Rogue Cultivator"
 
 msgid "Unknown"
 msgstr "Unknown"
+
+msgid "east"
+msgstr "East"

@@ -12,11 +12,10 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "earth_essence"
-msgstr "土"
-
-msgid "fire_essence"
-msgstr "火"
+msgid ""
+"At the auction, {winner_name} acquired {item_name} for {price} spirit "
+"stones."
+msgstr "在拍卖会上，{winner_name}以 {price} 灵石拍下了{item_name}。"
 
 # Essence Type
 msgid "gold_essence"

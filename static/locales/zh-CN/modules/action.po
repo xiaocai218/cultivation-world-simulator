@@ -12,141 +12,22 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid " (and sold old {item} at reduced price)"
-msgstr "（并将原有的{item}折价售出）"
-
-msgid "Animal realms in current area exceed character realm"
-msgstr "当前区域的动物境界高于角色境界"
-
-msgid "Assassination failed! Both sides engaged in fierce battle."
-msgstr "暗杀失败！双方爆发激战。"
-
-msgid "Breakthrough failed"
-msgstr "突破失败"
-
-msgid "Breakthrough succeeded"
-msgstr "突破成功"
-
-msgid "Can only execute in city areas"
-msgstr "仅能在城市区域执行"
-
-msgid "Cannot resolve region: {region}"
-msgstr "无法解析区域：{region}"
-
-msgid "Cannot sell this type: {name}"
-msgstr "无法出售此类型：{name}"
-
-msgid "Casting succeeded! Obtained {realm} {label} '{item}'"
-msgstr "铸造成功！获得了{realm}{label}『{item}』"
-
-msgid "Cultivation has reached bottleneck, cannot continue cultivating"
-msgstr "修为已达瓶颈，无法继续修炼"
-
-msgid "Current HP is full"
-msgstr "当前HP已满"
-
-msgid "Current area {region} has no animals"
-msgstr "当前区域{region}没有动物"
-
-msgid "Do not possess equipment: {name}"
-msgstr "未持有装备：{name}"
-
-msgid "Do not possess item/equipment: {name}"
-msgstr "未持有物品/装备：{name}"
-
-msgid "Do not possess material: {name}"
-msgstr "未持有材料：{name}"
+msgid ""
+"Evil alignment follows the principles of survival of the fittest, "
+"prioritizing self-interest above all, disdaining rules, and venerating power"
+" and fear. Acts ruthlessly, often resorting to murder and plunder."
+msgstr "邪恶阵营的理念是：弱肉强食，以自身利益为先，蔑视规则，推崇权力与恐惧。行事狠辣，常有杀人夺宝之举。"
 
 msgid ""
-"Forbidden illegal action (missing Ten Thousand Souls Banner or permission)"
-msgstr "未被允许的非法动作（缺少万魂幡或权限）"
+"Neutral alignment follows the principles of going with the flow, seeking "
+"benefit and avoiding harm, valuing self-cultivation and balance, and not "
+"easily taking sides."
+msgstr "中立阵营的理念是：顺势而为，趋利避害，重视自度与平衡，不轻易站队。"
 
 msgid ""
-"Insufficient materials, need {cost} {realm}-tier materials, currently have "
-"{count}"
-msgstr "材料不足，需要 {cost} 个{realm}阶材料，当前拥有 {count} 个"
-
-msgid "Insufficient spirit stones"
-msgstr "灵石不足"
-
-msgid "Invalid direction: {direction}"
-msgstr "无效的方向：{direction}"
-
-msgid "Invalid realm: {realm}"
-msgstr "无效的境界：{realm}"
-
-msgid "Missing HP information"
-msgstr "缺少HP信息"
-
-msgid "Missing target parameter"
-msgstr "缺少目标参数"
-
-msgid "Must be in a City to educate people."
-msgstr "必须在城市中才能教化世人。"
-
-msgid "Not at bottleneck, cannot breakthrough"
-msgstr "当前不处于瓶颈，无法突破"
-
-msgid "Not currently in normal area"
-msgstr "当前不在普通区域"
-
-msgid "Only evil alignment can execute"
-msgstr "仅邪阵营可执行"
-
-msgid "Only righteous alignment can execute"
-msgstr "仅正阵营可执行"
-
-msgid "Refining succeeded! Obtained {realm} elixir '{item}'"
-msgstr "炼丹成功！获得了{realm}丹药『{item}』"
-
-msgid "Target does not exist"
-msgstr "目标不存在"
-
-msgid "Target is already dead"
-msgstr "目标已死亡"
-
-msgid "Target realm not specified"
-msgstr "未指定目标境界"
-
-msgid "The prosperity of {city} has increased due to {avatar}'s teachings."
-msgstr "因 {avatar} 的教化，{city} 的繁荣度提升了。"
-
-msgid "This area has no shop"
-msgstr "该区域没有商店"
-
-msgid "This cave dwelling has been occupied by {name}, cannot respire"
-msgstr "该洞府已被 {name} 占据，无法吐纳"
-
-msgid "Unknown item: {name}"
-msgstr "未知物品：{name}"
-
-msgid "Your orthodoxy does not support Body Tempering."
-msgstr "您的道统不支持打熬肉身。"
-
-msgid "Your orthodoxy does not support Confucian Education."
-msgstr "您的道统不支持教化世人。"
-
-msgid "Your orthodoxy does not support Qi Respiration."
-msgstr "您的道统不支持吐纳灵气。"
-
-msgid "Your orthodoxy does not support Zen Meditation."
-msgstr "您的道统不支持禅定。"
-
-msgid ""
-"[{region}] is another sect's territory, you are not a disciple of that sect"
-msgstr "【{region}】是其他宗门驻地，你并非该宗门弟子"
-
-msgid "action_chess"
-msgstr "下棋"
-
-msgid "action_chess_desc"
-msgstr "对弈博弈，磨砺心智。"
-
-msgid "action_chess_story_prompt"
-msgstr "两人正在对弈下棋。"
-
-msgid "action_devourpeople_short_name"
-msgstr "吞噬生灵"
+"Righteous alignment follows the principles of helping the weak, maintaining "
+"order, and vanquishing evil."
+msgstr "正义阵营的理念是：扶助弱小，维护秩序，除魔卫道。"
 
 # Action 简短名称（用于 legal_actions）
 msgid "action_dualcultivation_short_name"
@@ -325,6 +206,9 @@ msgstr "逃离对方（基于成功率判定）"
 msgid "escape_requirements"
 msgstr "无限制"
 
+msgid "evil"
+msgstr "邪"
+
 msgid "excellent progress"
 msgstr "进境颇佳"
 
@@ -440,6 +324,9 @@ msgstr "移动到某个区域"
 
 msgid "move_to_region_requirements"
 msgstr "无限制"
+
+msgid "neutral"
+msgstr "中立"
 
 # Action: NurtureWeapon
 msgid "nurture_weapon_action_name"

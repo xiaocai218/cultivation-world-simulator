@@ -12,18 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "(Choosing to replace will sell the old {label})"
-msgstr "(Choosing to replace will sell the old {label})"
-
-msgid ", keep current '{old_name}'"
-msgstr ", keep current '{old_name}'"
-
-msgid ", replace old {label} '{old_name}'"
-msgstr ", replace old {label} '{old_name}'"
-
-msgid ", sell old {label} '{old_name}'"
-msgstr ", sell old {label} '{old_name}'"
-
 # Single choice - context and options
 msgid ""
 "Current situation: {context}\n"

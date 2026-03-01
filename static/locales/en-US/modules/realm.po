@@ -12,17 +12,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Mortal"
-msgstr "Mortal"
+msgid "apprentice"
+msgstr "Apprentice"
 
-msgid "core_formation"
-msgstr "Core Formation"
+msgid "child"
+msgstr "Child"
 
-msgid "foundation_establishment"
-msgstr "Foundation Establishment"
+msgid "enemy"
+msgstr "Enemy"
 
-msgid "nascent_soul"
-msgstr "Nascent Soul"
+msgid "friend"
+msgstr "Friend"
+
+msgid "kin"
+msgstr "Kin"
+
+msgid "lovers"
+msgstr "Lovers"
+
+msgid "master"
+msgstr "Master"
 
 # Realm
 msgid "qi_refinement"

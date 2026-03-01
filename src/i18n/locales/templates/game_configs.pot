@@ -3059,7 +3059,15 @@ msgstr ""
 msgid "WORLD_INFO_ORTHODOXY_NAME"
 msgstr ""
 
-#. world_info.csv: 道、佛、儒等根本理念，决定门牌的根脚与修行起源。
+#. world_info.csv: 不同的道统有不同的修行方法。道家吐纳，武家打熬，佛家禅定，儒家教化民众。
 msgid "WORLD_INFO_ORTHODOXY_DESC"
+msgstr ""
+
+#. world_info.csv: 
+msgid "WORLD_INFO_RANKING_NAME"
+msgstr ""
+
+#. world_info.csv: 修仙界设有天地人三榜及宗门榜。天榜收录元婴期强者，地榜收录金丹期强者，人榜收录筑基期强者，宗门...
+msgid "WORLD_INFO_RANKING_DESC"
 msgstr ""
 

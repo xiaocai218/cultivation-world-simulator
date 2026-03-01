@@ -12,8 +12,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "female"
-msgstr "女"
+msgid ""
+"Event: Hidden Domain Opening\n"
+"Name: {name}\n"
+"Description: {desc}"
+msgstr ""
+"事件：祕境開啓\n"
+"名稱：{name}\n"
+"描述：{desc}"
+
+msgid "Hidden Domain {name} opened! Entry restricted to {realm} only."
+msgstr "祕境【{name}】現世！僅限{realm}修士進入。"
+
+msgid ""
+"Hidden Domain {name} opened! Entry restricted to {realm} only. Entrants: "
+"{entrants}"
+msgstr "祕境【{name}】現世！僅限{realm}修士進入。進入者：{entrants}。"
+
+msgid ""
+"Hidden Domain {name} opened! Entry restricted to {realm} only. No one "
+"entered."
+msgstr "祕境【{name}】現世！僅限{realm}修士進入。無修士進入。"
+
+msgid "Hidden Domains opened: {names}"
+msgstr "{names}"
+
+msgid "Perished in a Hidden Domain"
+msgstr "在祕境中隕落"
+
+msgid "found a treasure"
+msgstr "覓得寶物"
 
 # Gender
 msgid "male"

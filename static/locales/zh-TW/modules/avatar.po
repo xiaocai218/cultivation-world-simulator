@@ -12,63 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "A rogue cultivator {name} has appeared in the world."
-msgstr "一名散修 {name} 現身於世。"
-
-msgid "Age"
-msgstr "年齡"
-
-msgid "Alignment"
-msgstr "陣營"
-
-msgid "Appearance"
-msgstr "外貌"
-
-msgid "Auxiliary"
-msgstr "輔助裝備"
-
-msgid "Backstory"
-msgstr "身世"
-
-msgid "Backstory: {backstory}"
-msgstr "身世：{backstory}"
-
-msgid "Current Action"
-msgstr "當前動作"
-
-msgid "Current Action: {action}"
-msgstr "當前動作：{action}"
-
-msgid "Current Effects"
-msgstr "當前效果"
-
-msgid "Emotion"
-msgstr "情緒"
-
-msgid "Gender"
-msgstr "性別"
-
-msgid "HP"
-msgstr "hp"
-
-msgid "Long-term Goal"
-msgstr "長期目標"
-
-msgid "Major Events"
-msgstr "重大事件"
-
-msgid "Materials"
-msgstr "材料"
-
-msgid "Name"
-msgstr "名字"
-
-msgid "Nearby Avatars"
-msgstr "周圍角色"
-
-msgid "Nickname"
-msgstr "綽號"
-
 # ============================================================================
 # Avatar 系統
 # ============================================================================
@@ -81,6 +24,9 @@ msgstr "出身：{origin}"
 
 msgid "Orthodoxy"
 msgstr "道統"
+
+msgid "Ranking"
+msgstr "排名"
 
 msgid "Realm"
 msgstr "境界"
@@ -207,10 +153,10 @@ msgstr "你長相和氣質都很頂，常引人側目。"
 msgid "appearance_9_name"
 msgstr "絕色"
 
+msgid "daughter"
+msgstr "女"
+
 msgid ""
 "{name} has awakened their spiritual roots and embarked on the path of "
 "cultivation."
 msgstr "{name} 覺醒了靈根，踏上了修行之路。"
-
-msgid "Ranking"
-msgstr "排名"

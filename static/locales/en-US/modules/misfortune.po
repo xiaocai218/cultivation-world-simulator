@@ -12,10 +12,59 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "misfortune_dynamic_story_prompt"
+msgid ", defended {region}"
+msgstr ", defended {region}"
+
+msgid ", successfully seized {region}"
+msgstr ", successfully seized {region}"
+
+msgid "Already the owner of this cave dwelling"
+msgstr "Already the owner of this cave dwelling"
+
+msgid "Cannot drive away in wilderness"
+msgstr "Cannot drive away in wilderness"
+
+msgid "Cannot find region: {region}"
+msgstr "Cannot find region: {region}"
+
+msgid "Cannot initiate interaction with self"
+msgstr "Cannot initiate interaction with self"
+
+msgid "Elixirs cannot be gifted"
+msgstr "Elixirs cannot be gifted"
+
+msgid "Gift you {item}"
+msgstr "Gift you {item}"
+
+msgid "Insufficient item: {name}"
+msgstr "Insufficient item: {name}"
+
+msgid "Insufficient spirit stones (current: {current}, need: {need})"
+msgstr "Insufficient spirit stones (current: {current}, need: {need})"
+
+msgid "Item not equipped: {name}"
+msgstr "Item not equipped: {name}"
+
+msgid "Item not found: {name}"
+msgstr "Item not found: {name}"
+
+msgid ""
+"Level difference insufficient, need 20 levels (current gap: {diff} levels)"
 msgstr ""
-"The character's current realm is {realm}. They were just at {location} performing the action: [{action_desc}]. The final result is: [{result}].\n"
-"Task: Based on the character's realm, background, and the [action they were performing], please automatically deduce a reasonable, coherent, and creative reason for the misfortune as a bridge to explain why this action led to this result. Describe rich environmental details and the character's psychological activities. Keep the word count between 100-200 words."
+"Level difference insufficient, need 20 levels (current gap: {diff} levels)"
+
+msgid "Target is not your apprentice"
+msgstr "Target is not your apprentice"
+
+msgid ""
+"Target is not your disciple, martial grandchild, martial sibling, child, "
+"grandchild, or friend"
+msgstr ""
+"Target is not your disciple, martial grandchild, martial sibling, child, "
+"grandchild, or friend"
+
+msgid "Target not within interaction range"
+msgstr "Target not within interaction range"
 
 # Misfortune messages
 msgid "misfortune_event_base"

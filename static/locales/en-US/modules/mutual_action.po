@@ -12,59 +12,36 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid ", defended {region}"
-msgstr ", defended {region}"
+msgid ", sell old {label}『{old_name}』"
+msgstr ", sell old {label}『{old_name}』"
 
-msgid ", successfully seized {region}"
-msgstr ", successfully seized {region}"
+msgid ", {replace} old {label}『{old_name}』"
+msgstr ", {replace} old {label}『{old_name}』"
 
-msgid "Already the owner of this cave dwelling"
-msgstr "Already the owner of this cave dwelling"
+msgid "Already lovers"
+msgstr "Already lovers"
 
-msgid "Cannot drive away in wilderness"
-msgstr "Cannot drive away in wilderness"
+msgid "Already sworn siblings"
+msgstr "Already sworn siblings"
 
-msgid "Cannot find region: {region}"
-msgstr "Cannot find region: {region}"
+# MutualAction: Confess
+msgid "confess_action_name"
+msgstr "Confess"
 
-msgid "Cannot initiate interaction with self"
-msgstr "Cannot initiate interaction with self"
-
-msgid "Elixirs cannot be gifted"
-msgstr "Elixirs cannot be gifted"
-
-msgid "Gift you {item}"
-msgstr "Gift you {item}"
-
-msgid "Insufficient item: {name}"
-msgstr "Insufficient item: {name}"
-
-msgid "Insufficient spirit stones (current: {current}, need: {need})"
-msgstr "Insufficient spirit stones (current: {current}, need: {need})"
-
-msgid "Item not equipped: {name}"
-msgstr "Item not equipped: {name}"
-
-msgid "Item not found: {name}"
-msgstr "Item not found: {name}"
-
-msgid ""
-"Level difference insufficient, need 20 levels (current gap: {diff} levels)"
+msgid "confess_description"
 msgstr ""
-"Level difference insufficient, need 20 levels (current gap: {diff} levels)"
+"Confess love to a target within interaction range. If accepted, they become "
+"lovers."
 
-msgid "Target is not your apprentice"
-msgstr "Target is not your apprentice"
+msgid "confess_requirements"
+msgstr "Target within interaction range, and not already lovers."
 
-msgid ""
-"Target is not your disciple, martial grandchild, martial sibling, child, "
-"grandchild, or friend"
+msgid "confess_story_prompt"
 msgstr ""
-"Target is not your disciple, martial grandchild, martial sibling, child, "
-"grandchild, or friend"
-
-msgid "Target not within interaction range"
-msgstr "Target not within interaction range"
+"Describe the process of {initiator} confessing their love to {target}. "
+"Include their inner feelings and the atmosphere. If accepted, describe the "
+"romance of them becoming lovers. If rejected, describe the gentle refusal "
+"and regret."
 
 # MutualAction: Conversation
 msgid "conversation_action_name"
@@ -177,6 +154,21 @@ msgstr ""
 msgid "spirit stones"
 msgstr "spirit stones"
 
+msgid "swear_brotherhood_action_name"
+msgstr "Swear Brotherhood"
+
+msgid "swear_brotherhood_description"
+msgstr ""
+"Propose to become sworn siblings with a cultivator in interaction range."
+
+msgid "swear_brotherhood_requirements"
+msgstr "Target within interaction range; not already sworn siblings."
+
+msgid "swear_brotherhood_story_prompt"
+msgstr ""
+"This is a heroic swearing of brotherhood. Describe their mutual appreciation"
+" and their vow to live and die together."
+
 # MutualAction: Talk
 msgid "talk_action_name"
 msgstr "Talk"
@@ -209,11 +201,17 @@ msgstr "{initiator} attempts to seize {region} from {host}"
 msgid "{initiator} challenges {target} to spar"
 msgstr "{initiator} challenges {target} to spar"
 
+msgid "{initiator} confesses their love to {target}"
+msgstr "{initiator} confesses their love to {target}"
+
 msgid "{initiator} forced {target} to yield {region}"
 msgstr "{initiator} forced {target} to yield {region}"
 
 msgid "{initiator} initiates {action} with {target}"
 msgstr "{initiator} initiates {action} with {target}"
+
+msgid "{initiator} proposes to become sworn siblings with {target}"
+msgstr "{initiator} proposes to become sworn siblings with {target}"
 
 msgid "{initiator} successfully gifted {item} to {target}"
 msgstr "{initiator} successfully gifted {item} to {target}"
@@ -224,11 +222,23 @@ msgstr "{master} imparts cultivation knowledge to apprentice {apprentice}"
 msgid "{region} is not a cultivation area, cannot occupy"
 msgstr "{region} is not a cultivation area, cannot occupy"
 
+msgid "{target} accepted {initiator}'s confession, they became lovers"
+msgstr "{target} accepted {initiator}'s confession, they became lovers"
+
+msgid "{target} accepted {initiator}'s proposal, they became sworn siblings"
+msgstr "{target} accepted {initiator}'s proposal, they became sworn siblings"
+
 msgid "{target} accepted {initiator}'s talk invitation"
 msgstr "{target} accepted {initiator}'s talk invitation"
 
 msgid "{target} feedback to {initiator}: {feedback}"
 msgstr "{target} feedback to {initiator}: {feedback}"
+
+msgid "{target} rejected {initiator}'s confession"
+msgstr "{target} rejected {initiator}'s confession"
+
+msgid "{target} rejected {initiator}'s proposal to become sworn siblings"
+msgstr "{target} rejected {initiator}'s proposal to become sworn siblings"
 
 msgid "{target} rejected {initiator}'s talk invitation"
 msgstr "{target} rejected {initiator}'s talk invitation"
@@ -239,53 +249,3 @@ msgid ""
 msgstr ""
 "{winner} gained slight advantage in sparring, defeated {loser}. ({winner} "
 "proficiency +{w_gain}, {loser} proficiency +{l_gain})"
-
-# MutualAction: Confess
-msgid "confess_action_name"
-msgstr "Confess"
-
-msgid "confess_description"
-msgstr "Confess love to a target within interaction range. If accepted, they become lovers."
-
-msgid "confess_requirements"
-msgstr "Target within interaction range, and not already lovers."
-
-msgid "confess_story_prompt"
-msgstr "Describe the process of {initiator} confessing their love to {target}. Include their inner feelings and the atmosphere. If accepted, describe the romance of them becoming lovers. If rejected, describe the gentle refusal and regret."
-
-msgid "Already lovers"
-msgstr "Already lovers"
-
-msgid "{initiator} confesses their love to {target}"
-msgstr "{initiator} confesses their love to {target}"
-
-msgid "{target} accepted {initiator}'s confession, they became lovers"
-msgstr "{target} accepted {initiator}'s confession, they became lovers"
-
-msgid "{target} rejected {initiator}'s confession"
-msgstr "{target} rejected {initiator}'s confession"
-
-msgid "swear_brotherhood_action_name"
-msgstr "Swear Brotherhood"
-
-msgid "swear_brotherhood_description"
-msgstr "Propose to become sworn siblings with a cultivator in interaction range."
-
-msgid "swear_brotherhood_requirements"
-msgstr "Target within interaction range; not already sworn siblings."
-
-msgid "swear_brotherhood_story_prompt"
-msgstr "This is a heroic swearing of brotherhood. Describe their mutual appreciation and their vow to live and die together."
-
-msgid "{initiator} proposes to become sworn siblings with {target}"
-msgstr "{initiator} proposes to become sworn siblings with {target}"
-
-msgid "{target} accepted {initiator}'s proposal, they became sworn siblings"
-msgstr "{target} accepted {initiator}'s proposal, they became sworn siblings"
-
-msgid "{target} rejected {initiator}'s proposal to become sworn siblings"
-msgstr "{target} rejected {initiator}'s proposal to become sworn siblings"
-
-msgid "Already sworn siblings"
-msgstr "Already sworn siblings"
-

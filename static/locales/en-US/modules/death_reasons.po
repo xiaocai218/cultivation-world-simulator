@@ -12,12 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Died from severe injuries"
-msgstr "Died from severe injuries"
-
-msgid "Died of old age"
-msgstr "Died of old age"
-
 # Death reasons
 msgid "Killed by {killer}"
 msgstr "Killed by {killer}"

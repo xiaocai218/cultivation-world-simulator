@@ -12,6 +12,12 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "Died from severe injuries"
+msgstr "重伤不治身亡"
+
+msgid "Died of old age"
+msgstr "寿元耗尽而亡"
+
 # ============================================================================
 # Cultivation 系统 - 境界
 # ============================================================================

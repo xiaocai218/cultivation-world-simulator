@@ -12,62 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Retreat Bonus"
-msgstr "Retreat Insight"
-
-# ============================================================================
-# Additional Missing Translations
-# ============================================================================
-msgid "Unsupported item type: {item_type}"
-msgstr "Unsupported item type: {item_type}"
-
-msgid "retreat_action_name"
-msgstr "Retreat"
-
-msgid "retreat_death_append"
-msgstr ""
-" And exhausted the last trace of vitality during retreat, passed away."
-
-msgid "retreat_desc"
-msgstr ""
-"Retreat, to breakthrough self. Extremely risky, only for those with great "
-"perseverance."
-
-msgid "retreat_fail"
-msgstr ""
-"Retreat failed! Vitality greatly damaged, lost {years} years of lifespan."
-
-msgid "retreat_requirements"
-msgstr "No restrictions; cooldown required"
-
-msgid "retreat_start"
-msgstr "{avatar} begins retreat, breakthrough time unknown."
-
-msgid "retreat_story_prompt_fail"
-msgstr ""
-"This is about a failed retreat. Describe how the cultivator was troubled by "
-"inner demons, self-doubt, and finally suffered backlash during the retreat. "
-"No combat description needed."
-
-msgid "retreat_story_prompt_success"
-msgstr ""
-"This is about a successful retreat. Describe how the cultivator overcame "
-"loneliness, comprehended the Heavenly Dao, and finally broke through the "
-"state of mind during the retreat. No combat description needed."
-
-msgid "retreat_success"
-msgstr ""
-"Retreat successfully completed! Cultivation improved, understanding of "
-"Heavenly Dao deepened."
-
-msgid "{avatar_name} abandoned {item_name}."
-msgstr "{avatar_name} abandoned {item_name}."
-
-msgid ""
-"{avatar_name} sold newly obtained {item_name}, gained {price} spirit stones."
-msgstr ""
-"{avatar_name} sold newly obtained {item_name}, gained {price} spirit stones."
-
 # Execution Results
 msgid "{avatar_name} {done} {grade} {label}『{item_name}』."
 msgstr "{avatar_name} {done} {grade} {label}『{item_name}』."

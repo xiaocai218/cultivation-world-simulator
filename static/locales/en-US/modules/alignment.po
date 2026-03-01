@@ -12,37 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid ""
-"Evil alignment follows the principles of survival of the fittest, "
-"prioritizing self-interest above all, disdaining rules, and venerating power"
-" and fear. Acts ruthlessly, often resorting to murder and plunder."
-msgstr ""
-"Evil alignment follows the principles of survival of the fittest, "
-"prioritizing self-interest above all, disdaining rules, and venerating power"
-" and fear. Acts ruthlessly, often resorting to murder and plunder."
-
-msgid ""
-"Neutral alignment follows the principles of going with the flow, seeking "
-"benefit and avoiding harm, valuing self-cultivation and balance, and not "
-"easily taking sides."
-msgstr ""
-"Neutral alignment follows the principles of going with the flow, seeking "
-"benefit and avoiding harm, valuing self-cultivation and balance, and not "
-"easily taking sides."
-
-msgid ""
-"Righteous alignment follows the principles of helping the weak, maintaining "
-"order, and vanquishing evil."
-msgstr ""
-"Righteous alignment follows the principles of helping the weak, maintaining "
-"order, and vanquishing evil."
-
-msgid "evil"
-msgstr "Evil"
-
-msgid "neutral"
-msgstr "Neutral"
-
 # Alignment
 msgid "righteous"
 msgstr "Righteous"

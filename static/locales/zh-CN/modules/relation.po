@@ -12,29 +12,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "apprentice"
-msgstr "徒弟"
-
-msgid "child"
-msgstr "子女"
-
-msgid "enemy"
-msgstr "仇人"
-
-msgid "friend"
-msgstr "朋友"
-
 msgid "grand_child"
 msgstr "孙辈"
 
 msgid "grand_parent"
 msgstr "祖父母"
-
-msgid "kin"
-msgstr "亲属"
-
-msgid "lovers"
-msgstr "道侣"
 
 msgid "martial_grandchild"
 msgstr "徒孙"
@@ -44,9 +26,6 @@ msgstr "师祖"
 
 msgid "martial_sibling"
 msgstr "同门"
-
-msgid "master"
-msgstr "师傅"
 
 # Relation
 msgid "parent"
@@ -135,15 +114,6 @@ msgstr "；"
 msgid "relation_son"
 msgstr "儿子"
 
-msgid "relation_younger_brother"
-msgstr "弟弟"
-
-msgid "relation_younger_sister"
-msgstr "妹妹"
-
-msgid "sibling"
-msgstr "兄弟姐妹"
-
 msgid "relation_sworn_older_brother"
 msgstr "结拜大哥"
 
@@ -156,5 +126,8 @@ msgstr "结拜小弟"
 msgid "relation_sworn_younger_sister"
 msgstr "结拜小妹"
 
-msgid "sworn_sibling"
-msgstr "结拜兄弟姐妹"
+msgid "relation_younger_brother"
+msgstr "弟弟"
+
+msgid "relation_younger_sister"
+msgstr "妹妹"

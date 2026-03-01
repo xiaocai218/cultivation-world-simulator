@@ -12,8 +12,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "east"
-msgstr "东"
+msgid "Auxiliary [{name}]"
+msgstr "辅助【{name}】"
+
+msgid "Elixir [{name}]"
+msgstr "丹药【{name}】"
+
+msgid "Heaven and Earth Phenomenon"
+msgstr "天地灵机"
 
 # Direction names
 msgid "north"

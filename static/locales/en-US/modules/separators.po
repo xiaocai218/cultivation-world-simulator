@@ -15,11 +15,23 @@ msgstr ""
 msgid "comma_separator"
 msgstr ", "
 
+msgid "earth_element"
+msgstr "Earth"
+
 msgid "element_separator"
 msgstr ", "
+
+msgid "fire_element"
+msgstr "Fire"
 
 msgid "material_separator"
 msgstr ", "
 
 msgid "semicolon_separator"
 msgstr "; "
+
+msgid "sibling"
+msgstr "Sibling"
+
+msgid "sworn_sibling"
+msgstr "Sworn Sibling"

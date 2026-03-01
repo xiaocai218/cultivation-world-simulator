@@ -25,6 +25,12 @@ msgstr "決定保留原功法"
 msgid "decided to learn it"
 msgstr "決定修煉"
 
+msgid "item_verb_consume"
+msgstr "服用"
+
+msgid "item_verb_consumed"
+msgstr "服用了"
+
 msgid "{name} discarded {item_name}."
 msgstr "{name} 放棄了{item_name}。"
 

@@ -12,40 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid ""
-"\n"
-"Effect: {effect_desc}"
-msgstr ""
-"\n"
-"效果：{effect_desc}"
-
-msgid " (Distance: {months} months)"
-msgstr "（距离：{months}月）"
-
-msgid " (Owner: {owner}, {realm})"
-msgstr "（主人{owner}，{realm}）"
-
-msgid " (Resource Distribution: {species_info})"
-msgstr "（资源分布：{species_info}）"
-
-msgid " ({desc})"
-msgstr "（{desc}）"
-
-msgid " ({essence_type} Essence: {essence_density})"
-msgstr "（{essence_type}行灵气：{essence_density}）"
-
-msgid " ({store_info})"
-msgstr "（{store_info}）"
-
-msgid " | {store_info}"
-msgstr " | {store_info}"
-
-msgid "City Region (can trade)"
-msgstr "城市区域（可以交易）"
-
-msgid "City Region: {name} - {desc}{desc_part}"
-msgstr "城市区域：{name} - {desc}{desc_part}"
-
 # ============================================================================
 # Map & Region & Others (New)
 # ============================================================================
@@ -101,6 +67,11 @@ msgstr "惊讶"
 
 msgid "emotion_tired"
 msgstr "疲惫"
+
+msgid "misfortune_dynamic_story_prompt"
+msgstr ""
+"角色当前境界是{realm}。TA刚才正在{location}执行操作：【{action_desc}】。最终的结果是：【{result}】。\n"
+"任务：请你结合角色的境界、背景以及TA【正在执行的行为】，自动推理出一个合理、连贯且富有创意的倒霉事由作为桥梁，解释为什么这个行为会导致这个结果。描写丰富的环境细节和角色的心理活动，字数控制在100-200字之间。"
 
 msgid "{names} ({price} Spirit Stones)"
 msgstr "{names}（{price}灵石）"

@@ -206,7 +206,7 @@ msgstr "靈石"
 msgid "WORLD_INFO_SPIRIT_STONE_TITLE"
 msgstr "灵石"
 
-#. world_info.csv: 世界每隔數年會有一次天象變動（如靈氣潮汐），影響角色能力。
+#. world_info.csv: 世界每隔数年会有一次天象变动（如灵气潮汐），影响角色能力。
 msgid "WORLD_INFO_WORLD_QI_DESC"
 msgstr "世界每隔數年會有一次天象變動（如靈氣潮汐），影響角色能力。"
 
@@ -217,3 +217,15 @@ msgstr "天地靈機"
 #. world_info.csv: 天地灵机
 msgid "WORLD_INFO_WORLD_QI_TITLE"
 msgstr "天地灵机"
+
+#. world_info.csv: 修仙界设有天地人三榜及宗门榜。天榜收录元婴期强者，地榜收录金丹期强者，人榜收录筑基期强者，宗门榜按宗门总实力排名。
+msgid "WORLD_INFO_RANKING_DESC"
+msgstr "修仙界設有天地人三榜及宗門榜。天榜收錄元嬰期強者，地榜收錄金丹期強者，人榜收錄築基期強者，宗門榜按宗門總實力排名。"
+
+#. world_info.csv: 排行榜
+msgid "WORLD_INFO_RANKING_NAME"
+msgstr "排行榜"
+
+#. world_info.csv: 排行榜
+msgid "WORLD_INFO_RANKING_TITLE"
+msgstr "排行榜"

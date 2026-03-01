@@ -12,12 +12,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid ", keep current『{old_name}』"
-msgstr "，保留身上的『{old_name}』"
-
-msgid "Abandon『{new_name}』"
-msgstr "放棄『{new_name}』"
+msgid "Mortal"
+msgstr "凡人"
 
 # 選項 B
 msgid "Sell new {label}『{new_name}』for spirit stones, keep current status"
 msgstr "賣掉新{label}『{new_name}』換取靈石，保留現狀"
+
+msgid "core_formation"
+msgstr "金丹"
+
+msgid "foundation_establishment"
+msgstr "築基"
+
+msgid "nascent_soul"
+msgstr "元嬰"

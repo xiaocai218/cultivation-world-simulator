@@ -18,11 +18,23 @@ msgstr ""
 msgid "comma_separator"
 msgstr "，"
 
+msgid "earth_element"
+msgstr "土"
+
 msgid "element_separator"
 msgstr "、"
+
+msgid "fire_element"
+msgstr "火"
 
 msgid "material_separator"
 msgstr "，"
 
 msgid "semicolon_separator"
 msgstr "；"
+
+msgid "sibling"
+msgstr "兄弟姐妹"
+
+msgid "sworn_sibling"
+msgstr "结拜兄弟姐妹"

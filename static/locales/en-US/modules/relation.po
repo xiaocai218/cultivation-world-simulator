@@ -12,29 +12,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "apprentice"
-msgstr "Apprentice"
-
-msgid "child"
-msgstr "Child"
-
-msgid "enemy"
-msgstr "Enemy"
-
-msgid "friend"
-msgstr "Friend"
-
 msgid "grand_child"
 msgstr "Grandchild"
 
 msgid "grand_parent"
 msgstr "Grandparent"
-
-msgid "kin"
-msgstr "Kin"
-
-msgid "lovers"
-msgstr "Lovers"
 
 msgid "martial_grandchild"
 msgstr "Martial Grandchild"
@@ -44,9 +26,6 @@ msgstr "Martial Grandmaster"
 
 msgid "martial_sibling"
 msgstr "Martial Sibling"
-
-msgid "master"
-msgstr "Master"
 
 # Relation
 msgid "parent"
@@ -118,9 +97,9 @@ msgstr "[Establish Relation Rules]"
 
 msgid "relation_rule_friend_add"
 msgstr ""
-"[Friend] Any friendly daily interactions (such as chatting, dual cultivation, "
-"sparring, healing, etc.) or a single display of goodwill is enough to "
-"establish this. No substantial conflict of interest."
+"[Friend] Any friendly daily interactions (such as chatting, dual "
+"cultivation, sparring, healing, etc.) or a single display of goodwill is "
+"enough to establish this. No substantial conflict of interest."
 
 msgid "relation_rule_friend_cancel"
 msgstr ""
@@ -150,15 +129,6 @@ msgstr "; "
 msgid "relation_son"
 msgstr "Son"
 
-msgid "relation_younger_brother"
-msgstr "Younger Brother"
-
-msgid "relation_younger_sister"
-msgstr "Younger Sister"
-
-msgid "sibling"
-msgstr "Sibling"
-
 msgid "relation_sworn_older_brother"
 msgstr "Sworn Older Brother"
 
@@ -171,5 +141,8 @@ msgstr "Sworn Younger Brother"
 msgid "relation_sworn_younger_sister"
 msgstr "Sworn Younger Sister"
 
-msgid "sworn_sibling"
-msgstr "Sworn Sibling"
+msgid "relation_younger_brother"
+msgstr "Younger Brother"
+
+msgid "relation_younger_sister"
+msgstr "Younger Sister"

@@ -12,10 +12,56 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "misfortune_dynamic_story_prompt"
-msgstr ""
-"角色当前境界是{realm}。TA刚才正在{location}执行操作：【{action_desc}】。最终的结果是：【{result}】。\n"
-"任务：请你结合角色的境界、背景以及TA【正在执行的行为】，自动推理出一个合理、连贯且富有创意的倒霉事由作为桥梁，解释为什么这个行为会导致这个结果。描写丰富的环境细节和角色的心理活动，字数控制在100-200字之间。"
+msgid ", defended {region}"
+msgstr "，守住了 {region}"
+
+msgid ", successfully seized {region}"
+msgstr "，成功夺取了 {region}"
+
+msgid "Already the owner of this cave dwelling"
+msgstr "已经是该洞府的主人了"
+
+msgid "Cannot drive away in wilderness"
+msgstr "荒野之中无法驱赶"
+
+msgid "Cannot find region: {region}"
+msgstr "无法找到区域：{region}"
+
+msgid "Cannot initiate interaction with self"
+msgstr "不能对自己发起互动"
+
+msgid "Elixirs cannot be gifted"
+msgstr "丹药不可赠送"
+
+msgid "Gift you {item}"
+msgstr "向你赠送 {item}"
+
+msgid "Insufficient item: {name}"
+msgstr "物品不足：{name}"
+
+msgid "Insufficient spirit stones (current: {current}, need: {need})"
+msgstr "灵石不足（当前：{current}，需要：{need}）"
+
+msgid "Item not equipped: {name}"
+msgstr "未装备该物品：{name}"
+
+msgid "Item not found: {name}"
+msgstr "未找到物品：{name}"
+
+msgid ""
+"Level difference insufficient, need 20 levels (current gap: {diff} levels)"
+msgstr "等级差不足20级（当前差距：{diff}级）"
+
+msgid "Target is not your apprentice"
+msgstr "目标不是自己的徒弟"
+
+msgid ""
+"Target is not your disciple, martial grandchild, martial sibling, child, "
+"grandchild, or friend"
+msgstr "目标不是你的徒弟、徒孙、同门、子女、孙辈或朋友"
+
+msgid "Target not within interaction range"
+msgstr "目标不在交互范围内"
 
 # Misfortune messages
 msgid "misfortune_event_base"

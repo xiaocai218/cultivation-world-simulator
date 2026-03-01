@@ -12,12 +12,18 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid ", keep current『{old_name}』"
-msgstr ", keep current『{old_name}』"
-
-msgid "Abandon『{new_name}』"
-msgstr "Abandon『{new_name}』"
+msgid "Mortal"
+msgstr "Mortal"
 
 # Option B
 msgid "Sell new {label}『{new_name}』for spirit stones, keep current status"
 msgstr "Sell new {label}『{new_name}』for spirit stones, keep current status"
+
+msgid "core_formation"
+msgstr "Core Formation"
+
+msgid "foundation_establishment"
+msgstr "Foundation Establishment"
+
+msgid "nascent_soul"
+msgstr "Nascent Soul"

@@ -12,12 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "earth_element"
-msgstr "土"
-
-msgid "fire_element"
-msgstr "火"
-
 # Root Element
 msgid "gold_element"
 msgstr "金"

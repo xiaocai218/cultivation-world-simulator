@@ -18,6 +18,18 @@ msgstr ""
 msgid " Effect: {effect_desc}"
 msgstr " Effect: {effect_desc}"
 
+msgid "Cave Dwelling"
+msgstr "Cave Dwelling"
+
+msgid "City Region"
+msgstr "City Region"
+
+msgid "Normal Region"
+msgstr "Normal Region"
+
+msgid "Ruins"
+msgstr "Ruins"
+
 msgid "dark_attribute"
 msgstr "Dark"
 

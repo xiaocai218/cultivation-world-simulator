@@ -12,6 +12,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "earth_essence"
+msgstr "Earth"
+
 # ============================================================================
 # Elixir System - Elixirs
 # ============================================================================
@@ -26,3 +29,6 @@ msgstr "Heal"
 
 msgid "elixir_type_lifespan"
 msgstr "Lifespan"
+
+msgid "fire_essence"
+msgstr "Fire"

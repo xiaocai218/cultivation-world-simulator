@@ -12,63 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "A rogue cultivator {name} has appeared in the world."
-msgstr "A rogue cultivator {name} has appeared in the world."
-
-msgid "Age"
-msgstr "Age"
-
-msgid "Alignment"
-msgstr "Alignment"
-
-msgid "Appearance"
-msgstr "Appearance"
-
-msgid "Auxiliary"
-msgstr "Auxiliary"
-
-msgid "Backstory"
-msgstr "Backstory"
-
-msgid "Backstory: {backstory}"
-msgstr "Backstory: {backstory}"
-
-msgid "Current Action"
-msgstr "Current Action"
-
-msgid "Current Action: {action}"
-msgstr "Current Action: {action}"
-
-msgid "Current Effects"
-msgstr "Current Effects"
-
-msgid "Emotion"
-msgstr "Emotion"
-
-msgid "Gender"
-msgstr "Gender"
-
-msgid "HP"
-msgstr "HP"
-
-msgid "Long-term Goal"
-msgstr "Long-term Goal"
-
-msgid "Major Events"
-msgstr "Major Events"
-
-msgid "Materials"
-msgstr "Materials"
-
-msgid "Name"
-msgstr "Name"
-
-msgid "Nearby Avatars"
-msgstr "Nearby Avatars"
-
-msgid "Nickname"
-msgstr "Nickname"
-
 # ============================================================================
 # Avatar System
 # ============================================================================
@@ -81,6 +24,9 @@ msgstr "Origin: {origin}"
 
 msgid "Orthodoxy"
 msgstr "Orthodoxy"
+
+msgid "Ranking"
+msgstr "Ranking"
 
 msgid "Realm"
 msgstr "Realm"
@@ -208,12 +154,12 @@ msgstr "Both your looks and aura are top-tier, often attracting side glances."
 msgid "appearance_9_name"
 msgstr "Exquisite"
 
+msgid "daughter"
+msgstr "daughter"
+
 msgid ""
 "{name} has awakened their spiritual roots and embarked on the path of "
 "cultivation."
 msgstr ""
 "{name} has awakened their spiritual roots and embarked on the path of "
 "cultivation."
-
-msgid "Ranking"
-msgstr "Ranking"

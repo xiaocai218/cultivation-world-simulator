@@ -12,18 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Cave Dwelling"
-msgstr "洞府"
-
-msgid "City Region"
-msgstr "城市区域"
-
-msgid "Normal Region"
-msgstr "普通区域"
-
-msgid "Ruins"
-msgstr "遗迹"
-
 # ============================================================================
 # Frontend UI Translations
 # ============================================================================

@@ -1,0 +1,153 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: cultivation-world-simulator 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-20 00:00+0000\n"
+"PO-Revision-Date: 2024-01-20 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: en-US\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+msgid " (and sold old {item} at reduced price)"
+msgstr " (and sold old {item} at reduced price)"
+
+msgid "Animal realms in current area exceed character realm"
+msgstr "Animal realms in current area exceed character realm"
+
+msgid "Assassination failed! Both sides engaged in fierce battle."
+msgstr "Assassination failed! Both sides engaged in fierce battle."
+
+msgid "Breakthrough failed"
+msgstr "Breakthrough failed"
+
+msgid "Breakthrough succeeded"
+msgstr "Breakthrough succeeded"
+
+msgid "Can only execute in city areas"
+msgstr "Can only execute in city areas"
+
+msgid "Cannot resolve region: {region}"
+msgstr "Cannot resolve region: {region}"
+
+msgid "Cannot sell this type: {name}"
+msgstr "Cannot sell this type: {name}"
+
+msgid "Casting succeeded! Obtained {realm} {label} '{item}'"
+msgstr "Casting succeeded! Obtained {realm} {label} '{item}'"
+
+msgid "Cultivation has reached bottleneck, cannot continue cultivating"
+msgstr "Cultivation has reached bottleneck, cannot continue cultivating"
+
+msgid "Current HP is full"
+msgstr "Current HP is full"
+
+msgid "Current area {region} has no animals"
+msgstr "Current area {region} has no animals"
+
+msgid "Do not possess equipment: {name}"
+msgstr "Do not possess equipment: {name}"
+
+msgid "Do not possess item/equipment: {name}"
+msgstr "Do not possess item/equipment: {name}"
+
+msgid "Do not possess material: {name}"
+msgstr "Do not possess material: {name}"
+
+msgid ""
+"Forbidden illegal action (missing Ten Thousand Souls Banner or permission)"
+msgstr ""
+"Forbidden illegal action (missing Ten Thousand Souls Banner or permission)"
+
+msgid ""
+"Insufficient materials, need {cost} {realm}-tier materials, currently have "
+"{count}"
+msgstr ""
+"Insufficient materials, need {cost} {realm}-tier materials, currently have "
+"{count}"
+
+msgid "Insufficient spirit stones"
+msgstr "Insufficient spirit stones"
+
+msgid "Invalid direction: {direction}"
+msgstr "Invalid direction: {direction}"
+
+msgid "Invalid realm: {realm}"
+msgstr "Invalid realm: {realm}"
+
+msgid "Missing HP information"
+msgstr "Missing HP information"
+
+msgid "Missing target parameter"
+msgstr "Missing target parameter"
+
+msgid "Must be in a City to educate people."
+msgstr "Must be in a City to educate people."
+
+msgid "Not at bottleneck, cannot breakthrough"
+msgstr "Not at bottleneck, cannot breakthrough"
+
+msgid "Not currently in normal area"
+msgstr "Not currently in normal area"
+
+msgid "Only evil alignment can execute"
+msgstr "Only evil alignment can execute"
+
+msgid "Only righteous alignment can execute"
+msgstr "Only righteous alignment can execute"
+
+msgid "Refining succeeded! Obtained {realm} elixir '{item}'"
+msgstr "Refining succeeded! Obtained {realm} elixir '{item}'"
+
+msgid "Target does not exist"
+msgstr "Target does not exist"
+
+msgid "Target is already dead"
+msgstr "Target is already dead"
+
+msgid "Target realm not specified"
+msgstr "Target realm not specified"
+
+msgid "The prosperity of {city} has increased due to {avatar}'s teachings."
+msgstr "The prosperity of {city} has increased due to {avatar}'s teachings."
+
+msgid "This area has no shop"
+msgstr "This area has no shop"
+
+msgid "This cave dwelling has been occupied by {name}, cannot respire"
+msgstr "This cave dwelling has been occupied by {name}, cannot respire"
+
+msgid "Unknown item: {name}"
+msgstr "Unknown item: {name}"
+
+msgid "Your orthodoxy does not support Body Tempering."
+msgstr "Your orthodoxy does not support Body Tempering."
+
+msgid "Your orthodoxy does not support Confucian Education."
+msgstr "Your orthodoxy does not support Confucian Education."
+
+msgid "Your orthodoxy does not support Qi Respiration."
+msgstr "Your orthodoxy does not support Qi Respiration."
+
+msgid "Your orthodoxy does not support Zen Meditation."
+msgstr "Your orthodoxy does not support Zen Meditation."
+
+msgid ""
+"[{region}] is another sect's territory, you are not a disciple of that sect"
+msgstr ""
+"[{region}] is another sect's territory, you are not a disciple of that sect"
+
+msgid "action_chess"
+msgstr "Chess"
+
+msgid "action_chess_desc"
+msgstr "Play chess to sharpen your mind."
+
+msgid "action_chess_story_prompt"
+msgstr "Two people are playing chess."
+
+msgid "action_devourpeople_short_name"
+msgstr "Devour People"

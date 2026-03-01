@@ -12,28 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid ""
-"\n"
-"【Related Avatars Information】"
-msgstr ""
-"\n"
-"【Related Avatars Information】"
-
-msgid "auxiliary"
-msgstr "auxiliary equipment"
-
-msgid "elixir"
-msgstr "elixir"
-
-msgid "item_label_auxiliary"
-msgstr "Auxiliary"
-
-msgid "item_label_elixir"
-msgstr "Elixir"
-
-msgid "item_label_technique"
-msgstr "Technique"
-
 # Item Labels
 msgid "item_label_weapon"
 msgstr "Weapon"

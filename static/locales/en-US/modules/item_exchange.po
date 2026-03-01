@@ -25,6 +25,12 @@ msgstr "decided to keep current technique"
 msgid "decided to learn it"
 msgstr "decided to learn it"
 
+msgid "item_verb_consume"
+msgstr "consume"
+
+msgid "item_verb_consumed"
+msgstr "consumed"
+
 msgid "{name} discarded {item_name}."
 msgstr "{name} discarded {item_name}."
 

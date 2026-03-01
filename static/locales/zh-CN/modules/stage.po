@@ -12,6 +12,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid ""
+"Competition: In the auction for {item_name}, {winner_name} outbid "
+"{runner_up_name} (bid: {bid})."
+msgstr "竞争：在{item_name}的竞拍中，{winner_name}力压{runner_up_name}（出价{bid}）。"
+
 # Stage
 msgid "early_stage"
 msgstr "前期"

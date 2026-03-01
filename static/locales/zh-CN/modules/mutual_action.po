@@ -12,56 +12,31 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid ", defended {region}"
-msgstr "，守住了 {region}"
+msgid ", sell old {label}『{old_name}』"
+msgstr "，卖掉旧{label}『{old_name}』"
 
-msgid ", successfully seized {region}"
-msgstr "，成功夺取了 {region}"
+msgid ", {replace} old {label}『{old_name}』"
+msgstr "，{replace}旧{label}『{old_name}』"
 
-msgid "Already the owner of this cave dwelling"
-msgstr "已经是该洞府的主人了"
+msgid "Already lovers"
+msgstr "已经是道侣了"
 
-msgid "Cannot drive away in wilderness"
-msgstr "荒野之中无法驱赶"
+msgid "Already sworn siblings"
+msgstr "已经是结拜兄弟/姐妹"
 
-msgid "Cannot find region: {region}"
-msgstr "无法找到区域：{region}"
+# MutualAction: Confess
+msgid "confess_action_name"
+msgstr "表白"
 
-msgid "Cannot initiate interaction with self"
-msgstr "不能对自己发起互动"
+msgid "confess_description"
+msgstr "向交互范围内的修士表白，若对方接受则结为道侣。"
 
-msgid "Elixirs cannot be gifted"
-msgstr "丹药不可赠送"
+msgid "confess_requirements"
+msgstr "目标在交互范围内，且当前非道侣关系。"
 
-msgid "Gift you {item}"
-msgstr "向你赠送 {item}"
-
-msgid "Insufficient item: {name}"
-msgstr "物品不足：{name}"
-
-msgid "Insufficient spirit stones (current: {current}, need: {need})"
-msgstr "灵石不足（当前：{current}，需要：{need}）"
-
-msgid "Item not equipped: {name}"
-msgstr "未装备该物品：{name}"
-
-msgid "Item not found: {name}"
-msgstr "未找到物品：{name}"
-
-msgid ""
-"Level difference insufficient, need 20 levels (current gap: {diff} levels)"
-msgstr "等级差不足20级（当前差距：{diff}级）"
-
-msgid "Target is not your apprentice"
-msgstr "目标不是自己的徒弟"
-
-msgid ""
-"Target is not your disciple, martial grandchild, martial sibling, child, "
-"grandchild, or friend"
-msgstr "目标不是你的徒弟、徒孙、同门、子女、孙辈或朋友"
-
-msgid "Target not within interaction range"
-msgstr "目标不在交互范围内"
+msgid "confess_story_prompt"
+msgstr ""
+"描述{initiator}向{target}表白的过程，包含内心的悸动、场景的氛围。如果接受，则描绘两情相悦结为道侣的浪漫；如果拒绝，则描绘婉拒与遗憾。"
 
 # MutualAction: Conversation
 msgid "conversation_action_name"
@@ -155,6 +130,18 @@ msgstr "这是两人之间的友好切磋，点到为止，没有真正的伤害
 msgid "spirit stones"
 msgstr "灵石"
 
+msgid "swear_brotherhood_action_name"
+msgstr "结拜"
+
+msgid "swear_brotherhood_description"
+msgstr "向交互范围内的修士发起结拜，若对方接受则结为义结金兰。"
+
+msgid "swear_brotherhood_requirements"
+msgstr "目标在交互范围内；对方不是你的结拜兄弟/姐妹"
+
+msgid "swear_brotherhood_story_prompt"
+msgstr "这是一场豪气干云的结拜，重点描写两人意气相投、誓言同生共死的场景。"
+
 # MutualAction: Talk
 msgid "talk_action_name"
 msgstr "攀谈"
@@ -185,11 +172,17 @@ msgstr "{initiator} 对 {host} 的 {region} 发起抢夺"
 msgid "{initiator} challenges {target} to spar"
 msgstr "{initiator} 向 {target} 发起切磋"
 
+msgid "{initiator} confesses their love to {target}"
+msgstr "{initiator}向{target}深情表白"
+
 msgid "{initiator} forced {target} to yield {region}"
 msgstr "{initiator} 逼迫 {target} 让出了 {region}"
 
 msgid "{initiator} initiates {action} with {target}"
 msgstr "{initiator} 对 {target} 发起 {action}"
+
+msgid "{initiator} proposes to become sworn siblings with {target}"
+msgstr "{initiator}向{target}提出结拜为义结金兰"
 
 msgid "{initiator} successfully gifted {item} to {target}"
 msgstr "{initiator} 成功赠送了 {item} 给 {target}"
@@ -200,11 +193,23 @@ msgstr "{master} 向徒弟 {apprentice} 传道授业"
 msgid "{region} is not a cultivation area, cannot occupy"
 msgstr "{region} 不是修炼区域，无法占据"
 
+msgid "{target} accepted {initiator}'s confession, they became lovers"
+msgstr "{target}接受了{initiator}的表白，两人结为道侣"
+
+msgid "{target} accepted {initiator}'s proposal, they became sworn siblings"
+msgstr "{target}接受了{initiator}的提议，两人结为义结金兰"
+
 msgid "{target} accepted {initiator}'s talk invitation"
 msgstr "{target} 接受了 {initiator} 的攀谈"
 
 msgid "{target} feedback to {initiator}: {feedback}"
 msgstr "{target} 对 {initiator} 的反馈：{feedback}"
+
+msgid "{target} rejected {initiator}'s confession"
+msgstr "{target}婉拒了{initiator}的表白"
+
+msgid "{target} rejected {initiator}'s proposal to become sworn siblings"
+msgstr "{target}拒绝了{initiator}的结拜提议"
 
 msgid "{target} rejected {initiator}'s talk invitation"
 msgstr "{target} 拒绝了 {initiator} 的攀谈"
@@ -214,53 +219,3 @@ msgid ""
 "proficiency +{w_gain}, {loser} proficiency +{l_gain})"
 msgstr ""
 "{winner} 在切磋中略胜一筹，战胜了 {loser}。（{winner} 熟练度+{w_gain}，{loser} 熟练度+{l_gain}）"
-
-# MutualAction: Confess
-msgid "confess_action_name"
-msgstr "表白"
-
-msgid "confess_description"
-msgstr "向交互范围内的修士表白，若对方接受则结为道侣。"
-
-msgid "confess_requirements"
-msgstr "目标在交互范围内，且当前非道侣关系。"
-
-msgid "confess_story_prompt"
-msgstr "描述{initiator}向{target}表白的过程，包含内心的悸动、场景的氛围。如果接受，则描绘两情相悦结为道侣的浪漫；如果拒绝，则描绘婉拒与遗憾。"
-
-msgid "Already lovers"
-msgstr "已经是道侣了"
-
-msgid "{initiator} confesses their love to {target}"
-msgstr "{initiator}向{target}深情表白"
-
-msgid "{target} accepted {initiator}'s confession, they became lovers"
-msgstr "{target}接受了{initiator}的表白，两人结为道侣"
-
-msgid "{target} rejected {initiator}'s confession"
-msgstr "{target}婉拒了{initiator}的表白"
-
-msgid "swear_brotherhood_action_name"
-msgstr "结拜"
-
-msgid "swear_brotherhood_description"
-msgstr "向交互范围内的修士发起结拜，若对方接受则结为义结金兰。"
-
-msgid "swear_brotherhood_requirements"
-msgstr "目标在交互范围内；对方不是你的结拜兄弟/姐妹"
-
-msgid "swear_brotherhood_story_prompt"
-msgstr "这是一场豪气干云的结拜，重点描写两人意气相投、誓言同生共死的场景。"
-
-msgid "{initiator} proposes to become sworn siblings with {target}"
-msgstr "{initiator}向{target}提出结拜为义结金兰"
-
-msgid "{target} accepted {initiator}'s proposal, they became sworn siblings"
-msgstr "{target}接受了{initiator}的提议，两人结为义结金兰"
-
-msgid "{target} rejected {initiator}'s proposal to become sworn siblings"
-msgstr "{target}拒绝了{initiator}的结拜提议"
-
-msgid "Already sworn siblings"
-msgstr "已经是结拜兄弟/姐妹"
-

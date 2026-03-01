@@ -12,6 +12,9 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+msgid "earth_essence"
+msgstr "土"
+
 # ============================================================================
 # Elixir 系统 - 丹药
 # ============================================================================
@@ -26,3 +29,6 @@ msgstr "疗伤"
 
 msgid "elixir_type_lifespan"
 msgstr "延寿"
+
+msgid "fire_essence"
+msgstr "火"

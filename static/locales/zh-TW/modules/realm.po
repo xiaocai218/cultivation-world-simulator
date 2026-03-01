@@ -12,17 +12,26 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Mortal"
-msgstr "凡人"
+msgid "apprentice"
+msgstr "徒弟"
 
-msgid "core_formation"
-msgstr "金丹"
+msgid "child"
+msgstr "子女"
 
-msgid "foundation_establishment"
-msgstr "築基"
+msgid "enemy"
+msgstr "仇人"
 
-msgid "nascent_soul"
-msgstr "元嬰"
+msgid "friend"
+msgstr "朋友"
+
+msgid "kin"
+msgstr "親屬"
+
+msgid "lovers"
+msgstr "道侶"
+
+msgid "master"
+msgstr "師傅"
 
 # Realm
 msgid "qi_refinement"

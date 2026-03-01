@@ -12,28 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid ""
-"\n"
-"【Related Avatars Information】"
-msgstr ""
-"\n"
-"【相關角色信息】"
-
-msgid "auxiliary"
-msgstr "輔助裝備"
-
-msgid "elixir"
-msgstr "丹藥"
-
-msgid "item_label_auxiliary"
-msgstr "輔助裝備"
-
-msgid "item_label_elixir"
-msgstr "丹藥"
-
-msgid "item_label_technique"
-msgstr "功法"
-
 # 物品標籤
 msgid "item_label_weapon"
 msgstr "兵器"

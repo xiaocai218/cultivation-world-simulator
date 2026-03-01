@@ -12,9 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Disciple"
-msgstr "弟子"
-
 # 默認值
 msgid "None"
 msgstr "無"
@@ -24,3 +21,6 @@ msgstr "散修"
 
 msgid "Unknown"
 msgstr "未知"
+
+msgid "east"
+msgstr "東"

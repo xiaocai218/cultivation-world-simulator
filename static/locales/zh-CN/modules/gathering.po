@@ -22,6 +22,9 @@ msgstr "拍卖会正在举行..."
 msgid "epiphany_event_desc"
 msgstr "特殊事件：弟子 {names} 在听道中顿悟，直接学会了 {tech_name}！\n"
 
+msgid "female"
+msgstr "女"
+
 msgid "sect_teaching_context_prompt"
 msgstr ""
 "宗门：{sect_name}\n"

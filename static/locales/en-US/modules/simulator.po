@@ -12,22 +12,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "phenomenon_change"
-msgstr ""
-"{old_name} dissipates, celestial phenomena reappear! {new_name}: {new_desc}."
+msgid "(Choosing to replace will sell the old {label})"
+msgstr "(Choosing to replace will sell the old {label})"
 
-msgid "world_creation_phenomenon"
-msgstr "The world is born, celestial phenomena descend! {name}: {desc}."
+msgid ", keep current '{old_name}'"
+msgstr ", keep current '{old_name}'"
 
-msgid ""
-"{avatar_name} deliberated and redefined their long-term objective: "
-"{objective}"
-msgstr ""
-"{avatar_name} deliberated and redefined their long-term objective: "
-"{objective}"
+msgid ", replace old {label} '{old_name}'"
+msgstr ", replace old {label} '{old_name}'"
 
-msgid "{avatar_name} determined their long-term objective: {objective}"
-msgstr "{avatar_name} determined their long-term objective: {objective}"
+msgid ", sell old {label} '{old_name}'"
+msgstr ", sell old {label} '{old_name}'"
 
 # ============================================================================
 # Simulator & Event Translations

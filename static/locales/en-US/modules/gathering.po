@@ -24,6 +24,9 @@ msgstr ""
 "Special Event: Disciples {names} had an epiphany during the lecture and "
 "directly learned {tech_name}!\n"
 
+msgid "female"
+msgstr "Female"
+
 msgid "sect_teaching_context_prompt"
 msgstr ""
 "Sect: {sect_name}\n"

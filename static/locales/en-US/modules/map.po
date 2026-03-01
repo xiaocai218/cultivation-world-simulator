@@ -12,40 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid ""
-"\n"
-"Effect: {effect_desc}"
-msgstr ""
-"\n"
-"Effect: {effect_desc}"
-
-msgid " (Distance: {months} months)"
-msgstr " (Distance: {months} months)"
-
-msgid " (Owner: {owner}, {realm})"
-msgstr " (Owner: {owner}, {realm})"
-
-msgid " (Resource Distribution: {species_info})"
-msgstr " (Resource Distribution: {species_info})"
-
-msgid " ({desc})"
-msgstr " ({desc})"
-
-msgid " ({essence_type} Essence: {essence_density})"
-msgstr " ({essence_type} Essence: {essence_density})"
-
-msgid " ({store_info})"
-msgstr " ({store_info})"
-
-msgid " | {store_info}"
-msgstr " | {store_info}"
-
-msgid "City Region (can trade)"
-msgstr "City Region (can trade)"
-
-msgid "City Region: {name} - {desc}{desc_part}"
-msgstr "City Region: {name} - {desc}{desc_part}"
-
 # ============================================================================
 # Map & Region & Others (New)
 # ============================================================================
@@ -104,6 +70,11 @@ msgstr "Surprised"
 
 msgid "emotion_tired"
 msgstr "Tired"
+
+msgid "misfortune_dynamic_story_prompt"
+msgstr ""
+"The character's current realm is {realm}. They were just at {location} performing the action: [{action_desc}]. The final result is: [{result}].\n"
+"Task: Based on the character's realm, background, and the [action they were performing], please automatically deduce a reasonable, coherent, and creative reason for the misfortune as a bridge to explain why this action led to this result. Describe rich environmental details and the character's psychological activities. Keep the word count between 100-200 words."
 
 msgid "{names} ({price} Spirit Stones)"
 msgstr "{names} ({price} Spirit Stones)"

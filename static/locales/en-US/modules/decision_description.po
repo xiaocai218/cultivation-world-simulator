@@ -12,13 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid ""
-"\n"
-"(Selecting {replace} will sell old {label})"
-msgstr ""
-"\n"
-"(Selecting {replace} will sell old {label})"
-
 # Decision Description
 msgid ""
 "Current {label}: {old_info}\n"
@@ -26,3 +19,6 @@ msgid ""
 msgstr ""
 "Current {label}: {old_info}\n"
 "{new_desc}"
+
+msgid "Disciple"
+msgstr "Disciple"

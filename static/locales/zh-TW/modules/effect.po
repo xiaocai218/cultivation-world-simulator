@@ -12,15 +12,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "Auxiliary [{name}]"
-msgstr "輔助【{name}】"
-
-msgid "Elixir [{name}]"
-msgstr "丹藥【{name}】"
-
-msgid "Heaven and Earth Phenomenon"
-msgstr "天地靈機"
-
 # Effect 來源標籤
 msgid "Sect [{name}]"
 msgstr "宗門【{name}】"

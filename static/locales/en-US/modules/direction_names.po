@@ -12,8 +12,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "east"
-msgstr "East"
+msgid "Auxiliary [{name}]"
+msgstr "Auxiliary [{name}]"
+
+msgid "Elixir [{name}]"
+msgstr "Elixir [{name}]"
+
+msgid "Heaven and Earth Phenomenon"
+msgstr "Heaven and Earth Phenomenon"
 
 # Direction names
 msgid "north"

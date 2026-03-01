@@ -17,3 +17,4 @@ title,title_id,name_id,desc_id,desc
 拍卖会,WORLD_INFO_AUCTION_TITLE,WORLD_INFO_AUCTION_NAME,WORLD_INFO_AUCTION_DESC,每隔一段不确定的时间会有神秘人组织的拍卖会，或许有好货出售。
 秘境,WORLD_INFO_SECRET_REALM_TITLE,WORLD_INFO_SECRET_REALM_NAME,WORLD_INFO_SECRET_REALM_DESC,每隔数年会有秘境开启。进入秘境可能遭遇凶险，也可能获得高阶法宝和功法。
 道统,WORLD_INFO_ORTHODOXY_TITLE,WORLD_INFO_ORTHODOXY_NAME,WORLD_INFO_ORTHODOXY_DESC,不同的道统有不同的修行方法。道家吐纳，武家打熬，佛家禅定，儒家教化民众。
+排行榜,WORLD_INFO_RANKING_TITLE,WORLD_INFO_RANKING_NAME,WORLD_INFO_RANKING_DESC,修仙界设有天地人三榜及宗门榜。天榜收录元婴期强者，地榜收录金丹期强者，人榜收录筑基期强者，宗门榜按宗门总实力排名。

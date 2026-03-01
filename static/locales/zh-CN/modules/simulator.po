@@ -12,19 +12,17 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid "phenomenon_change"
-msgstr "{old_name}消散，天地异象再现！{new_name}：{new_desc}。"
+msgid "(Choosing to replace will sell the old {label})"
+msgstr "（选择替换将卖出旧{label}）"
 
-msgid "world_creation_phenomenon"
-msgstr "世界初开，天降异象！{name}：{desc}。"
+msgid ", keep current '{old_name}'"
+msgstr "，保留身上的『{old_name}』"
 
-msgid ""
-"{avatar_name} deliberated and redefined their long-term objective: "
-"{objective}"
-msgstr "{avatar_name} 经过深思熟虑，重新确定了自己的长期目标：{objective}"
+msgid ", replace old {label} '{old_name}'"
+msgstr "，替换旧{label}『{old_name}』"
 
-msgid "{avatar_name} determined their long-term objective: {objective}"
-msgstr "{avatar_name} 确定了自己的长期目标：{objective}"
+msgid ", sell old {label} '{old_name}'"
+msgstr "，卖掉旧{label}『{old_name}』"
 
 # ============================================================================
 # Simulator & Event Translations

@@ -12,145 +12,30 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-msgid " (and sold old {item} at reduced price)"
-msgstr " (and sold old {item} at reduced price)"
-
-msgid "Animal realms in current area exceed character realm"
-msgstr "Animal realms in current area exceed character realm"
-
-msgid "Assassination failed! Both sides engaged in fierce battle."
-msgstr "Assassination failed! Both sides engaged in fierce battle."
-
-msgid "Breakthrough failed"
-msgstr "Breakthrough failed"
-
-msgid "Breakthrough succeeded"
-msgstr "Breakthrough succeeded"
-
-msgid "Can only execute in city areas"
-msgstr "Can only execute in city areas"
-
-msgid "Cannot resolve region: {region}"
-msgstr "Cannot resolve region: {region}"
-
-msgid "Cannot sell this type: {name}"
-msgstr "Cannot sell this type: {name}"
-
-msgid "Casting succeeded! Obtained {realm} {label} '{item}'"
-msgstr "Casting succeeded! Obtained {realm} {label} '{item}'"
-
-msgid "Cultivation has reached bottleneck, cannot continue cultivating"
-msgstr "Cultivation has reached bottleneck, cannot continue cultivating"
-
-msgid "Current HP is full"
-msgstr "Current HP is full"
-
-msgid "Current area {region} has no animals"
-msgstr "Current area {region} has no animals"
-
-msgid "Do not possess equipment: {name}"
-msgstr "Do not possess equipment: {name}"
-
-msgid "Do not possess item/equipment: {name}"
-msgstr "Do not possess item/equipment: {name}"
-
-msgid "Do not possess material: {name}"
-msgstr "Do not possess material: {name}"
+msgid ""
+"Evil alignment follows the principles of survival of the fittest, "
+"prioritizing self-interest above all, disdaining rules, and venerating power"
+" and fear. Acts ruthlessly, often resorting to murder and plunder."
+msgstr ""
+"Evil alignment follows the principles of survival of the fittest, "
+"prioritizing self-interest above all, disdaining rules, and venerating power"
+" and fear. Acts ruthlessly, often resorting to murder and plunder."
 
 msgid ""
-"Forbidden illegal action (missing Ten Thousand Souls Banner or permission)"
+"Neutral alignment follows the principles of going with the flow, seeking "
+"benefit and avoiding harm, valuing self-cultivation and balance, and not "
+"easily taking sides."
 msgstr ""
-"Forbidden illegal action (missing Ten Thousand Souls Banner or permission)"
+"Neutral alignment follows the principles of going with the flow, seeking "
+"benefit and avoiding harm, valuing self-cultivation and balance, and not "
+"easily taking sides."
 
 msgid ""
-"Insufficient materials, need {cost} {realm}-tier materials, currently have "
-"{count}"
+"Righteous alignment follows the principles of helping the weak, maintaining "
+"order, and vanquishing evil."
 msgstr ""
-"Insufficient materials, need {cost} {realm}-tier materials, currently have "
-"{count}"
-
-msgid "Insufficient spirit stones"
-msgstr "Insufficient spirit stones"
-
-msgid "Invalid direction: {direction}"
-msgstr "Invalid direction: {direction}"
-
-msgid "Invalid realm: {realm}"
-msgstr "Invalid realm: {realm}"
-
-msgid "Missing HP information"
-msgstr "Missing HP information"
-
-msgid "Missing target parameter"
-msgstr "Missing target parameter"
-
-msgid "Must be in a City to educate people."
-msgstr "Must be in a City to educate people."
-
-msgid "Not at bottleneck, cannot breakthrough"
-msgstr "Not at bottleneck, cannot breakthrough"
-
-msgid "Not currently in normal area"
-msgstr "Not currently in normal area"
-
-msgid "Only evil alignment can execute"
-msgstr "Only evil alignment can execute"
-
-msgid "Only righteous alignment can execute"
-msgstr "Only righteous alignment can execute"
-
-msgid "Refining succeeded! Obtained {realm} elixir '{item}'"
-msgstr "Refining succeeded! Obtained {realm} elixir '{item}'"
-
-msgid "Target does not exist"
-msgstr "Target does not exist"
-
-msgid "Target is already dead"
-msgstr "Target is already dead"
-
-msgid "Target realm not specified"
-msgstr "Target realm not specified"
-
-msgid "The prosperity of {city} has increased due to {avatar}'s teachings."
-msgstr "The prosperity of {city} has increased due to {avatar}'s teachings."
-
-msgid "This area has no shop"
-msgstr "This area has no shop"
-
-msgid "This cave dwelling has been occupied by {name}, cannot respire"
-msgstr "This cave dwelling has been occupied by {name}, cannot respire"
-
-msgid "Unknown item: {name}"
-msgstr "Unknown item: {name}"
-
-msgid "Your orthodoxy does not support Body Tempering."
-msgstr "Your orthodoxy does not support Body Tempering."
-
-msgid "Your orthodoxy does not support Confucian Education."
-msgstr "Your orthodoxy does not support Confucian Education."
-
-msgid "Your orthodoxy does not support Qi Respiration."
-msgstr "Your orthodoxy does not support Qi Respiration."
-
-msgid "Your orthodoxy does not support Zen Meditation."
-msgstr "Your orthodoxy does not support Zen Meditation."
-
-msgid ""
-"[{region}] is another sect's territory, you are not a disciple of that sect"
-msgstr ""
-"[{region}] is another sect's territory, you are not a disciple of that sect"
-
-msgid "action_chess"
-msgstr "Chess"
-
-msgid "action_chess_desc"
-msgstr "Play chess to sharpen your mind."
-
-msgid "action_chess_story_prompt"
-msgstr "Two people are playing chess."
-
-msgid "action_devourpeople_short_name"
-msgstr "Devour People"
+"Righteous alignment follows the principles of helping the weak, maintaining "
+"order, and vanquishing evil."
 
 # Action Short Names (for legal_actions)
 msgid "action_dualcultivation_short_name"
@@ -350,6 +235,9 @@ msgstr "Escape from opponent (success rate based)"
 msgid "escape_requirements"
 msgstr "No restrictions"
 
+msgid "evil"
+msgstr "Evil"
+
 msgid "excellent progress"
 msgstr "excellent progress"
 
@@ -473,6 +361,9 @@ msgstr "Move to a specific region"
 
 msgid "move_to_region_requirements"
 msgstr "No restrictions"
+
+msgid "neutral"
+msgstr "Neutral"
 
 # Action: NurtureWeapon
 msgid "nurture_weapon_action_name"
@@ -689,37 +580,6 @@ msgstr "{initiator} invites {target} for dual cultivation"
 msgid "{root_name} ({elements})"
 msgstr "{root_name} ({elements})"
 
-msgid ""
-"Evil alignment follows the principles of survival of the fittest, "
-"prioritizing self-interest above all, disdaining rules, and venerating power"
-" and fear. Acts ruthlessly, often resorting to murder and plunder."
-msgstr ""
-"Evil alignment follows the principles of survival of the fittest, "
-"prioritizing self-interest above all, disdaining rules, and venerating power"
-" and fear. Acts ruthlessly, often resorting to murder and plunder."
-
-msgid ""
-"Neutral alignment follows the principles of going with the flow, seeking "
-"benefit and avoiding harm, valuing self-cultivation and balance, and not "
-"easily taking sides."
-msgstr ""
-"Neutral alignment follows the principles of going with the flow, seeking "
-"benefit and avoiding harm, valuing self-cultivation and balance, and not "
-"easily taking sides."
-
-msgid ""
-"Righteous alignment follows the principles of helping the weak, maintaining "
-"order, and vanquishing evil."
-msgstr ""
-"Righteous alignment follows the principles of helping the weak, maintaining "
-"order, and vanquishing evil."
-
-msgid "evil"
-msgstr "Evil"
-
-msgid "neutral"
-msgstr "Neutral"
-
 # Alignment
 msgid "righteous"
 msgstr "Righteous"
@@ -729,9 +589,6 @@ msgstr "Righteous"
 # ============================================================================
 msgid " Devoured Souls: {count}"
 msgstr " Devoured Souls: {count}"
-
-msgid "{desc} (Devoured Souls: {souls})"
-msgstr "{desc} (Devoured Souls: {souls})"
 
 msgid "A rogue cultivator {name} has appeared in the world."
 msgstr "A rogue cultivator {name} has appeared in the world."
@@ -790,6 +647,9 @@ msgstr "Nearby Avatars"
 msgid "Nickname"
 msgstr "Nickname"
 
+msgid "{desc} (Devoured Souls: {souls})"
+msgstr "{desc} (Devoured Souls: {souls})"
+
 # ============================================================================
 # Avatar System
 # ============================================================================
@@ -802,6 +662,9 @@ msgstr "Origin: {origin}"
 
 msgid "Orthodoxy"
 msgstr "Orthodoxy"
+
+msgid "Ranking"
+msgstr "Ranking"
 
 msgid "Realm"
 msgstr "Realm"
@@ -929,43 +792,15 @@ msgstr "Both your looks and aura are top-tier, often attracting side glances."
 msgid "appearance_9_name"
 msgstr "Exquisite"
 
-msgid ""
-"{name} has awakened their spiritual roots and embarked on the path of "
-"cultivation."
-msgstr ""
-"{name} has awakened their spiritual roots and embarked on the path of "
-"cultivation."
-
-msgid "Ranking"
-msgstr "Ranking"
-
 msgid "daughter"
 msgstr "daughter"
 
-# Battle - action descriptions
-msgid "defeated"
-msgstr "defeated"
-
-msgid "son"
-msgstr "son"
-
-msgid "{p1} and {p2} gave birth to a {gender} named {child}."
-msgstr "{p1} and {p2} gave birth to a {gender} named {child}."
-
-# Battle messages
 msgid ""
-"{winner} defeated {loser}, dealing {damage} damage. {loser} was fatally "
-"wounded and perished."
+"{name} has awakened their spiritual roots and embarked on the path of "
+"cultivation."
 msgstr ""
-"{winner} defeated {loser}, dealing {damage} damage. {loser} was fatally "
-"wounded and perished."
-
-msgid ""
-"{winner} defeated {loser}. {loser} took {loser_dmg} damage, {winner} also "
-"took {winner_dmg} damage."
-msgstr ""
-"{winner} defeated {loser}. {loser} took {loser_dmg} damage, {winner} also "
-"took {winner_dmg} damage."
+"{name} has awakened their spiritual roots and embarked on the path of "
+"cultivation."
 
 msgid ""
 "(Alignment: {alignment}, Style: {style}, Headquarters: {hq_name}){effect}"
@@ -1011,6 +846,10 @@ msgstr "Battle"
 msgid "date_format_year_month"
 msgstr "Year {year} Month {month}"
 
+# Battle - action descriptions
+msgid "defeated"
+msgstr "defeated"
+
 msgid "old_age"
 msgstr "Old Age"
 
@@ -1022,6 +861,9 @@ msgstr "({sect_name} HQ)"
 
 msgid "serious_injury"
 msgstr "Serious Injury"
+
+msgid "son"
+msgstr "son"
 
 msgid "{alignment}: {description}"
 msgstr "{alignment}: {description}"
@@ -1050,11 +892,169 @@ msgstr "{name} has ascended to a cultivator."
 msgid "{name}: {desc} ({realm})"
 msgstr "{name}: {desc} ({realm})"
 
+msgid "{p1} and {p2} gave birth to a {gender} named {child}."
+msgstr "{p1} and {p2} gave birth to a {gender} named {child}."
+
 msgid "{realm} {stage} (Level {level}) {status}"
 msgstr "{realm} {stage} (Level {level}) {status}"
 
 msgid "{realm} {stage} (Level {level}). At bottleneck: {status}"
 msgstr "{realm} {stage} (Level {level}). At bottleneck: {status}"
+
+# Battle messages
+msgid ""
+"{winner} defeated {loser}, dealing {damage} damage. {loser} was fatally "
+"wounded and perished."
+msgstr ""
+"{winner} defeated {loser}, dealing {damage} damage. {loser} was fatally "
+"wounded and perished."
+
+msgid ""
+"{winner} defeated {loser}. {loser} took {loser_dmg} damage, {winner} also "
+"took {winner_dmg} damage."
+msgstr ""
+"{winner} defeated {loser}. {loser} took {loser_dmg} damage, {winner} also "
+"took {winner_dmg} damage."
+
+msgid " (and sold old {item} at reduced price)"
+msgstr " (and sold old {item} at reduced price)"
+
+msgid "Animal realms in current area exceed character realm"
+msgstr "Animal realms in current area exceed character realm"
+
+msgid "Assassination failed! Both sides engaged in fierce battle."
+msgstr "Assassination failed! Both sides engaged in fierce battle."
+
+msgid "Breakthrough failed"
+msgstr "Breakthrough failed"
+
+msgid "Breakthrough succeeded"
+msgstr "Breakthrough succeeded"
+
+msgid "Can only execute in city areas"
+msgstr "Can only execute in city areas"
+
+msgid "Cannot resolve region: {region}"
+msgstr "Cannot resolve region: {region}"
+
+msgid "Cannot sell this type: {name}"
+msgstr "Cannot sell this type: {name}"
+
+msgid "Casting succeeded! Obtained {realm} {label} '{item}'"
+msgstr "Casting succeeded! Obtained {realm} {label} '{item}'"
+
+msgid "Cultivation has reached bottleneck, cannot continue cultivating"
+msgstr "Cultivation has reached bottleneck, cannot continue cultivating"
+
+msgid "Current HP is full"
+msgstr "Current HP is full"
+
+msgid "Current area {region} has no animals"
+msgstr "Current area {region} has no animals"
+
+msgid "Do not possess equipment: {name}"
+msgstr "Do not possess equipment: {name}"
+
+msgid "Do not possess item/equipment: {name}"
+msgstr "Do not possess item/equipment: {name}"
+
+msgid "Do not possess material: {name}"
+msgstr "Do not possess material: {name}"
+
+msgid ""
+"Forbidden illegal action (missing Ten Thousand Souls Banner or permission)"
+msgstr ""
+"Forbidden illegal action (missing Ten Thousand Souls Banner or permission)"
+
+msgid ""
+"Insufficient materials, need {cost} {realm}-tier materials, currently have "
+"{count}"
+msgstr ""
+"Insufficient materials, need {cost} {realm}-tier materials, currently have "
+"{count}"
+
+msgid "Insufficient spirit stones"
+msgstr "Insufficient spirit stones"
+
+msgid "Invalid direction: {direction}"
+msgstr "Invalid direction: {direction}"
+
+msgid "Invalid realm: {realm}"
+msgstr "Invalid realm: {realm}"
+
+msgid "Missing HP information"
+msgstr "Missing HP information"
+
+msgid "Missing target parameter"
+msgstr "Missing target parameter"
+
+msgid "Must be in a City to educate people."
+msgstr "Must be in a City to educate people."
+
+msgid "Not at bottleneck, cannot breakthrough"
+msgstr "Not at bottleneck, cannot breakthrough"
+
+msgid "Not currently in normal area"
+msgstr "Not currently in normal area"
+
+msgid "Only evil alignment can execute"
+msgstr "Only evil alignment can execute"
+
+msgid "Only righteous alignment can execute"
+msgstr "Only righteous alignment can execute"
+
+msgid "Refining succeeded! Obtained {realm} elixir '{item}'"
+msgstr "Refining succeeded! Obtained {realm} elixir '{item}'"
+
+msgid "Target does not exist"
+msgstr "Target does not exist"
+
+msgid "Target is already dead"
+msgstr "Target is already dead"
+
+msgid "Target realm not specified"
+msgstr "Target realm not specified"
+
+msgid "The prosperity of {city} has increased due to {avatar}'s teachings."
+msgstr "The prosperity of {city} has increased due to {avatar}'s teachings."
+
+msgid "This area has no shop"
+msgstr "This area has no shop"
+
+msgid "This cave dwelling has been occupied by {name}, cannot respire"
+msgstr "This cave dwelling has been occupied by {name}, cannot respire"
+
+msgid "Unknown item: {name}"
+msgstr "Unknown item: {name}"
+
+msgid "Your orthodoxy does not support Body Tempering."
+msgstr "Your orthodoxy does not support Body Tempering."
+
+msgid "Your orthodoxy does not support Confucian Education."
+msgstr "Your orthodoxy does not support Confucian Education."
+
+msgid "Your orthodoxy does not support Qi Respiration."
+msgstr "Your orthodoxy does not support Qi Respiration."
+
+msgid "Your orthodoxy does not support Zen Meditation."
+msgstr "Your orthodoxy does not support Zen Meditation."
+
+msgid ""
+"[{region}] is another sect's territory, you are not a disciple of that sect"
+msgstr ""
+"[{region}] is another sect's territory, you are not a disciple of that sect"
+
+msgid "action_chess"
+msgstr "Chess"
+
+msgid "action_chess_desc"
+msgstr "Play chess to sharpen your mind."
+
+msgid "action_chess_story_prompt"
+msgstr "Two people are playing chess."
+
+msgid "action_devourpeople_short_name"
+msgstr "Devour People"
 
 # Condition Translation
 msgid "Conditional effect"
@@ -1068,6 +1068,12 @@ msgstr "When {condition}"
 
 msgid "[{condition}] {effects}"
 msgstr "[{condition}] {effects}"
+
+msgid "Died from severe injuries"
+msgstr "Died from severe injuries"
+
+msgid "Died of old age"
+msgstr "Died of old age"
 
 # ============================================================================
 # Cultivation System - Realm
@@ -1091,12 +1097,6 @@ msgstr "{realm}{stage}(Level {level}). At bottleneck: {status}"
 msgid "{realm}{stage}(Level {level}){status}"
 msgstr "{realm}{stage}(Level {level}){status}"
 
-msgid "Died from severe injuries"
-msgstr "Died from severe injuries"
-
-msgid "Died of old age"
-msgstr "Died of old age"
-
 # Death reasons
 msgid "Killed by {killer}"
 msgstr "Killed by {killer}"
@@ -1109,13 +1109,6 @@ msgstr "Unknown reason"
 
 msgid "{name} (Deceased: {reason})"
 msgstr "{name} (Deceased: {reason})"
-
-msgid ""
-"\n"
-"(Selecting {replace} will sell old {label})"
-msgstr ""
-"\n"
-"(Selecting {replace} will sell old {label})"
 
 # Decision Description
 msgid ""
@@ -1141,6 +1134,15 @@ msgstr "Unknown"
 msgid "east"
 msgstr "East"
 
+msgid "Auxiliary [{name}]"
+msgstr "Auxiliary [{name}]"
+
+msgid "Elixir [{name}]"
+msgstr "Elixir [{name}]"
+
+msgid "Heaven and Earth Phenomenon"
+msgstr "Heaven and Earth Phenomenon"
+
 # Direction names
 msgid "north"
 msgstr "North"
@@ -1150,15 +1152,6 @@ msgstr "South"
 
 msgid "west"
 msgstr "West"
-
-msgid "Auxiliary [{name}]"
-msgstr "Auxiliary [{name}]"
-
-msgid "Elixir [{name}]"
-msgstr "Elixir [{name}]"
-
-msgid "Heaven and Earth Phenomenon"
-msgstr "Heaven and Earth Phenomenon"
 
 # Effect Source Labels
 msgid "Sect [{name}]"
@@ -1307,6 +1300,9 @@ msgstr "Temper Duration Reduction"
 msgid "play_benefit"
 msgstr "Leisure Benefit"
 
+msgid "earth_essence"
+msgstr "Earth"
+
 # ============================================================================
 # Elixir System - Elixirs
 # ============================================================================
@@ -1322,11 +1318,15 @@ msgstr "Heal"
 msgid "elixir_type_lifespan"
 msgstr "Lifespan"
 
-msgid "earth_essence"
-msgstr "Earth"
-
 msgid "fire_essence"
 msgstr "Fire"
+
+msgid ""
+"At the auction, {winner_name} acquired {item_name} for {price} spirit "
+"stones."
+msgstr ""
+"At the auction, {winner_name} acquired {item_name} for {price} spirit "
+"stones."
 
 # Essence Type
 msgid "gold_essence"
@@ -1337,13 +1337,6 @@ msgstr "Water"
 
 msgid "wood_essence"
 msgstr "Wood"
-
-msgid ""
-"At the auction, {winner_name} acquired {item_name} for {price} spirit "
-"stones."
-msgstr ""
-"At the auction, {winner_name} acquired {item_name} for {price} spirit "
-"stones."
 
 # Event Content
 msgid ""
@@ -1425,25 +1418,6 @@ msgstr "{avatar} gained cultivation experience +{exp} points"
 msgid "{winner} defeated {loser}"
 msgstr "{winner} defeated {loser}"
 
-# Feedback labels
-msgid "feedback_accept"
-msgstr "Accept"
-
-msgid "feedback_attack"
-msgstr "Attack"
-
-msgid "feedback_escape"
-msgstr "Escape"
-
-msgid "feedback_move_away_from_avatar"
-msgstr "Attempt to move away"
-
-msgid "feedback_move_away_from_region"
-msgstr "Attempt to leave area"
-
-msgid "feedback_reject"
-msgstr "Reject"
-
 msgid ""
 "\n"
 "--- Current Effects Detail ---"
@@ -1465,6 +1439,25 @@ msgstr "Performing {action}"
 
 msgid "Realm: {realm}"
 msgstr "Realm: {realm}"
+
+# Feedback labels
+msgid "feedback_accept"
+msgstr "Accept"
+
+msgid "feedback_attack"
+msgstr "Attack"
+
+msgid "feedback_escape"
+msgstr "Escape"
+
+msgid "feedback_move_away_from_avatar"
+msgstr "Attempt to move away"
+
+msgid "feedback_move_away_from_region"
+msgstr "Attempt to leave area"
+
+msgid "feedback_reject"
+msgstr "Reject"
 
 msgid "{avatar} attempted to escape from {target}: {result}"
 msgstr "{avatar} attempted to escape from {target}: {result}"
@@ -1554,13 +1547,6 @@ msgstr "{region} does not sell {item}"
 msgid "{sect} {rank}"
 msgstr "{sect} {rank}"
 
-# Formatted Strings
-msgid "{weapon_name}, Proficiency: {proficiency}%"
-msgstr "{weapon_name}, Proficiency: {proficiency}%"
-
-msgid "【{name}】 {gender} {age} years old"
-msgstr "【{name}】 {gender} {age} years old"
-
 msgid " But you already have '{current_auxiliary}'."
 msgstr " But you already have '{current_auxiliary}'."
 
@@ -1596,6 +1582,13 @@ msgstr "Found auxiliary equipment '{auxiliary}', {exchange_result}"
 
 msgid "Found weapon '{weapon}', {exchange_result}"
 msgstr "Found weapon '{weapon}', {exchange_result}"
+
+# Formatted Strings
+msgid "{weapon_name}, Proficiency: {proficiency}%"
+msgstr "{weapon_name}, Proficiency: {proficiency}%"
+
+msgid "【{name}】 {gender} {age} years old"
+msgstr "【{name}】 {gender} {age} years old"
 
 # Fortune Event Text - Technique
 msgid ""
@@ -1693,6 +1686,9 @@ msgstr ""
 "Special Event: Disciples {names} had an epiphany during the lecture and "
 "directly learned {tech_name}!\n"
 
+msgid "female"
+msgstr "Female"
+
 msgid "sect_teaching_context_prompt"
 msgstr ""
 "Sect: {sect_name}\n"
@@ -1723,13 +1719,6 @@ msgid "sect_teaching_summary"
 msgstr ""
 "{sect_name} held a teaching conference hosted by {teacher_name}. "
 "Participants: {student_names}."
-
-msgid "female"
-msgstr "Female"
-
-# Gender
-msgid "male"
-msgstr "Male"
 
 msgid ""
 "Event: Hidden Domain Opening\n"
@@ -1765,6 +1754,10 @@ msgstr "Perished in a Hidden Domain"
 
 msgid "found a treasure"
 msgstr "found a treasure"
+
+# Gender
+msgid "male"
+msgstr "Male"
 
 # ============================================================================
 # Hidden Domain
@@ -1805,6 +1798,12 @@ msgstr "decided to keep current technique"
 msgid "decided to learn it"
 msgstr "decided to learn it"
 
+msgid "item_verb_consume"
+msgstr "consume"
+
+msgid "item_verb_consumed"
+msgstr "consumed"
+
 msgid "{name} discarded {item_name}."
 msgstr "{name} discarded {item_name}."
 
@@ -1819,32 +1818,6 @@ msgid ""
 "{name} sold the newly obtained {item_name}, earning {price} spirit stones."
 msgstr ""
 "{name} sold the newly obtained {item_name}, earning {price} spirit stones."
-
-msgid "item_verb_consume"
-msgstr "consume"
-
-msgid "item_verb_consumed"
-msgstr "consumed"
-
-# Item Verbs
-msgid "item_verb_equip"
-msgstr "equip"
-
-msgid "item_verb_equipped"
-msgstr "equipped"
-
-msgid "item_verb_practice"
-msgstr "practice"
-
-msgid "item_verb_replace"
-msgstr "replace"
-
-msgid "item_verb_switched"
-msgstr "switched to"
-
-# Auto-equip Message
-msgid "{avatar_name} obtained {grade} {label}『{item_name}』and {action}."
-msgstr "{avatar_name} obtained {grade} {label}『{item_name}』and {action}."
 
 msgid ""
 "\n"
@@ -1868,6 +1841,26 @@ msgstr "Elixir"
 msgid "item_label_technique"
 msgstr "Technique"
 
+# Item Verbs
+msgid "item_verb_equip"
+msgstr "equip"
+
+msgid "item_verb_equipped"
+msgstr "equipped"
+
+msgid "item_verb_practice"
+msgstr "practice"
+
+msgid "item_verb_replace"
+msgstr "replace"
+
+msgid "item_verb_switched"
+msgstr "switched to"
+
+# Auto-equip Message
+msgid "{avatar_name} obtained {grade} {label}『{item_name}』and {action}."
+msgstr "{avatar_name} obtained {grade} {label}『{item_name}』and {action}."
+
 # Item Labels
 msgid "item_label_weapon"
 msgstr "Weapon"
@@ -1882,13 +1875,6 @@ msgstr "weapon"
 # Labels
 msgid "【Auction Items Information】"
 msgstr "【Auction Items Information】"
-
-# LLM Prompt
-msgid "auction_story_prompt"
-msgstr ""
-"Select the most interesting aspect or a single bid to describe, without "
-"needing to cover everything. Focus on describing the tense atmosphere during"
-" the bidding process."
 
 msgid ""
 "\n"
@@ -1923,6 +1909,13 @@ msgstr "City Region (can trade)"
 
 msgid "City Region: {name} - {desc}{desc_part}"
 msgstr "City Region: {name} - {desc}{desc_part}"
+
+# LLM Prompt
+msgid "auction_story_prompt"
+msgstr ""
+"Select the most interesting aspect or a single bid to describe, without "
+"needing to cover everything. Focus on describing the tense atmosphere during"
+" the bidding process."
 
 # ============================================================================
 # Map & Region & Others (New)
@@ -1983,50 +1976,16 @@ msgstr "Surprised"
 msgid "emotion_tired"
 msgstr "Tired"
 
-msgid "{names} ({price} Spirit Stones)"
-msgstr "{names} ({price} Spirit Stones)"
-
-msgid "{value} Spirit Stones"
-msgstr "{value} Spirit Stones"
-
 msgid "misfortune_dynamic_story_prompt"
 msgstr ""
 "The character's current realm is {realm}. They were just at {location} performing the action: [{action_desc}]. The final result is: [{result}].\n"
 "Task: Based on the character's realm, background, and the [action they were performing], please automatically deduce a reasonable, coherent, and creative reason for the misfortune as a bridge to explain why this action led to this result. Describe rich environmental details and the character's psychological activities. Keep the word count between 100-200 words."
 
-# Misfortune messages
-msgid "misfortune_event_base"
-msgstr "Encountered misfortune ({title}), {result}"
+msgid "{names} ({price} Spirit Stones)"
+msgstr "{names} ({price} Spirit Stones)"
 
-msgid "misfortune_result_backlash"
-msgstr "{name} cultivation regressed by {amount} points"
-
-msgid "misfortune_result_injury"
-msgstr "{name} took {damage} damage, HP remaining {current}/{max}"
-
-msgid "misfortune_result_loss_spirit_stone"
-msgstr "{name} lost {amount} spirit stones"
-
-msgid "misfortune_title_backlash"
-msgstr "Cultivation Backlash"
-
-msgid "misfortune_title_injury"
-msgstr "Accidental Injury"
-
-msgid "misfortune_title_loss_spirit_stone"
-msgstr "Financial Loss"
-
-msgid "misfortune_title_mystery"
-msgstr "Mysterious Misfortune"
-
-msgid "{name} cultivation regressed by {amount} points"
-msgstr "{name} cultivation regressed by {amount} points"
-
-msgid "{name} lost {amount} spirit stones"
-msgstr "{name} lost {amount} spirit stones"
-
-msgid "{name} took {damage} damage, HP remaining {current}/{max}"
-msgstr "{name} took {damage} damage, HP remaining {current}/{max}"
+msgid "{value} Spirit Stones"
+msgstr "{value} Spirit Stones"
 
 msgid ", defended {region}"
 msgstr ", defended {region}"
@@ -2081,6 +2040,71 @@ msgstr ""
 
 msgid "Target not within interaction range"
 msgstr "Target not within interaction range"
+
+# Misfortune messages
+msgid "misfortune_event_base"
+msgstr "Encountered misfortune ({title}), {result}"
+
+msgid "misfortune_result_backlash"
+msgstr "{name} cultivation regressed by {amount} points"
+
+msgid "misfortune_result_injury"
+msgstr "{name} took {damage} damage, HP remaining {current}/{max}"
+
+msgid "misfortune_result_loss_spirit_stone"
+msgstr "{name} lost {amount} spirit stones"
+
+msgid "misfortune_title_backlash"
+msgstr "Cultivation Backlash"
+
+msgid "misfortune_title_injury"
+msgstr "Accidental Injury"
+
+msgid "misfortune_title_loss_spirit_stone"
+msgstr "Financial Loss"
+
+msgid "misfortune_title_mystery"
+msgstr "Mysterious Misfortune"
+
+msgid "{name} cultivation regressed by {amount} points"
+msgstr "{name} cultivation regressed by {amount} points"
+
+msgid "{name} lost {amount} spirit stones"
+msgstr "{name} lost {amount} spirit stones"
+
+msgid "{name} took {damage} damage, HP remaining {current}/{max}"
+msgstr "{name} took {damage} damage, HP remaining {current}/{max}"
+
+msgid ", sell old {label}『{old_name}』"
+msgstr ", sell old {label}『{old_name}』"
+
+msgid ", {replace} old {label}『{old_name}』"
+msgstr ", {replace} old {label}『{old_name}』"
+
+msgid "Already lovers"
+msgstr "Already lovers"
+
+msgid "Already sworn siblings"
+msgstr "Already sworn siblings"
+
+# MutualAction: Confess
+msgid "confess_action_name"
+msgstr "Confess"
+
+msgid "confess_description"
+msgstr ""
+"Confess love to a target within interaction range. If accepted, they become "
+"lovers."
+
+msgid "confess_requirements"
+msgstr "Target within interaction range, and not already lovers."
+
+msgid "confess_story_prompt"
+msgstr ""
+"Describe the process of {initiator} confessing their love to {target}. "
+"Include their inner feelings and the atmosphere. If accepted, describe the "
+"romance of them becoming lovers. If rejected, describe the gentle refusal "
+"and regret."
 
 # MutualAction: Conversation
 msgid "conversation_action_name"
@@ -2193,6 +2217,21 @@ msgstr ""
 msgid "spirit stones"
 msgstr "spirit stones"
 
+msgid "swear_brotherhood_action_name"
+msgstr "Swear Brotherhood"
+
+msgid "swear_brotherhood_description"
+msgstr ""
+"Propose to become sworn siblings with a cultivator in interaction range."
+
+msgid "swear_brotherhood_requirements"
+msgstr "Target within interaction range; not already sworn siblings."
+
+msgid "swear_brotherhood_story_prompt"
+msgstr ""
+"This is a heroic swearing of brotherhood. Describe their mutual appreciation"
+" and their vow to live and die together."
+
 # MutualAction: Talk
 msgid "talk_action_name"
 msgstr "Talk"
@@ -2225,11 +2264,17 @@ msgstr "{initiator} attempts to seize {region} from {host}"
 msgid "{initiator} challenges {target} to spar"
 msgstr "{initiator} challenges {target} to spar"
 
+msgid "{initiator} confesses their love to {target}"
+msgstr "{initiator} confesses their love to {target}"
+
 msgid "{initiator} forced {target} to yield {region}"
 msgstr "{initiator} forced {target} to yield {region}"
 
 msgid "{initiator} initiates {action} with {target}"
 msgstr "{initiator} initiates {action} with {target}"
+
+msgid "{initiator} proposes to become sworn siblings with {target}"
+msgstr "{initiator} proposes to become sworn siblings with {target}"
 
 msgid "{initiator} successfully gifted {item} to {target}"
 msgstr "{initiator} successfully gifted {item} to {target}"
@@ -2240,11 +2285,23 @@ msgstr "{master} imparts cultivation knowledge to apprentice {apprentice}"
 msgid "{region} is not a cultivation area, cannot occupy"
 msgstr "{region} is not a cultivation area, cannot occupy"
 
+msgid "{target} accepted {initiator}'s confession, they became lovers"
+msgstr "{target} accepted {initiator}'s confession, they became lovers"
+
+msgid "{target} accepted {initiator}'s proposal, they became sworn siblings"
+msgstr "{target} accepted {initiator}'s proposal, they became sworn siblings"
+
 msgid "{target} accepted {initiator}'s talk invitation"
 msgstr "{target} accepted {initiator}'s talk invitation"
 
 msgid "{target} feedback to {initiator}: {feedback}"
 msgstr "{target} feedback to {initiator}: {feedback}"
+
+msgid "{target} rejected {initiator}'s confession"
+msgstr "{target} rejected {initiator}'s confession"
+
+msgid "{target} rejected {initiator}'s proposal to become sworn siblings"
+msgstr "{target} rejected {initiator}'s proposal to become sworn siblings"
 
 msgid "{target} rejected {initiator}'s talk invitation"
 msgstr "{target} rejected {initiator}'s talk invitation"
@@ -2256,86 +2313,22 @@ msgstr ""
 "{winner} gained slight advantage in sparring, defeated {loser}. ({winner} "
 "proficiency +{w_gain}, {loser} proficiency +{l_gain})"
 
-# MutualAction: Confess
-msgid "confess_action_name"
-msgstr "Confess"
-
-msgid "confess_description"
-msgstr ""
-"Confess love to a target within interaction range. If accepted, they become "
-"lovers."
-
-msgid "confess_requirements"
-msgstr "Target within interaction range, and not already lovers."
-
-msgid "confess_story_prompt"
-msgstr ""
-"Describe the process of {initiator} confessing their love to {target}. "
-"Include their inner feelings and the atmosphere. If accepted, describe the "
-"romance of them becoming lovers. If rejected, describe the gentle refusal "
-"and regret."
-
-msgid "Already lovers"
-msgstr "Already lovers"
-
-msgid "{initiator} confesses their love to {target}"
-msgstr "{initiator} confesses their love to {target}"
-
-msgid "{target} accepted {initiator}'s confession, they became lovers"
-msgstr "{target} accepted {initiator}'s confession, they became lovers"
-
-msgid "{target} rejected {initiator}'s confession"
-msgstr "{target} rejected {initiator}'s confession"
-
-msgid "swear_brotherhood_action_name"
-msgstr "Swear Brotherhood"
-
-msgid "swear_brotherhood_description"
-msgstr ""
-"Propose to become sworn siblings with a cultivator in interaction range."
-
-msgid "swear_brotherhood_requirements"
-msgstr "Target within interaction range; not already sworn siblings."
-
-msgid "swear_brotherhood_story_prompt"
-msgstr ""
-"This is a heroic swearing of brotherhood. Describe their mutual appreciation"
-" and their vow to live and die together."
-
-msgid "{initiator} proposes to become sworn siblings with {target}"
-msgstr "{initiator} proposes to become sworn siblings with {target}"
-
-msgid "{target} accepted {initiator}'s proposal, they became sworn siblings"
-msgstr "{target} accepted {initiator}'s proposal, they became sworn siblings"
-
-msgid "{target} rejected {initiator}'s proposal to become sworn siblings"
-msgstr "{target} rejected {initiator}'s proposal to become sworn siblings"
-
-msgid "Already sworn siblings"
-msgstr "Already sworn siblings"
-
-msgid ", sell old {label}『{old_name}』"
-msgstr ", sell old {label}『{old_name}』"
-
-msgid ", {replace} old {label}『{old_name}』"
-msgstr ", {replace} old {label}『{old_name}』"
-
-# Option A
-msgid "{action} new {label}『{new_name}』"
-msgstr "{action} new {label}『{new_name}』"
-
 msgid ", keep current『{old_name}』"
 msgstr ", keep current『{old_name}』"
 
 msgid "Abandon『{new_name}』"
 msgstr "Abandon『{new_name}』"
 
-# Option B
-msgid "Sell new {label}『{new_name}』for spirit stones, keep current status"
-msgstr "Sell new {label}『{new_name}』for spirit stones, keep current status"
+# Option A
+msgid "{action} new {label}『{new_name}』"
+msgstr "{action} new {label}『{new_name}』"
 
 msgid "Mortal"
 msgstr "Mortal"
+
+# Option B
+msgid "Sell new {label}『{new_name}』for spirit stones, keep current status"
+msgstr "Sell new {label}『{new_name}』for spirit stones, keep current status"
 
 msgid "core_formation"
 msgstr "Core Formation"
@@ -2345,10 +2338,6 @@ msgstr "Foundation Establishment"
 
 msgid "nascent_soul"
 msgstr "Nascent Soul"
-
-# Realm
-msgid "qi_refinement"
-msgstr "Qi Refinement"
 
 msgid "apprentice"
 msgstr "Apprentice"
@@ -2362,17 +2351,24 @@ msgstr "Enemy"
 msgid "friend"
 msgstr "Friend"
 
-msgid "grand_child"
-msgstr "Grandchild"
-
-msgid "grand_parent"
-msgstr "Grandparent"
-
 msgid "kin"
 msgstr "Kin"
 
 msgid "lovers"
 msgstr "Lovers"
+
+msgid "master"
+msgstr "Master"
+
+# Realm
+msgid "qi_refinement"
+msgstr "Qi Refinement"
+
+msgid "grand_child"
+msgstr "Grandchild"
+
+msgid "grand_parent"
+msgstr "Grandparent"
 
 msgid "martial_grandchild"
 msgstr "Martial Grandchild"
@@ -2382,9 +2378,6 @@ msgstr "Martial Grandmaster"
 
 msgid "martial_sibling"
 msgstr "Martial Sibling"
-
-msgid "master"
-msgstr "Master"
 
 # Relation
 msgid "parent"
@@ -2488,15 +2481,6 @@ msgstr "; "
 msgid "relation_son"
 msgstr "Son"
 
-msgid "relation_younger_brother"
-msgstr "Younger Brother"
-
-msgid "relation_younger_sister"
-msgstr "Younger Sister"
-
-msgid "sibling"
-msgstr "Sibling"
-
 msgid "relation_sworn_older_brother"
 msgstr "Sworn Older Brother"
 
@@ -2509,14 +2493,11 @@ msgstr "Sworn Younger Brother"
 msgid "relation_sworn_younger_sister"
 msgstr "Sworn Younger Sister"
 
-msgid "sworn_sibling"
-msgstr "Sworn Sibling"
+msgid "relation_younger_brother"
+msgstr "Younger Brother"
 
-msgid "earth_element"
-msgstr "Earth"
-
-msgid "fire_element"
-msgstr "Fire"
+msgid "relation_younger_sister"
+msgstr "Younger Sister"
 
 # Root Element
 msgid "gold_element"
@@ -2559,6 +2540,13 @@ msgstr "Water"
 msgid "wood_element"
 msgstr "Wood"
 
+msgid ""
+"(Orthodoxy: {orthodoxy}, Alignment: {alignment}, Style: {style}, "
+"Headquarters: {hq_name}){effect}"
+msgstr ""
+"(Orthodoxy: {orthodoxy}, Alignment: {alignment}, Style: {style}, "
+"Headquarters: {hq_name}){effect}"
+
 # Scene Setting
 msgid ""
 "Event Type: Mysterious Auction\n"
@@ -2566,13 +2554,6 @@ msgid ""
 msgstr ""
 "Event Type: Mysterious Auction\n"
 "Scene Setting: The auction takes place in a mysterious space, hosted by a mysterious figure with an unfathomable aura."
-
-msgid ""
-"(Orthodoxy: {orthodoxy}, Alignment: {alignment}, Style: {style}, "
-"Headquarters: {hq_name}){effect}"
-msgstr ""
-"(Orthodoxy: {orthodoxy}, Alignment: {alignment}, Style: {style}, "
-"Headquarters: {hq_name}){effect}"
 
 msgid "SECT_10_STYLE"
 msgstr ""
@@ -2761,9 +2742,33 @@ msgstr "Inner Disciple"
 msgid "outer_disciple"
 msgstr "Outer Disciple"
 
+msgid ""
+"\n"
+"(Selecting {replace} will sell old {label})"
+msgstr ""
+"\n"
+"(Selecting {replace} will sell old {label})"
+
 # Sect Rank
 msgid "patriarch"
 msgstr "Patriarch"
+
+msgid "phenomenon_change"
+msgstr ""
+"{old_name} dissipates, celestial phenomena reappear! {new_name}: {new_desc}."
+
+msgid "world_creation_phenomenon"
+msgstr "The world is born, celestial phenomena descend! {name}: {desc}."
+
+msgid ""
+"{avatar_name} deliberated and redefined their long-term objective: "
+"{objective}"
+msgstr ""
+"{avatar_name} deliberated and redefined their long-term objective: "
+"{objective}"
+
+msgid "{avatar_name} determined their long-term objective: {objective}"
+msgstr "{avatar_name} determined their long-term objective: {objective}"
 
 # ============================================================================
 # Sect System - Sects
@@ -2795,8 +2800,14 @@ msgstr ""
 msgid "comma_separator"
 msgstr ", "
 
+msgid "earth_element"
+msgstr "Earth"
+
 msgid "element_separator"
 msgstr ", "
+
+msgid "fire_element"
+msgstr "Fire"
 
 msgid "material_separator"
 msgstr ", "
@@ -2804,30 +2815,11 @@ msgstr ", "
 msgid "semicolon_separator"
 msgstr "; "
 
-msgid "phenomenon_change"
-msgstr ""
-"{old_name} dissipates, celestial phenomena reappear! {new_name}: {new_desc}."
+msgid "sibling"
+msgstr "Sibling"
 
-msgid "world_creation_phenomenon"
-msgstr "The world is born, celestial phenomena descend! {name}: {desc}."
-
-msgid ""
-"{avatar_name} deliberated and redefined their long-term objective: "
-"{objective}"
-msgstr ""
-"{avatar_name} deliberated and redefined their long-term objective: "
-"{objective}"
-
-msgid "{avatar_name} determined their long-term objective: {objective}"
-msgstr "{avatar_name} determined their long-term objective: {objective}"
-
-# ============================================================================
-# Simulator & Event Translations
-# ============================================================================
-msgid ""
-"{avatar_name} passed by {region_name}, found it ownerless, and occupied it."
-msgstr ""
-"{avatar_name} passed by {region_name}, found it ownerless, and occupied it."
+msgid "sworn_sibling"
+msgstr "Sworn Sibling"
 
 msgid "(Choosing to replace will sell the old {label})"
 msgstr "(Choosing to replace will sell the old {label})"
@@ -2840,6 +2832,14 @@ msgstr ", replace old {label} '{old_name}'"
 
 msgid ", sell old {label} '{old_name}'"
 msgstr ", sell old {label} '{old_name}'"
+
+# ============================================================================
+# Simulator & Event Translations
+# ============================================================================
+msgid ""
+"{avatar_name} passed by {region_name}, found it ownerless, and occupied it."
+msgstr ""
+"{avatar_name} passed by {region_name}, found it ownerless, and occupied it."
 
 # Single choice - context and options
 msgid ""
@@ -2879,6 +2879,13 @@ msgstr ""
 "\n"
 "{choices}"
 
+msgid ""
+"Competition: In the auction for {item_name}, {winner_name} outbid "
+"{runner_up_name} (bid: {bid})."
+msgstr ""
+"Competition: In the auction for {item_name}, {winner_name} outbid "
+"{runner_up_name} (bid: {bid})."
+
 # Stage
 msgid "early_stage"
 msgstr "Early Stage"
@@ -2890,86 +2897,79 @@ msgid "middle_stage"
 msgstr "Middle Stage"
 
 msgid ""
-"Competition: In the auction for {item_name}, {winner_name} outbid "
-"{runner_up_name} (bid: {bid})."
+"Bold and open: Grand words, majestic momentum, informal, expressing feelings"
+" directly."
 msgstr ""
-"Competition: In the auction for {item_name}, {winner_name} outbid "
-"{runner_up_name} (bid: {bid})."
+"Bold and open: Grand words, majestic momentum, informal, expressing feelings"
+" directly."
+
+msgid ""
+"Buddhist emptiness: Insights of impermanence and emptiness interwoven, light"
+" and not mysterious."
+msgstr ""
+"Buddhist emptiness: Insights of impermanence and emptiness interwoven, light"
+" and not mysterious."
+
+msgid ""
+"Chronicle style: Like a historian's record, orderly events, few adjectives."
+msgstr ""
+"Chronicle style: Like a historian's record, orderly events, few adjectives."
+
+msgid ""
+"Cold and concise: Mainly short sentences, every word counts, like metal "
+"striking stone, no extra emotional rendering."
+msgstr ""
+"Cold and concise: Mainly short sentences, every word counts, like metal "
+"striking stone, no extra emotional rendering."
 
 # Story Generation Text
 msgid "Deal: {winner_name} acquired {item_name} for {price} spirit stones."
 msgstr "Deal: {winner_name} acquired {item_name} for {price} spirit stones."
 
+msgid ""
+"Elegant scholarly: Scholarly atmosphere, slight touch of citations, without "
+"showing off."
+msgstr ""
+"Elegant scholarly: Scholarly atmosphere, slight touch of citations, without "
+"showing off."
+
+msgid ""
+"Emotion in scenery: Expressing emotion through scenery, blending feelings "
+"with the setting."
+msgstr ""
+"Emotion in scenery: Expressing emotion through scenery, blending feelings "
+"with the setting."
+
+msgid ""
+"Fine line drawing: No decoration, capturing subtle movements and expressions"
+" to convey spirit, real and delicate."
+msgstr ""
+"Fine line drawing: No decoration, capturing subtle movements and expressions"
+" to convey spirit, real and delicate."
+
+msgid ""
+"Folk storytelling: Like a storyteller's tone but in written language, fast-"
+"paced, vivid and interesting."
+msgstr ""
+"Folk storytelling: Like a storyteller's tone but in written language, fast-"
+"paced, vivid and interesting."
+
+msgid ""
+"Freehand ancient style: Focus on imagery and metaphor, concise, avoiding "
+"obscure archaic language."
+msgstr ""
+"Freehand ancient style: Focus on imagery and metaphor, concise, avoiding "
+"obscure archaic language."
+
+msgid ""
+"Gorgeous and bizarre: Heavy sensory description, ornate and seductive "
+"language, emphasizing the strangeness of light and color."
+msgstr ""
+"Gorgeous and bizarre: Heavy sensory description, ornate and seductive "
+"language, emphasizing the strangeness of light and color."
+
 msgid "Item: {item_name}, Description: {description}"
 msgstr "Item: {item_name}, Description: {description}"
-
-msgid ""
-"Bold and open: Grand words, majestic momentum, informal, expressing feelings"
-" directly."
-msgstr ""
-"Bold and open: Grand words, majestic momentum, informal, expressing feelings"
-" directly."
-
-msgid ""
-"Buddhist emptiness: Insights of impermanence and emptiness interwoven, light"
-" and not mysterious."
-msgstr ""
-"Buddhist emptiness: Insights of impermanence and emptiness interwoven, light"
-" and not mysterious."
-
-msgid ""
-"Chronicle style: Like a historian's record, orderly events, few adjectives."
-msgstr ""
-"Chronicle style: Like a historian's record, orderly events, few adjectives."
-
-msgid ""
-"Cold and concise: Mainly short sentences, every word counts, like metal "
-"striking stone, no extra emotional rendering."
-msgstr ""
-"Cold and concise: Mainly short sentences, every word counts, like metal "
-"striking stone, no extra emotional rendering."
-
-msgid ""
-"Elegant scholarly: Scholarly atmosphere, slight touch of citations, without "
-"showing off."
-msgstr ""
-"Elegant scholarly: Scholarly atmosphere, slight touch of citations, without "
-"showing off."
-
-msgid ""
-"Emotion in scenery: Expressing emotion through scenery, blending feelings "
-"with the setting."
-msgstr ""
-"Emotion in scenery: Expressing emotion through scenery, blending feelings "
-"with the setting."
-
-msgid ""
-"Fine line drawing: No decoration, capturing subtle movements and expressions"
-" to convey spirit, real and delicate."
-msgstr ""
-"Fine line drawing: No decoration, capturing subtle movements and expressions"
-" to convey spirit, real and delicate."
-
-msgid ""
-"Folk storytelling: Like a storyteller's tone but in written language, fast-"
-"paced, vivid and interesting."
-msgstr ""
-"Folk storytelling: Like a storyteller's tone but in written language, fast-"
-"paced, vivid and interesting."
-
-msgid ""
-"Freehand ancient style: Focus on imagery and metaphor, concise, avoiding "
-"obscure archaic language."
-msgstr ""
-"Freehand ancient style: Focus on imagery and metaphor, concise, avoiding "
-"obscure archaic language."
-
-msgid ""
-"Gorgeous and bizarre: Heavy sensory description, ornate and seductive "
-"language, emphasizing the strangeness of light and color."
-msgstr ""
-"Gorgeous and bizarre: Heavy sensory description, ornate and seductive "
-"language, emphasizing the strangeness of light and color."
 
 msgid ""
 "Marketplace life: Grounded writing, using colloquialisms, simple and "
@@ -3020,6 +3020,18 @@ msgstr ""
 msgid " Effect: {effect_desc}"
 msgstr " Effect: {effect_desc}"
 
+msgid "Cave Dwelling"
+msgstr "Cave Dwelling"
+
+msgid "City Region"
+msgstr "City Region"
+
+msgid "Normal Region"
+msgstr "Normal Region"
+
+msgid "Ruins"
+msgstr "Ruins"
+
 msgid "dark_attribute"
 msgstr "Dark"
 
@@ -3060,18 +3072,6 @@ msgstr "Wind"
 
 msgid "wood_attribute"
 msgstr "Wood"
-
-msgid "Cave Dwelling"
-msgstr "Cave Dwelling"
-
-msgid "City Region"
-msgstr "City Region"
-
-msgid "Normal Region"
-msgstr "Normal Region"
-
-msgid "Ruins"
-msgstr "Ruins"
 
 # ============================================================================
 # Frontend UI Translations
