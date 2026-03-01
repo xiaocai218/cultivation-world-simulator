@@ -136,18 +136,23 @@ class ActionMixin:
         if result.status == ActionStatus.COMPLETED:
             params_for_finish = filter_kwargs_for_callable(action.finish, params)
             finish_events = await action.finish(**params_for_finish)
-            # 仅当当前动作仍然是刚才执行的那个实例时才清空
-            # 若在 step() 内部通过"抢占"机制切换了动作（如 Escape 失败立即切到 Attack），不要清空新动作
-            if self.current_action is action_instance_before:
-                self.current_action = None
             if finish_events:
                 # 允许 finish 直接返回事件（极少用），统一并入 pending
                 for e in finish_events:
                     self._pending_events.append(e)
+                    
         # 合并动作返回的事件（通常为空）
         if result.events:
             for e in result.events:
                 self.add_event(e)
+                
+        # 仅当当前动作仍然是刚才执行的那个实例时才清空
+        # 若在 step() 内部通过"抢占"机制切换了动作（如 Escape 失败立即切到 Attack），不要清空新动作
+        # 所有非 RUNNING 状态（包含 COMPLETED, FAILED, CANCELLED, INTERRUPTED）均代表动作终止，需要清空槽位
+        if result.status != ActionStatus.RUNNING:
+            if self.current_action is action_instance_before:
+                self.current_action = None
+
         events, self._pending_events = self._pending_events, []
         # 本轮已执行过，清除"新设动作"标记
         # 1. 动作结束 (None)
