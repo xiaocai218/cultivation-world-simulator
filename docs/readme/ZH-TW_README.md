@@ -1,6 +1,6 @@
 <!-- 語言 / Language -->
 <h3 align="center">
-  <a href="../../README.md">🇨🇳 简体中文</a> · <a href="ZH-TW_README.md">🇭🇰 繁體中文</a> · <a href="EN_README.md">🇺🇸 English</a>
+  <a href="../../README.md">简体中文</a> · <a href="ZH-TW_README.md">繁體中文</a> · <a href="EN_README.md">English</a>
 </h3>
 <p align="center">— ✦ —</p>
 
@@ -8,10 +8,10 @@
 
 ![GitHub stars](https://img.shields.io/github/stars/4thfever/cultivation-world-simulator?style=social)
 [![Steam](https://img.shields.io/badge/Steam-%E5%95%86%E5%BA%97%E9%A1%B5%E9%9D%A2-2a475e?logo=steam&logoColor=white)](https://store.steampowered.com/app/4443180)
-[![Bilibili](https://img.shields.io/badge/Bilibili-%E6%9F%A5%E7%9C%8B%E8%A7%86%E9%頻-FB7299?logo=bilibili)](https://space.bilibili.com/527346837)
+[![Bilibili](https://img.shields.io/badge/Bilibili-%E6%9F%A5%E7%9C%8B%E8%A6%96%E9%A0%BB-FB7299?logo=bilibili)](https://space.bilibili.com/527346837)
 ![QQ Group](https://img.shields.io/badge/QQ%E7%BE%A4-1071821688-deepskyblue?logo=tencent-qq&logoColor=white)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Us-7289da?logo=discord&logoColor=white)](https://discord.gg/shhRWmZR)
-[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE)
+[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey)](../../LICENSE)
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white)
@@ -22,7 +22,7 @@
 
 
 <p align="center">
-  <img src="../../assets/zh-tw/screenshot.gif" alt="遊戲演示" width="100%">
+  <img src="../../assets/zh-TW/screenshot.gif" alt="遊戲演示" width="100%">
 </p>
 
 > **一個 AI 驅動的修仙世界模擬器，旨在創造一個真正活著的、有沉浸感的仙俠世界。**
@@ -51,38 +51,38 @@
   <tr>
     <td width="33%" valign="top">
       <h4 align="center">宗門體系</h4>
-      <img src="../../assets/zh-tw/screenshots/宗门.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/宗门.png" width="100%" />
       <br/><br/>
       <h4 align="center">城市區域</h4>
-      <img src="../../assets/zh-tw/screenshots/城市.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/城市.png" width="100%" />
       <br/><br/>
       <h4 align="center">生平經歷</h4>
-      <img src="../../assets/zh-tw/screenshots/经历.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/经历.png" width="100%" />
     </td>
     <td width="33%" valign="top">
       <h4 align="center">角色面板</h4>
-      <img src="../../assets/zh-tw/screenshots/角色.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/角色.png" width="100%" />
       <br/><br/>
       <h4 align="center">性格特質</h4>
-      <img src="../../assets/zh-tw/screenshots/特质.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/特质.png" width="100%" />
       <br/><br/>
       <h4 align="center">自主思考</h4>
-      <img src="../../assets/zh-tw/screenshots/思考.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/思考.png" width="100%" />
       <br/><br/>
       <h4 align="center">江湖綽號</h4>
-      <img src="../../assets/zh-tw/screenshots/绰号.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/绰号.png" width="100%" />
     </td>
     <td width="33%" valign="top">
       <h4 align="center">洞府探秘</h4>
-      <img src="../../assets/zh-tw/screenshots/洞府.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/洞府.png" width="100%" />
       <br/><br/>
       <h4 align="center">長短期目標</h4>
-      <img src="../../assets/zh-tw/screenshots/目标.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/目标.png" width="100%" />
       <br/><br/>
       <h4 align="center">丹藥/法寶/武器</h4>
-      <img src="../../assets/zh-tw/screenshots/丹药.png" width="100%" />
-      <img src="../../assets/zh-tw/screenshots/法宝.png" width="100%" />
-      <img src="../../assets/zh-tw/screenshots/武器.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/丹药.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/法宝.png" width="100%" />
+      <img src="../../assets/zh-TW/screenshots/武器.png" width="100%" />
     </td>
   </tr>
 </table>

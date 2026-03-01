@@ -1,6 +1,6 @@
 <!-- 语言 / Language -->
 <h3 align="center">
-  <a href="README.md">🇨🇳 简体中文</a> · <a href="docs/readme/ZH-TW_README.md">🇭🇰 繁體中文</a> · <a href="docs/readme/EN_README.md">🇺🇸 English</a>
+  <a href="README.md">简体中文</a> · <a href="docs/readme/ZH-TW_README.md">繁體中文</a> · <a href="docs/readme/EN_README.md">English</a>
 </h3>
 <p align="center">— ✦ —</p>
 

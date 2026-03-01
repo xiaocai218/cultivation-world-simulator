@@ -1,6 +1,6 @@
 <!-- Language / 语言 -->
 <h3 align="center">
-  <a href="../../README.md">🇨🇳 简体中文</a> · <a href="ZH-TW_README.md">🇭🇰 繁體中文</a> · <a href="EN_README.md">🇺🇸 English</a>
+  <a href="../../README.md">简体中文</a> · <a href="ZH-TW_README.md">繁體中文</a> · <a href="EN_README.md">English</a>
 </h3>
 <p align="center">— ✦ —</p>
 
@@ -11,7 +11,7 @@
 [![Bilibili](https://img.shields.io/badge/Bilibili-Watch_Video-FB7299?logo=bilibili)](https://space.bilibili.com/527346837)
 ![QQ Group](https://img.shields.io/badge/QQ%20Group-1071821688-deepskyblue?logo=tencent-qq&logoColor=white)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Us-7289da?logo=discord&logoColor=white)](https://discord.gg/shhRWmZR)
-[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE)
+[![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey)](../../LICENSE)
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white)
@@ -21,7 +21,7 @@
 ![PixiJS](https://img.shields.io/badge/PixiJS-E72264?style=flat&logo=pixijs&logoColor=white)
 
 <p align="center">
-  <img src="assets/en-US/screenshot.gif" alt="Game Demo" width="100%">
+  <img src="../../assets/en-US/screenshot.gif" alt="Game Demo" width="100%">
 </p>
 
 > **An AI-driven cultivation world simulator that aims to create a truly living, immersive xianxia world.**
@@ -50,38 +50,38 @@ You don't need to personally fight monsters or level up. Instead, you observe al
   <tr>
     <td width="33%" valign="top">
       <h4 align="center">Sect System</h4>
-      <img src="assets/en-US/screenshots/宗门.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/宗门.png" width="100%" />
       <br/><br/>
       <h4 align="center">City Region</h4>
-      <img src="assets/en-US/screenshots/城市.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/城市.png" width="100%" />
       <br/><br/>
       <h4 align="center">Life Experiences</h4>
-      <img src="assets/en-US/screenshots/经历.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/经历.png" width="100%" />
     </td>
     <td width="33%" valign="top">
       <h4 align="center">Character Panel</h4>
-      <img src="assets/en-US/screenshots/角色.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/角色.png" width="100%" />
       <br/><br/>
       <h4 align="center">Personality Traits</h4>
-      <img src="assets/en-US/screenshots/特质.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/特质.png" width="100%" />
       <br/><br/>
       <h4 align="center">Independent Thinking</h4>
-      <img src="assets/en-US/screenshots/思考.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/思考.png" width="100%" />
       <br/><br/>
       <h4 align="center">Nicknames</h4>
-      <img src="assets/en-US/screenshots/绰号.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/绰号.png" width="100%" />
     </td>
     <td width="33%" valign="top">
       <h4 align="center">Dungeon Exploration</h4>
-      <img src="assets/en-US/screenshots/洞府.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/洞府.png" width="100%" />
       <br/><br/>
       <h4 align="center">Short/Long Term Goals</h4>
-      <img src="assets/en-US/screenshots/目标.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/目标.png" width="100%" />
       <br/><br/>
       <h4 align="center">Elixirs/Treasures/Weapons</h4>
-      <img src="assets/en-US/screenshots/丹药.png" width="100%" />
-      <img src="assets/en-US/screenshots/法宝.png" width="100%" />
-      <img src="assets/en-US/screenshots/武器.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/丹药.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/法宝.png" width="100%" />
+      <img src="../../assets/en-US/screenshots/武器.png" width="100%" />
     </td>
   </tr>
 </table>
@@ -173,7 +173,7 @@ If you find this project interesting, please give us a Star ⭐! It will motivat
   <img src="https://contrib.rocks/image?repo=4thfever/cultivation-world-simulator&max=100&columns=11" />
 </a>
 
-For more details on contributions, please see [CONTRIBUTORS.md](CONTRIBUTORS.md).
+For more details on contributions, please see [CONTRIBUTORS.md](../../CONTRIBUTORS.md).
 
 
 ## 📋 Development Progress
