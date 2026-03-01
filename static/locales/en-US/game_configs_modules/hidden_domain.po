@@ -1,28 +1,16 @@
 #
 msgid ""
 msgstr ""
+"Project-Id-Version: cultivation-world-simulator 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-20 00:00+0000\n"
+"PO-Revision-Date: 2024-01-20 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: en-US\n"
 "Language: en_US\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-
-#. hidden_domain.csv: 万木残界
-msgid "HIDDEN_DOMAIN_HIDDEN_DOMAIN_WOOD_NAME"
-msgstr "Remnant of Myriad Woods"
-
-#. hidden_domain.csv: 此乃上古丹宗“青帝苑”崩碎后遗落的一角碎...
-msgid "HIDDEN_DOMAIN_HIDDEN_DOMAIN_WOOD_DESC"
-msgstr ""
-"A fragment of the ancient Azure Emperor's Garden that shattered eons ago, "
-"now perpetually shrouded in multicolored, toxic miasma. The broken laws "
-"within cause spirit plants to grow madly, with shapeshifting demon vines and"
-" man-eating flowers lurking in the shadows. Rumor has it that if one can "
-"traverse the outer \"Dead Silence Forest\" and find the \"Azure Wood Spirit "
-"Spring\" at the core, even mortal grass can become immortal medicine. "
-"However, one must beware of the guardian beasts, twisted by millennia of "
-"consuming medicinal dregs, who thirst for fresh blood."
-
-#. hidden_domain.csv: 陨仙焚谷
-msgid "HIDDEN_DOMAIN_HIDDEN_DOMAIN_FIRE_NAME"
-msgstr "Valley of Fallen Immortals"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. hidden_domain.csv: 万年前人族大能与炎魔皇同归于尽之地，至今...
 msgid "HIDDEN_DOMAIN_HIDDEN_DOMAIN_FIRE_DESC"
@@ -37,9 +25,9 @@ msgstr ""
 "with deep destiny might even pick up fragment artifacts left by ancient "
 "cultivators from the magma depths or glimpse a trace of the Great Dao."
 
-#. hidden_domain.csv: 九天虚空殿
-msgid "HIDDEN_DOMAIN_HIDDEN_DOMAIN_PALACE_NAME"
-msgstr "Nine Heavens Void Palace"
+#. hidden_domain.csv: 陨仙焚谷
+msgid "HIDDEN_DOMAIN_HIDDEN_DOMAIN_FIRE_NAME"
+msgstr "Valley of Fallen Immortals"
 
 #. hidden_domain.csv: 漂浮于九天罡风层之上的宏伟宫殿群，非有大...
 msgid "HIDDEN_DOMAIN_HIDDEN_DOMAIN_PALACE_DESC"
@@ -54,3 +42,23 @@ msgstr ""
 "capable of causing a bloodbath in the cultivation world. Only peak Core "
 "Formation cultivators can barely withstand the pressure from the ancient "
 "times to spy a glimpse of immortal opportunity."
+
+#. hidden_domain.csv: 九天虚空殿
+msgid "HIDDEN_DOMAIN_HIDDEN_DOMAIN_PALACE_NAME"
+msgstr "Nine Heavens Void Palace"
+
+#. hidden_domain.csv: 此乃上古丹宗“青帝苑”崩碎后遗落的一角碎...
+msgid "HIDDEN_DOMAIN_HIDDEN_DOMAIN_WOOD_DESC"
+msgstr ""
+"A fragment of the ancient Azure Emperor's Garden that shattered eons ago, "
+"now perpetually shrouded in multicolored, toxic miasma. The broken laws "
+"within cause spirit plants to grow madly, with shapeshifting demon vines and"
+" man-eating flowers lurking in the shadows. Rumor has it that if one can "
+"traverse the outer \"Dead Silence Forest\" and find the \"Azure Wood Spirit "
+"Spring\" at the core, even mortal grass can become immortal medicine. "
+"However, one must beware of the guardian beasts, twisted by millennia of "
+"consuming medicinal dregs, who thirst for fresh blood."
+
+#. hidden_domain.csv: 万木残界
+msgid "HIDDEN_DOMAIN_HIDDEN_DOMAIN_WOOD_NAME"
+msgstr "Remnant of Myriad Woods"

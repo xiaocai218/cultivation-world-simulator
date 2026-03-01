@@ -1,0 +1,26 @@
+{
+  "title": "Start Game",
+  "description": "Configure initial world state. Note: These settings cannot be changed once the game starts.",
+  "labels": {
+    "init_npc_num": "Initial Cultivators",
+    "sect_num": "Active Sects",
+    "new_npc_rate": "Monthly New Cultivator Rate",
+    "world_history": "World History Background"
+  },
+  "tips": {
+    "sect_num": "Sect number should be less than half of initial cultivators.",
+    "world_history": "Can include ancient, medieval, or recent history. Note: Enabling this calls LLM and significantly increases initialization time."
+  },
+  "placeholders": {
+    "world_history": "Enter cultivation world history background (Optional)."
+  },
+  "options": {},
+  "actions": {
+    "start": "Start"
+  },
+  "messages": {
+    "load_failed": "Failed to load configuration",
+    "start_success": "Configuration saved, initializing world...",
+    "start_failed": "Failed to start game"
+  }
+}

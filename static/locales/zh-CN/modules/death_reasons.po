@@ -6,7 +6,7 @@ msgstr ""
 "POT-Creation-Date: 2024-01-20 00:00+0000\n"
 "PO-Revision-Date: 2024-01-20 00:00+0000\n"
 "Last-Translator: \n"
-"Language-Team: Chinese\n"
+"Language-Team: zh-CN\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,8 +16,11 @@ msgstr ""
 msgid "Killed by {killer}"
 msgstr "被{killer}杀害"
 
-msgid "Died from severe injuries"
-msgstr "重伤不治身亡"
+# ============================================================================
+# Relation & Root & Appearance & Sect (Refined)
+# ============================================================================
+msgid "Unknown reason"
+msgstr "未知原因"
 
-msgid "Died of old age"
-msgstr "寿元耗尽而亡"
+msgid "{name} (Deceased: {reason})"
+msgstr "{name}(已故：{reason})"

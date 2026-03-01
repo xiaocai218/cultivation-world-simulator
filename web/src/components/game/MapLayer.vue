@@ -2,7 +2,7 @@
 import { onMounted, onUnmounted, ref, watch } from 'vue'
 import { Container, Sprite, TilingSprite, Graphics, Ticker } from 'pixi.js'
 import { useTextures } from './composables/useTextures'
-import { useWorldStore } from '../../stores/world'
+import { useMapStore } from '../../stores/map'
 import { getRegionTextStyle } from '../../utils/mapStyles'
 import { useAudio } from '../../composables/useAudio'
 import type { RegionSummary } from '../../types/core'
@@ -10,7 +10,7 @@ import type { RegionSummary } from '../../types/core'
 const TILE_SIZE = 64
 const mapContainer = ref<Container>()
 const { textures, isLoaded, loadSectTexture, loadCityTexture, getTileTexture } = useTextures()
-const worldStore = useWorldStore()
+const mapStore = useMapStore()
 
 // 动态水面相关变量
 let ticker: Ticker | null = null
@@ -24,7 +24,7 @@ const emit = defineEmits<{
 
 onMounted(() => {
   // Map data is loaded by worldStore.initialize() in App.vue or similar
-  if (isLoaded.value && worldStore.isLoaded) {
+  if (isLoaded.value && mapStore.isLoaded) {
     renderMap()
   }
 })
@@ -34,7 +34,7 @@ onUnmounted(() => {
 })
 
 watch(
-  () => [isLoaded.value, worldStore.isLoaded],
+  () => [isLoaded.value, mapStore.isLoaded],
   ([texturesReady, mapReady]) => {
     if (texturesReady && mapReady) {
       renderMap()
@@ -51,7 +51,7 @@ function cleanupTicker() {
 }
 
 async function renderMap() {
-  if (!mapContainer.value || !worldStore.mapData.length) return
+  if (!mapContainer.value || !mapStore.mapData.length) return
 
   // 清理旧资源
   cleanupTicker()
@@ -60,8 +60,8 @@ async function renderMap() {
   await preloadRegionTextures()
 
   if (!mapContainer.value) return // Check again after await
-  const rows = worldStore.mapData.length
-  const cols = worldStore.mapData[0]?.length ?? 0
+  const rows = mapStore.mapData.length
+  const cols = mapStore.mapData[0]?.length ?? 0
   const mapWidth = cols * TILE_SIZE
   const mapHeight = rows * TILE_SIZE
 
@@ -105,7 +105,7 @@ async function renderMap() {
 
   for (let y = 0; y < rows; y++) {
     for (let x = 0; x < cols; x++) {
-      const type = worldStore.mapData[y][x]
+      const type = mapStore.mapData[y][x]
 
       // 处理特殊地块：海与水
       if (type === 'SEA') {
@@ -175,7 +175,7 @@ async function renderMap() {
       // v8: deltaMS / deltaTime
       let baseSpeed = 0.5
       
-      const configSpeed = worldStore.frontendConfig?.water_speed || 'high' // default high as per old behavior
+      const configSpeed = mapStore.frontendConfig?.water_speed || 'high' // default high as per old behavior
       if (configSpeed === 'none') {
         baseSpeed = 0
       } else if (configSpeed === 'low') {
@@ -215,7 +215,7 @@ async function renderMap() {
 }
 
 async function preloadRegionTextures() {
-  const regions = Array.from(worldStore.regions.values());
+  const regions = Array.from(mapStore.regions.values());
   
   // Sects - use sect_id instead of sect_name
   const sectIds = Array.from(
@@ -246,7 +246,7 @@ async function preloadRegionTextures() {
 }
 
 function renderLargeRegions() {
-    const regions = Array.from(worldStore.regions.values());
+    const regions = Array.from(mapStore.regions.values());
     for (const region of regions) {
         let baseName: string | null = null;
         
@@ -311,7 +311,7 @@ function handleRegionSelect(region: RegionSummary) {
      <container :z-index="200">
         <!-- @vue-ignore -->
         <text
-            v-for="r in Array.from(worldStore.regions.values())"
+            v-for="r in Array.from(mapStore.regions.values())"
             :key="r.name"
             :text="r.name"
             :x="r.x * TILE_SIZE + TILE_SIZE / 2"

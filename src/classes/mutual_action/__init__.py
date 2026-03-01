@@ -11,6 +11,8 @@ from .gift import Gift
 from .spar import Spar
 from .occupy import Occupy
 from .play import TeaParty, Chess
+from .confess import Confess
+from .swear_brotherhood import SwearBrotherhood
 from src.classes.action.registry import register_action
 
 __all__ = [
@@ -26,6 +28,8 @@ __all__ = [
     "Occupy",
     "TeaParty",
     "Chess",
+    "Confess",
+    "SwearBrotherhood",
 ]
 
 # 注册 mutual actions（均为实际动作）
@@ -40,3 +44,5 @@ register_action(actual=True)(Spar)
 register_action(actual=True)(Occupy)
 register_action(actual=True)(TeaParty)
 register_action(actual=True)(Chess)
+register_action(actual=True)(Confess)
+register_action(actual=True)(SwearBrotherhood)

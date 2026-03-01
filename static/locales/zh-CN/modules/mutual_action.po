@@ -6,53 +6,37 @@ msgstr ""
 "POT-Creation-Date: 2024-01-20 00:00+0000\n"
 "PO-Revision-Date: 2024-01-20 00:00+0000\n"
 "Last-Translator: \n"
-"Language-Team: Chinese\n"
+"Language-Team: zh-CN\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-# MutualAction Base
-msgid "mutual_action_name"
-msgstr "互动动作"
+msgid ", sell old {label}『{old_name}』"
+msgstr "，卖掉旧{label}『{old_name}』"
 
-msgid "mutual_action_requirements"
-msgstr "交互范围内可互动"
+msgid ", {replace} old {label}『{old_name}』"
+msgstr "，{replace}旧{label}『{old_name}』"
 
-msgid "Cannot initiate interaction with self"
-msgstr "不能对自己发起互动"
+msgid "Already lovers"
+msgstr "已经是道侣了"
 
-msgid "{initiator} initiates {action} with {target}"
-msgstr "{initiator} 对 {target} 发起 {action}"
+msgid "Already sworn siblings"
+msgstr "已经是结拜兄弟/姐妹"
 
-msgid "{target} feedback to {initiator}: {feedback}"
-msgstr "{target} 对 {initiator} 的反馈：{feedback}"
+# MutualAction: Confess
+msgid "confess_action_name"
+msgstr "表白"
 
-# MutualAction: Attack
-msgid "mutual_attack_action_name"
-msgstr "攻击"
+msgid "confess_description"
+msgstr "向交互范围内的修士表白，若对方接受则结为道侣。"
 
-msgid "mutual_attack_description"
-msgstr "对目标进行攻击"
+msgid "confess_requirements"
+msgstr "目标在交互范围内，且当前非道侣关系。"
 
-msgid "mutual_attack_requirements"
-msgstr "目标在交互范围内；不能连续执行"
-
-msgid "Target not within interaction range"
-msgstr "目标不在交互范围内"
-
-# MutualAction: DriveAway
-msgid "drive_away_action_name"
-msgstr "驱赶"
-
-msgid "drive_away_description"
-msgstr "以武力威慑对方离开此地"
-
-msgid "drive_away_requirements"
-msgstr "目标在交互范围内；不能连续执行"
-
-msgid "Cannot drive away in wilderness"
-msgstr "荒野之中无法驱赶"
+msgid "confess_story_prompt"
+msgstr ""
+"描述{initiator}向{target}表白的过程，包含内心的悸动、场景的氛围。如果接受，则描绘两情相悦结为道侣的浪漫；如果拒绝，则描绘婉拒与遗憾。"
 
 # MutualAction: Conversation
 msgid "conversation_action_name"
@@ -64,49 +48,21 @@ msgstr "与对方进行一段交流对话"
 msgid "conversation_requirements"
 msgstr "目标在交互范围内"
 
-msgid "{avatar1} conversation with {avatar2}: {content}"
-msgstr "{avatar1} 与 {avatar2} 的交谈：{content}"
+# MutualAction: DriveAway
+msgid "drive_away_action_name"
+msgstr "驱赶"
 
-# MutualAction: Talk
-msgid "talk_action_name"
-msgstr "攀谈"
+msgid "drive_away_description"
+msgstr "以武力威慑对方离开此地"
 
-msgid "talk_description"
-msgstr "向某人发起攀谈，对象不能是自己"
-
-msgid "talk_requirements"
-msgstr "对象在交互范围内"
+msgid "drive_away_requirements"
+msgstr "目标在交互范围内；不能连续执行"
 
 msgid "feedback_talk"
 msgstr "接受攀谈"
 
-msgid "{target} accepted {initiator}'s talk invitation"
-msgstr "{target} 接受了 {initiator} 的攀谈"
-
-msgid "{target} rejected {initiator}'s talk invitation"
-msgstr "{target} 拒绝了 {initiator} 的攀谈"
-
-# MutualAction: Spar
-msgid "spar_action_name"
-msgstr "切磋"
-
-msgid "spar_description"
-msgstr "与目标切磋武艺，点到为止（大幅增加武器熟练度，不造成伤害）"
-
-msgid "spar_requirements"
-msgstr "交互范围内可互动；不能连续执行"
-
-msgid "spar_story_prompt"
-msgstr "这是两人之间的友好切磋，点到为止，没有真正的伤害。重点描写双方招式的精妙和互相的印证启发。不要出现血腥或重伤描述。"
-
-msgid ""
-"{winner} gained slight advantage in sparring, defeated {loser}. ({winner} "
-"proficiency +{w_gain}, {loser} proficiency +{l_gain})"
-msgstr ""
-"{winner} 在切磋中略胜一筹，战胜了 {loser}。（{winner} 熟练度+{w_gain}，{loser} 熟练度+{l_gain}）"
-
-msgid "{initiator} challenges {target} to spar"
-msgstr "{initiator} 向 {target} 发起切磋"
+msgid "feedback_yield"
+msgstr "让步"
 
 # MutualAction: Gift
 msgid "gift_action_name"
@@ -118,33 +74,6 @@ msgstr "向对方赠送灵石或物品。参数 'item_id' 请填入物品 ID（�
 msgid "gift_requirements"
 msgstr "发起者持有该物品；目标在交互范围内；丹药不可赠送"
 
-msgid "spirit stones"
-msgstr "灵石"
-
-msgid "Item not found: {name}"
-msgstr "未找到物品：{name}"
-
-msgid "Insufficient spirit stones (current: {current}, need: {need})"
-msgstr "灵石不足（当前：{current}，需要：{need}）"
-
-msgid "Item not equipped: {name}"
-msgstr "未装备该物品：{name}"
-
-msgid "Insufficient item: {name}"
-msgstr "物品不足：{name}"
-
-msgid "Elixirs cannot be gifted"
-msgstr "丹药不可赠送"
-
-msgid "Gift you {item}"
-msgstr "向你赠送 {item}"
-
-msgid "{initiator} attempts to gift {item} to {target}"
-msgstr "{initiator} 试图向 {target} 赠送 {item}"
-
-msgid "{initiator} successfully gifted {item} to {target}"
-msgstr "{initiator} 成功赠送了 {item} 给 {target}"
-
 # MutualAction: Impart
 msgid "impart_action_name"
 msgstr "传道"
@@ -155,20 +84,22 @@ msgstr "向徒弟、徒孙、同门、子女、孙辈或朋友传授修炼经验
 msgid "impart_requirements"
 msgstr "目标必须是发起者的徒弟、徒孙、同门、子女、孙辈或朋友；发起者等级 > 目标等级 + 20；目标在交互范围内；不能连续执行"
 
-msgid "Target is not your apprentice"
-msgstr "目标不是自己的徒弟"
+# MutualAction Base
+msgid "mutual_action_name"
+msgstr "互动动作"
 
-msgid "Target is not your disciple, martial grandchild, martial sibling, child, grandchild, or friend"
-msgstr "目标不是你的徒弟、徒孙、同门、子女、孙辈或朋友"
+msgid "mutual_action_requirements"
+msgstr "交互范围内可互动"
 
-msgid "Level difference insufficient, need 20 levels (current gap: {diff} levels)"
-msgstr "等级差不足20级（当前差距：{diff}级）"
+# MutualAction: Attack
+msgid "mutual_attack_action_name"
+msgstr "攻击"
 
-msgid "{giver} imparts cultivation knowledge to {receiver}"
-msgstr "{giver} 向 {receiver} 传道授业"
+msgid "mutual_attack_description"
+msgstr "对目标进行攻击"
 
-msgid "{master} imparts cultivation knowledge to apprentice {apprentice}"
-msgstr "{master} 向徒弟 {apprentice} 传道授业"
+msgid "mutual_attack_requirements"
+msgstr "目标在交互范围内；不能连续执行"
 
 # MutualAction: Occupy
 msgid "occupy_action_name"
@@ -183,31 +114,108 @@ msgstr "目标在交互范围内；不能连续执行"
 msgid "occupy_story_prompt"
 msgstr "这是一场争夺洞府的战斗。不要出现具体血量或伤害数值。"
 
-msgid "feedback_yield"
-msgstr "让步"
+# MutualAction: Spar
+msgid "spar_action_name"
+msgstr "切磋"
 
-msgid "Cannot find region: {region}"
-msgstr "无法找到区域：{region}"
+msgid "spar_description"
+msgstr "与目标切磋武艺，点到为止（大幅增加武器熟练度，不造成伤害）"
 
-msgid "{region} is not a cultivation area, cannot occupy"
-msgstr "{region} 不是修炼区域，无法占据"
+msgid "spar_requirements"
+msgstr "交互范围内可互动；不能连续执行"
 
-msgid "Already the owner of this cave dwelling"
-msgstr "已经是该洞府的主人了"
+msgid "spar_story_prompt"
+msgstr "这是两人之间的友好切磋，点到为止，没有真正的伤害。重点描写双方招式的精妙和互相的印证启发。不要出现血腥或重伤描述。"
 
-msgid "{initiator} attempts to seize {region} from {host}"
-msgstr "{initiator} 对 {host} 的 {region} 发起抢夺"
+msgid "spirit stones"
+msgstr "灵石"
 
-msgid "{initiator} forced {target} to yield {region}"
-msgstr "{initiator} 逼迫 {target} 让出了 {region}"
+msgid "swear_brotherhood_action_name"
+msgstr "结拜"
+
+msgid "swear_brotherhood_description"
+msgstr "向交互范围内的修士发起结拜，若对方接受则结为义结金兰。"
+
+msgid "swear_brotherhood_requirements"
+msgstr "目标在交互范围内；对方不是你的结拜兄弟/姐妹"
+
+msgid "swear_brotherhood_story_prompt"
+msgstr "这是一场豪气干云的结拜，重点描写两人意气相投、誓言同生共死的场景。"
+
+# MutualAction: Talk
+msgid "talk_action_name"
+msgstr "攀谈"
+
+msgid "talk_description"
+msgstr "向某人发起攀谈，对象不能是自己"
+
+msgid "talk_requirements"
+msgstr "对象在交互范围内"
+
+msgid "{avatar1} conversation with {avatar2}: {content}"
+msgstr "{avatar1} 与 {avatar2} 的交谈：{content}"
+
+msgid "{giver} imparts cultivation knowledge to {receiver}"
+msgstr "{giver} 向 {receiver} 传道授业"
 
 msgid ""
 "{initiator} attempted to seize {target}'s cave dwelling {region}, {target} "
 "rejected and engaged in battle"
 msgstr "{initiator} 试图抢夺 {target} 的洞府 {region}，{target} 拒绝并应战"
 
-msgid ", successfully seized {region}"
-msgstr "，成功夺取了 {region}"
+msgid "{initiator} attempts to gift {item} to {target}"
+msgstr "{initiator} 试图向 {target} 赠送 {item}"
 
-msgid ", defended {region}"
-msgstr "，守住了 {region}"
+msgid "{initiator} attempts to seize {region} from {host}"
+msgstr "{initiator} 对 {host} 的 {region} 发起抢夺"
+
+msgid "{initiator} challenges {target} to spar"
+msgstr "{initiator} 向 {target} 发起切磋"
+
+msgid "{initiator} confesses their love to {target}"
+msgstr "{initiator}向{target}深情表白"
+
+msgid "{initiator} forced {target} to yield {region}"
+msgstr "{initiator} 逼迫 {target} 让出了 {region}"
+
+msgid "{initiator} initiates {action} with {target}"
+msgstr "{initiator} 对 {target} 发起 {action}"
+
+msgid "{initiator} proposes to become sworn siblings with {target}"
+msgstr "{initiator}向{target}提出结拜为义结金兰"
+
+msgid "{initiator} successfully gifted {item} to {target}"
+msgstr "{initiator} 成功赠送了 {item} 给 {target}"
+
+msgid "{master} imparts cultivation knowledge to apprentice {apprentice}"
+msgstr "{master} 向徒弟 {apprentice} 传道授业"
+
+msgid "{region} is not a cultivation area, cannot occupy"
+msgstr "{region} 不是修炼区域，无法占据"
+
+msgid "{target} accepted {initiator}'s confession, they became lovers"
+msgstr "{target}接受了{initiator}的表白，两人结为道侣"
+
+msgid "{target} accepted {initiator}'s proposal, they became sworn siblings"
+msgstr "{target}接受了{initiator}的提议，两人结为义结金兰"
+
+msgid "{target} accepted {initiator}'s talk invitation"
+msgstr "{target} 接受了 {initiator} 的攀谈"
+
+msgid "{target} feedback to {initiator}: {feedback}"
+msgstr "{target} 对 {initiator} 的反馈：{feedback}"
+
+msgid "{target} rejected {initiator}'s confession"
+msgstr "{target}婉拒了{initiator}的表白"
+
+msgid "{target} rejected {initiator}'s proposal to become sworn siblings"
+msgstr "{target}拒绝了{initiator}的结拜提议"
+
+msgid "{target} rejected {initiator}'s talk invitation"
+msgstr "{target} 拒绝了 {initiator} 的攀谈"
+
+msgid ""
+"{winner} gained slight advantage in sparring, defeated {loser}. ({winner} "
+"proficiency +{w_gain}, {loser} proficiency +{l_gain})"
+msgstr ""
+"{winner} 在切磋中略胜一筹，战胜了 {loser}。（{winner} 熟练度+{w_gain}，{loser} 熟练度+{l_gain}）"

@@ -1,0 +1,167 @@
+{
+  "prosperity": "繁榮度",
+  "status_bar": {
+    "phenomenon": "天地靈機",
+    "effect": "效果：",
+    "duration": "持續 {years} 年",
+    "selector_title": "天道干涉：更易天象",
+    "empty_data": "暫無天象數據",
+    "cultivators": "修士: {count}",
+    "change_success": "天象已更易爲：{name}",
+    "click_to_change": "（點擊可更易天象）",
+    "author_github": "Github倉庫",
+    "hidden_domain": {
+      "label": "[祕境]",
+      "title": "祕境列表",
+      "empty": "暫無祕境數據",
+      "danger": "凶險",
+      "drop": "機緣",
+      "status_open": "開啟中",
+      "status_closed": "未開啟"
+    }
+  },
+  "controls": {
+    "resume": "繼續遊戲",
+    "pause": "暫停遊戲",
+    "paused": "已暫停",
+    "closed_msg": "遊戲已關閉，您可以安全關閉此標籤頁。"
+  },
+  "event_panel": {
+    "title": "事件記錄",
+    "filter_all": "所有人",
+    "deceased": "(已故)",
+    "add_second": "+ 添加第二人",
+    "load_more": "向上滾動載入更多",
+    "empty_dual": "這兩人之間暫無事件",
+    "empty_single": "該修士暫無事件",
+    "empty_none": "暫無事件"
+  },
+  "ranking": {
+    "title_short": "[天地人榜]",
+    "tournament_short": "[武道會]",
+    "title": "天地人榜",
+    "heaven": "天榜 (元嬰)",
+    "earth": "地榜 (金丹)",
+    "human": "人榜 (築基)",
+    "sect_ranking": "宗門榜",
+    "rank": "排名",
+    "name": "姓名",
+    "sect": "所屬宗門",
+    "realm": "修爲境界",
+    "power": "基礎戰力",
+    "sect_name": "宗門名稱",
+    "alignment": "行事陣營",
+    "member_count": "現存人數",
+    "total_power": "宗門總戰力",
+    "empty": "暫無資料",
+    "tournament_title": "天下武道會",
+    "tournament_next": "距離下一屆還有 {years} 年",
+    "heaven_first": "天榜第一",
+    "earth_first": "地榜第一",
+    "human_first": "人榜第一"
+  },
+  "info_panel": {
+    "popup": {
+      "effect": "效果：",
+      "drops": "掉落/產出：",
+      "hq": "駐地：",
+      "types": {
+        "elixir": "丹藥",
+        "plant": "植物",
+        "lode": "礦脈",
+        "item": "物品",
+        "weapon": "兵器",
+        "auxiliary": "輔助裝備",
+        "technique": "功法",
+        "sect": "宗門",
+        "persona": "特質",
+        "SWORD": "劍",
+        "SABER": "刀",
+        "SPEAR": "槍",
+        "STAFF": "棍",
+        "FAN": "扇",
+        "WHIP": "鞭",
+        "ZITHER": "琴",
+        "FLUTE": "笛",
+        "HIDDEN_WEAPON": "暗器"
+      }
+    },
+    "avatar": {
+      "set_objective": "設定目標",
+      "clear_objective": "清空目標",
+      "dead_with_reason": "已故 ({reason})",
+      "unknown_reason": "未知原因",
+      "long_term_objective": "長期目標",
+      "backstory": "身世",
+      "short_term_objective": "短期目標",
+      "stats": {
+        "realm": "境界",
+        "origin": "出身",
+        "age": "年齡",
+        "awakened_age": "修道年齡",
+        "hp": "HP",
+        "gender": "性別",
+        "alignment": "陣營",
+        "sect": "宗門",
+        "rogue": "散修",
+        "root": "靈根",
+        "magic_stone": "靈石",
+        "appearance": "顏值",
+        "battle_strength": "基礎戰力",
+        "ranking": "排行",
+        "emotion": "情緒"
+      },
+      "sections": {
+        "thinking": "當前思考",
+        "traits": "特質",
+        "techniques_equipment": "功法與裝備",
+        "materials": "材料",
+        "relations": "關係",
+        "current_effects": "當前效果"
+      },
+      "weapon_meta": "熟練度 {value}",
+      "relation_meta": "{owner}的{relation}",
+      "father_short": "父",
+      "mother_short": "母",
+      "mortal_realm": "凡人",
+      "modals": {
+        "set_long_term": "設定長期目標",
+        "placeholder": "請輸入目標...",
+        "set_failed": "設定失敗",
+        "clear_confirm": "確定要清空該角色的長期目標嗎？"
+      }
+    },
+    "region": {
+      "view_sect": "查看宗門詳情",
+      "essence_title": "靈氣環境",
+      "essence_info": "{type}行靈氣 · 濃度 {density}",
+      "sections": {
+        "host": "洞府主人",
+        "animals": "動物分佈",
+        "plants": "植物分佈",
+        "lodes": "礦脈分佈",
+        "market": "坊市交易"
+      },
+      "host_meta": "主人",
+      "no_host": "無主（可佔據）",
+      "price_meta": "{price}靈石"
+    },
+    "sect": {
+      "stats": {
+        "alignment": "陣營",
+        "orthodoxy": "道統",
+        "style": "風格",
+        "preferred": "擅長",
+        "members": "成員"
+      },
+      "sections": {
+        "intro": "宗門簡介",
+        "hq": "駐地：{name}",
+        "bonus": "宗門加成",
+        "techniques": "獨門絕學",
+        "members": "門下弟子"
+      },
+      "no_bonus": "無特殊加成"
+    }
+  }
+}

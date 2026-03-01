@@ -18,6 +18,7 @@ export default defineConfig({
       reporter: ['text', 'json', 'html'],
       exclude: [
         'node_modules/',
+        'dist/**/',
         'src/__tests__/',
         '**/*.d.ts',
         'vite.config.ts',

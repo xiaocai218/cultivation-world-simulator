@@ -1,0 +1,26 @@
+{
+  "title": "開始遊戲",
+  "description": "設定世界的初始狀態。注意：遊戲開始後，這些設定將無法更改。",
+  "labels": {
+    "init_npc_num": "初始修士數量",
+    "sect_num": "活躍宗門數量",
+    "new_npc_rate": "每月新生修士概率",
+    "world_history": "世界歷史背景"
+  },
+  "tips": {
+    "sect_num": "宗門數量建議少於角色數量的一半",
+    "world_history": "可以包括上古、中古、近古。注意：啓用此功能會調用LLM，初始化時間會顯著增加。"
+  },
+  "placeholders": {
+    "world_history": "請輸入修仙界歷史背景（可選）。"
+  },
+  "options": {},
+  "actions": {
+    "start": "開始"
+  },
+  "messages": {
+    "load_failed": "載入配置失敗",
+    "start_success": "配置已儲存，正在初始化世界...",
+    "start_failed": "開始遊戲失敗"
+  }
+}

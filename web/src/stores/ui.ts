@@ -10,10 +10,24 @@ export interface Selection {
   id: string;
 }
 
+export type SystemMenuTab =
+  | 'save'
+  | 'load'
+  | 'create'
+  | 'delete'
+  | 'llm'
+  | 'start'
+  | 'settings'
+  | 'about'
+  | 'other';
+
 export const useUiStore = defineStore('ui', () => {
   // --- Selection & Panels ---
   
   const selectedTarget = ref<Selection | null>(null);
+  const systemMenuVisible = ref(false);
+  const systemMenuDefaultTab = ref<SystemMenuTab>('load');
+  const systemMenuClosable = ref(true);
   
   // 详情数据 (可能为空，或正在加载)
   // 使用 shallowRef 避免深层响应式转换带来的性能开销 (对于大型嵌套对象，如 AvatarDetail)
@@ -48,6 +62,22 @@ export const useUiStore = defineStore('ui', () => {
     detailData.value = null;
   }
 
+  function openSystemMenu(tab: SystemMenuTab = 'load', closable = true) {
+    systemMenuDefaultTab.value = tab;
+    systemMenuClosable.value = closable;
+    systemMenuVisible.value = true;
+  }
+
+  function closeSystemMenu() {
+    if (systemMenuClosable.value) {
+      systemMenuVisible.value = false;
+    }
+  }
+
+  function setSystemMenuClosable(closable: boolean) {
+    systemMenuClosable.value = closable;
+  }
+
   async function refreshDetail() {
     if (!selectedTarget.value) return;
 
@@ -67,7 +97,7 @@ export const useUiStore = defineStore('ui', () => {
       const data = await avatarApi.fetchDetailInfo(target);
       
       if (shouldAcceptResponse()) {
-        detailData.value = data as any;
+        detailData.value = data as unknown as AvatarDetail | RegionDetail | SectDetail;
       }
     } catch (e) {
       if (shouldAcceptResponse()) {
@@ -82,6 +112,9 @@ export const useUiStore = defineStore('ui', () => {
 
   return {
     selectedTarget,
+    systemMenuVisible,
+    systemMenuDefaultTab,
+    systemMenuClosable,
     detailData,
     isLoadingDetail,
     detailError,
@@ -89,6 +122,9 @@ export const useUiStore = defineStore('ui', () => {
     select,
     clearSelection,
     clearHoverCache,
+    openSystemMenu,
+    closeSystemMenu,
+    setSystemMenuClosable,
     refreshDetail
   };
 });

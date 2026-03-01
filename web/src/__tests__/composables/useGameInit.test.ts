@@ -133,6 +133,8 @@ describe('useGameInit', () => {
       const wrapper = mount(TestComponent)
 
       expect(wrapper.vm.avatarsPreloaded).toBe(false)
+      expect(wrapper.vm.initializeDurationMs).toBe(0)
+      expect(wrapper.vm.lastPollDurationMs).toBeGreaterThanOrEqual(0)
 
       wrapper.unmount()
     })
@@ -316,6 +318,32 @@ describe('useGameInit', () => {
       wrapper.unmount()
     })
 
+    it('should only initialize once when status remains ready', async () => {
+      const initializeSpy = vi.spyOn(worldStore, 'initialize').mockResolvedValue(undefined)
+      const setInitializedSpy = vi.spyOn(systemStore, 'setInitialized')
+
+      // First poll idle, second ready, third still ready.
+      vi.spyOn(systemStore, 'fetchInitStatus')
+        .mockResolvedValueOnce(createMockStatus({ status: 'idle' }))
+        .mockResolvedValueOnce(createMockStatus({ status: 'ready' }))
+        .mockResolvedValueOnce(createMockStatus({ status: 'ready' }))
+
+      const TestComponent = createTestComponent()
+      const wrapper = mount(TestComponent)
+
+      await vi.advanceTimersByTimeAsync(0)
+      await nextTick()
+      await vi.advanceTimersByTimeAsync(1000)
+      await nextTick()
+      await vi.advanceTimersByTimeAsync(1000)
+      await nextTick()
+
+      expect(initializeSpy).toHaveBeenCalledTimes(1)
+      expect(setInitializedSpy).toHaveBeenCalledWith(true)
+
+      wrapper.unmount()
+    })
+
     it('should handle fetch error gracefully', async () => {
       const consoleSpy = vi.spyOn(console, 'error').mockImplementation(() => {})
 
@@ -328,7 +356,7 @@ describe('useGameInit', () => {
       await vi.advanceTimersByTimeAsync(0)
       await nextTick()
 
-      expect(consoleSpy).toHaveBeenCalledWith('Failed to fetch init status:', expect.any(Error))
+      expect(consoleSpy).toHaveBeenCalled()
 
       consoleSpy.mockRestore()
       wrapper.unmount()
@@ -398,6 +426,7 @@ describe('useGameInit', () => {
       await wrapper.vm.initializeGame()
 
       expect(initSpy).toHaveBeenCalled()
+      expect(wrapper.vm.initializeDurationMs).toBeGreaterThanOrEqual(0)
 
       wrapper.unmount()
     })

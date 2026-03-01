@@ -1,6 +1,6 @@
-import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest'
-import { mount, flushPromises } from '@vue/test-utils'
-import { defineComponent, ref, nextTick } from 'vue'
+import { describe, it, expect, vi, beforeEach } from 'vitest'
+import { mount } from '@vue/test-utils'
+import { defineComponent, ref } from 'vue'
 import { useUiStore } from '@/stores/ui'
 import { useSystemStore } from '@/stores/system'
 
@@ -55,11 +55,6 @@ describe('useGameControl', () => {
     vi.clearAllMocks()
   })
 
-  afterEach(() => {
-    // Clean up global function.
-    delete (window as any).__openLLMConfig
-  })
-
   describe('initial state', () => {
     it('should have correct initial values', () => {
       const TestComponent = createTestComponent()
@@ -68,17 +63,6 @@ describe('useGameControl', () => {
       expect(wrapper.vm.showMenu).toBe(false)
       expect(wrapper.vm.menuDefaultTab).toBe('load')
       expect(wrapper.vm.canCloseMenu).toBe(true)
-
-      wrapper.unmount()
-    })
-
-    it('should expose openLLMConfig to window on mount', async () => {
-      const TestComponent = createTestComponent()
-      const wrapper = mount(TestComponent)
-      await nextTick()
-
-      expect((window as any).__openLLMConfig).toBeDefined()
-      expect(typeof (window as any).__openLLMConfig).toBe('function')
 
       wrapper.unmount()
     })
@@ -293,6 +277,7 @@ describe('useGameControl', () => {
 
       expect(wrapper.vm.menuDefaultTab).toBe('llm')
       expect(wrapper.vm.showMenu).toBe(true)
+      expect(wrapper.vm.canCloseMenu).toBe(false)
       wrapper.unmount()
     })
   })

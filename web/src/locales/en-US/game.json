@@ -1,0 +1,167 @@
+{
+  "prosperity": "Prosperity",
+  "status_bar": {
+    "phenomenon": "World Phenomenon",
+    "effect": "Effect: ",
+    "duration": "Lasts {years} Years",
+    "selector_title": "Intervention: Change Phenomenon",
+    "empty_data": "No phenomenon data",
+    "cultivators": "Cultivators: {count}",
+    "change_success": "Phenomenon changed to: {name}",
+    "click_to_change": "(Click to change phenomenon)",
+    "author_github": "Github",
+    "hidden_domain": {
+      "label": "[Hidden Domain]",
+      "title": "Hidden Domains List",
+      "empty": "No hidden domains data",
+      "danger": "Danger",
+      "drop": "Fortune",
+      "status_open": "Open",
+      "status_closed": "Closed"
+    }
+  },
+  "controls": {
+    "resume": "Resume Game",
+    "pause": "Pause Game",
+    "paused": "Paused",
+    "closed_msg": "Game closed. You can safely close this tab."
+  },
+  "event_panel": {
+    "title": "Event Logs",
+    "filter_all": "All",
+    "deceased": "(Deceased)",
+    "add_second": "+ Add Second",
+    "load_more": "Scroll up to load more",
+    "empty_dual": "No events between these two",
+    "empty_single": "No events for this cultivator",
+    "empty_none": "No events"
+  },
+  "ranking": {
+    "title_short": "[Rankings]",
+    "tournament_short": "[Tournament]",
+    "title": "Heaven, Earth & Human Rankings",
+    "heaven": "Heaven (Nascent Soul)",
+    "earth": "Earth (Core Formation)",
+    "human": "Human (Foundation)",
+    "sect_ranking": "Sects",
+    "rank": "Rank",
+    "name": "Name",
+    "sect": "Sect",
+    "realm": "Realm",
+    "power": "Power",
+    "sect_name": "Sect Name",
+    "alignment": "Alignment",
+    "member_count": "Members",
+    "total_power": "Total Power",
+    "empty": "No data",
+    "tournament_title": "World Martial Arts Tournament",
+    "tournament_next": "Next tournament in {years} years",
+    "heaven_first": "Heaven 1st",
+    "earth_first": "Earth 1st",
+    "human_first": "Human 1st"
+  },
+  "info_panel": {
+    "popup": {
+      "effect": "Effect: ",
+      "drops": "Drops: ",
+      "hq": "HQ: ",
+      "types": {
+        "elixir": "Elixir",
+        "plant": "Plant",
+        "lode": "Lode",
+        "item": "Item",
+        "weapon": "Weapon",
+        "auxiliary": "Auxiliary",
+        "technique": "Art",
+        "sect": "Sect",
+        "persona": "Trait",
+        "SWORD": "Sword",
+        "SABER": "Saber",
+        "SPEAR": "Spear",
+        "STAFF": "Staff",
+        "FAN": "Fan",
+        "WHIP": "Whip",
+        "ZITHER": "Zither",
+        "FLUTE": "Flute",
+        "HIDDEN_WEAPON": "Hidden Weapon"
+      }
+    },
+    "avatar": {
+      "set_objective": "Set Objective",
+      "clear_objective": "Clear Objective",
+      "dead_with_reason": "Deceased ({reason})",
+      "unknown_reason": "Unknown",
+      "long_term_objective": "Long-term",
+      "backstory": "Backstory",
+      "short_term_objective": "Short-term",
+      "stats": {
+        "realm": "Realm",
+        "origin": "Origin",
+        "age": "Age",
+        "awakened_age": "Started Cultivation At",
+        "hp": "HP",
+        "gender": "Gender",
+        "alignment": "Alignment",
+        "sect": "Sect",
+        "rogue": "Rogue",
+        "root": "Root",
+        "magic_stone": "Stones",
+        "appearance": "Look",
+        "battle_strength": "Power",
+        "ranking": "Ranking",
+        "emotion": "Emotion"
+      },
+      "sections": {
+        "thinking": "Thinking",
+        "traits": "Traits",
+        "techniques_equipment": "Arts & Gear",
+        "materials": "Materials",
+        "relations": "Relations",
+        "current_effects": "Current Effects"
+      },
+      "weapon_meta": "Proficiency {value}",
+      "relation_meta": "{relation} of {owner}",
+      "father_short": "Father",
+      "mother_short": "Mother",
+      "mortal_realm": "Mortal",
+      "modals": {
+        "set_long_term": "Set Long-term Objective",
+        "placeholder": "Enter objective...",
+        "set_failed": "Failed to set",
+        "clear_confirm": "Are you sure you want to clear the long-term objective?"
+      }
+    },
+    "region": {
+      "view_sect": "View Sect Details",
+      "essence_title": "Qi Environment",
+      "essence_info": "{type} Qi · Density {density}",
+      "sections": {
+        "host": "Cave Owner",
+        "animals": "Animals",
+        "plants": "Plants",
+        "lodes": "Minerals",
+        "market": "Market"
+      },
+      "host_meta": "Owner",
+      "no_host": "Unowned",
+      "price_meta": "{price} Stones"
+    },
+    "sect": {
+      "stats": {
+        "alignment": "Alignment",
+        "orthodoxy": "Orthodoxy",
+        "style": "Style",
+        "preferred": "Weapon",
+        "members": "Members"
+      },
+      "sections": {
+        "intro": "Introduction",
+        "hq": "HQ: {name}",
+        "bonus": "Sect Bonus",
+        "techniques": "Unique Arts",
+        "members": "Disciples"
+      },
+      "no_bonus": "No special bonus"
+    }
+  }
+}

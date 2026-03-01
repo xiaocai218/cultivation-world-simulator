@@ -6,9 +6,19 @@ import { GAME_PHASES } from '@/constants/game'
 import { storeToRefs } from 'pinia'
 
 import { useTextures } from '@/components/game/composables/useTextures'
+import { logError, logWarn } from '@/utils/appError'
 
 interface UseGameInitOptions {
   onIdle?: () => void
+}
+
+type InitPhaseName =
+  | (typeof GAME_PHASES.MAP_READY)[number]
+  | (typeof GAME_PHASES.AVATAR_READY)[number]
+  | (typeof GAME_PHASES.TEXTURES_READY)[number]
+
+function isPhaseIn(list: readonly string[], phaseName: string): phaseName is InitPhaseName {
+  return list.includes(phaseName)
 }
 
 export function useGameInit(options: UseGameInitOptions = {}) {
@@ -23,11 +33,14 @@ export function useGameInit(options: UseGameInitOptions = {}) {
   const mapPreloaded = ref(false)
   const avatarsPreloaded = ref(false)
   const texturesPreloaded = ref(false)
+  const initializeDurationMs = ref(0)
+  const lastPollDurationMs = ref(0)
   
   let pollInterval: ReturnType<typeof setInterval> | null = null
 
   // Methods
   async function initializeGame() {
+    const start = performance.now()
     if (isInitialized.value) {
       // 重新加载存档时，重新初始化
       worldStore.reset()
@@ -46,10 +59,12 @@ export function useGameInit(options: UseGameInitOptions = {}) {
     await loadBaseTextures()
     
     systemStore.setInitialized(true)
+    initializeDurationMs.value = performance.now() - start
     console.log('[GameInit] Game initialized.')
   }
 
   async function pollInitStatus() {
+    const pollStart = performance.now()
     try {
       const prevStatus = initStatus.value?.status
       const res = await systemStore.fetchInitStatus()
@@ -73,31 +88,33 @@ export function useGameInit(options: UseGameInitOptions = {}) {
       }
 
       // 提前加载地图
-      if (!mapPreloaded.value && GAME_PHASES.MAP_READY.includes(res.phase_name as any)) {
+      if (!mapPreloaded.value && isPhaseIn(GAME_PHASES.MAP_READY, res.phase_name)) {
         mapPreloaded.value = true
         worldStore.preloadMap()
       }
       
       // 提前加载角色
-      if (!avatarsPreloaded.value && GAME_PHASES.AVATAR_READY.includes(res.phase_name as any)) {
+      if (!avatarsPreloaded.value && isPhaseIn(GAME_PHASES.AVATAR_READY, res.phase_name)) {
         avatarsPreloaded.value = true
         worldStore.preloadAvatars()
       }
       
       // 提前加载纹理资源（利用后端生成事件等待期）
-      if (!texturesPreloaded.value && GAME_PHASES.TEXTURES_READY.includes(res.phase_name as any)) {
+      if (!texturesPreloaded.value && isPhaseIn(GAME_PHASES.TEXTURES_READY, res.phase_name)) {
         texturesPreloaded.value = true
-        loadBaseTextures().catch(e => console.warn('[GameInit] Failed to preload textures', e))
+        loadBaseTextures().catch((e) => logWarn('GameInit preload textures', e))
       }
       
       // 状态跃迁：非 Ready -> Ready
-      if (prevStatus !== 'ready' && res.status === 'ready') {
+      if (prevStatus !== 'ready' && res.status === 'ready' && !isInitialized.value) {
         await initializeGame()
         // 不要停止轮询，否则 reset 之后无法检测到状态变化
         // stopPolling()
       }
     } catch (e) {
-      console.error('Failed to fetch init status:', e)
+      logError('GameInit fetch init status', e)
+    } finally {
+      lastPollDurationMs.value = performance.now() - pollStart
     }
   }
 
@@ -128,6 +145,8 @@ export function useGameInit(options: UseGameInitOptions = {}) {
     showLoading: isLoading,
     mapPreloaded,
     avatarsPreloaded,
+    initializeDurationMs,
+    lastPollDurationMs,
     initializeGame,
     startPolling,
     stopPolling

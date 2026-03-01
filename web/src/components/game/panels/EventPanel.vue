@@ -1,15 +1,17 @@
 <script setup lang="ts">
-import { computed, ref, watch, nextTick, onMounted, h } from 'vue'
-import { useWorldStore } from '../../../stores/world'
+import { computed, ref, watch, nextTick, h } from 'vue'
+import { useAvatarStore } from '../../../stores/avatar'
+import { useEventStore } from '../../../stores/event'
 import { useUiStore } from '../../../stores/ui'
 import { NSelect, NSpin, NButton } from 'naive-ui'
 import type { SelectOption } from 'naive-ui'
-import { highlightAvatarNames, buildAvatarColorMap, avatarIdToColor } from '../../../utils/eventHelper'
+import { tokenizeEventContent, buildAvatarColorMap, avatarIdToColor } from '../../../utils/eventHelper'
 import type { GameEvent } from '../../../types/core'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
-const worldStore = useWorldStore()
+const avatarStore = useAvatarStore()
+const eventStore = useEventStore()
 const uiStore = useUiStore()
 const filterValue1 = ref('all')
 const filterValue2 = ref<string | null>(null)  // null 表示未启用双人筛选
@@ -17,7 +19,7 @@ const eventListRef = ref<HTMLElement | null>(null)
 
 const filterOptions = computed(() => [
   { label: t('game.event_panel.filter_all'), value: 'all' },
-  ...worldStore.avatarList.map(avatar => ({
+  ...avatarStore.avatarList.map(avatar => ({
     label: (avatar.name ?? avatar.id) + (avatar.is_dead ? ` ${t('game.event_panel.deceased')}` : ''),
     value: avatar.id
   }))
@@ -25,7 +27,7 @@ const filterOptions = computed(() => [
 
 // 第二人的选项（排除第一人和"所有人"）
 const filterOptions2 = computed(() =>
-  worldStore.avatarList
+  avatarStore.avatarList
     .filter(avatar => avatar.id !== filterValue1.value)
     .map(avatar => ({
       label: (avatar.name ?? avatar.id) + (avatar.is_dead ? ` ${t('game.event_panel.deceased')}` : ''),
@@ -34,7 +36,7 @@ const filterOptions2 = computed(() =>
 )
 
 // 直接使用 store 中的事件（已由 API 过滤）
-const displayEvents = computed(() => worldStore.events || [])
+const displayEvents = computed(() => eventStore.events || [])
 
 // 渲染带颜色圆点的选项标签
 const renderLabel = (option: SelectOption) => {
@@ -61,9 +63,9 @@ function handleScroll(e: Event) {
   if (!el) return
 
   // 当滚动到顶部附近时，加载更多
-  if (el.scrollTop < 100 && worldStore.eventsHasMore && !worldStore.eventsLoading) {
+  if (el.scrollTop < 100 && eventStore.eventsHasMore && !eventStore.eventsLoading) {
     const oldScrollHeight = el.scrollHeight
-    worldStore.loadMoreEvents().then(() => {
+    eventStore.loadMoreEvents().then(() => {
       // 保持滚动位置（在顶部加载了新内容后）
       nextTick(() => {
         const newScrollHeight = el.scrollHeight
@@ -87,7 +89,7 @@ function buildFilter() {
 
 // 加载事件并滚动到底部
 async function reloadEvents() {
-  await worldStore.resetEvents(buildFilter())
+  await eventStore.resetEvents(buildFilter())
   nextTick(() => {
     if (eventListRef.value) {
       eventListRef.value.scrollTop = eventListRef.value.scrollHeight
@@ -140,16 +142,6 @@ watch(displayEvents, () => {
   }
 }, { deep: true })
 
-// 初始加载
-onMounted(async () => {
-  await worldStore.resetEvents({})
-  nextTick(() => {
-    if (eventListRef.value) {
-      eventListRef.value.scrollTop = eventListRef.value.scrollHeight
-    }
-  })
-})
-
 const emptyEventMessage = computed(() => {
   if (filterValue2.value) return t('game.event_panel.empty_dual')
   if (filterValue1.value !== 'all') return t('game.event_panel.empty_single')
@@ -161,18 +153,15 @@ function formatEventDate(event: { year: number; month: number }) {
 }
 
 // 构建角色名 -> 颜色映射表。
-const avatarColorMap = computed(() => buildAvatarColorMap(worldStore.avatarList))
+const avatarColorMap = computed(() => buildAvatarColorMap(avatarStore.avatarList))
 
-// 渲染事件内容，高亮角色名。
-function renderEventContent(event: GameEvent): string {
+// 渲染事件内容：拆分为安全 token，避免使用 v-html。
+function renderEventContent(event: GameEvent) {
   const text = event.content || event.text || ''
-  return highlightAvatarNames(text, avatarColorMap.value)
+  return tokenizeEventContent(text, avatarColorMap.value)
 }
 
-// 处理事件列表中的点击，使用事件委托检测角色名点击。
-function handleEventListClick(e: MouseEvent) {
-  const target = e.target as HTMLElement
-  const avatarId = target.dataset?.avatarId
+function handleAvatarClick(avatarId?: string) {
   if (avatarId) {
     uiStore.select('avatar', avatarId)
   }
@@ -216,20 +205,32 @@ function handleEventListClick(e: MouseEvent) {
         </n-button>
       </div>
     </div>
-    <div v-if="worldStore.eventsLoading && displayEvents.length === 0" class="loading">
+    <div v-if="eventStore.eventsLoading && displayEvents.length === 0" class="loading">
       <n-spin size="small" />
       <span>{{ t('common.loading') }}</span>
     </div>
     <div v-else-if="displayEvents.length === 0" class="empty">{{ emptyEventMessage }}</div>
-    <div v-else class="event-list" ref="eventListRef" @scroll="handleScroll" @click="handleEventListClick">
+    <div v-else class="event-list" ref="eventListRef" @scroll="handleScroll">
       <!-- 顶部加载指示器 -->
-      <div v-if="worldStore.eventsHasMore" class="load-more-hint">
-        <span v-if="worldStore.eventsLoading">{{ t('common.loading') }}</span>
+      <div v-if="eventStore.eventsHasMore" class="load-more-hint">
+        <span v-if="eventStore.eventsLoading">{{ t('common.loading') }}</span>
         <span v-else>{{ t('game.event_panel.load_more') }}</span>
       </div>
       <div v-for="event in displayEvents" :key="event.id" class="event-item">
         <div class="event-date">{{ formatEventDate(event) }}</div>
-        <div class="event-content" v-html="renderEventContent(event)"></div>
+        <div class="event-content">
+          <template v-for="(segment, index) in renderEventContent(event)" :key="`${event.id}-${index}`">
+            <span
+              v-if="segment.type === 'avatar'"
+              class="clickable-avatar"
+              :style="{ color: segment.color }"
+              @click="handleAvatarClick(segment.avatarId)"
+            >
+              {{ segment.text }}
+            </span>
+            <span v-else>{{ segment.text }}</span>
+          </template>
+        </div>
       </div>
     </div>
   </section>

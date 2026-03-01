@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { useWorldStore } from '../../stores/world'
+import { useAvatarStore } from '../../stores/avatar'
 import AnimatedAvatar from './AnimatedAvatar.vue'
 import { computed } from 'vue'
 import { calculateVisualOffsets } from './utils/avatarLayout'
 
-const worldStore = useWorldStore()
+const avatarStore = useAvatarStore()
 const TILE_SIZE = 64
 
 const emit = defineEmits<{
@@ -12,7 +12,7 @@ const emit = defineEmits<{
 }>()
 
 const visibleAvatars = computed(() => {
-  return worldStore.avatarList.filter(a => !a.is_dead)
+  return avatarStore.avatarList.filter(a => !a.is_dead)
 })
 
 const avatarOffsets = computed(() => {

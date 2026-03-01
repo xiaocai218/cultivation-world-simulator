@@ -2,8 +2,10 @@ import { httpClient } from '../http';
 import type { 
   InitialStateDTO, 
   MapResponseDTO, 
-  PhenomenonDTO
+  PhenomenonDTO,
+  RankingsDTO,
 } from '../../types/api';
+import { normalizeRankingsResponse } from '../mappers/world';
 
 export const worldApi = {
   fetchInitialState() {
@@ -22,7 +24,8 @@ export const worldApi = {
     return httpClient.post('/api/control/set_phenomenon', { id });
   },
 
-  fetchRankings() {
-    return httpClient.get<any>('/api/rankings');
+  async fetchRankings() {
+    const data = await httpClient.get<Partial<RankingsDTO>>('/api/rankings');
+    return normalizeRankingsResponse(data);
   }
 };

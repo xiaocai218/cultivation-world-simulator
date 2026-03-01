@@ -4,6 +4,8 @@ import {
   mergeAndSortEvents,
   avatarIdToColor,
   buildAvatarColorMap,
+  tokenizeEventContent,
+  escapeHtml,
   highlightAvatarNames,
   MAX_EVENTS,
   type AvatarColorInfo,
@@ -149,7 +151,7 @@ describe('eventHelper', () => {
   })
 
   describe('highlightAvatarNames', () => {
-    it('should return original text when colorMap is empty', () => {
+    it('should escape html even when colorMap is empty', () => {
       const text = 'Hello World'
       const result = highlightAvatarNames(text, new Map())
       expect(result).toBe(text)
@@ -244,6 +246,39 @@ describe('eventHelper', () => {
       expect(result).toContain('hsl(200, 70%, 65%)')
       expect(result).toContain('data-avatar-id="zhangsan"')
       expect(result).toContain('data-avatar-id="libai"')
+    })
+  })
+
+  describe('tokenizeEventContent', () => {
+    it('should preserve plain text when no avatar names match', () => {
+      const text = '无人提及角色名'
+      const tokens = tokenizeEventContent(
+        text,
+        new Map<string, AvatarColorInfo>([['Alice', { id: '1', color: 'hsl(1, 70%, 65%)' }]])
+      )
+
+      expect(tokens).toEqual([{ type: 'text', text }])
+    })
+
+    it('should split mixed text and avatar names into structured tokens', () => {
+      const colorMap = new Map<string, AvatarColorInfo>([
+        ['张三丰', { id: 'zhangsanfeng', color: 'hsl(200, 70%, 65%)' }],
+        ['李白', { id: 'libai', color: 'hsl(300, 70%, 65%)' }],
+      ])
+      const tokens = tokenizeEventContent('张三丰与李白论道', colorMap)
+
+      expect(tokens).toEqual([
+        { type: 'avatar', text: '张三丰', avatarId: 'zhangsanfeng', color: 'hsl(200, 70%, 65%)' },
+        { type: 'text', text: '与' },
+        { type: 'avatar', text: '李白', avatarId: 'libai', color: 'hsl(300, 70%, 65%)' },
+        { type: 'text', text: '论道' },
+      ])
+    })
+  })
+
+  describe('escapeHtml', () => {
+    it('should escape dangerous html characters', () => {
+      expect(escapeHtml('<img src=x onerror=alert(1)>')).toBe('&lt;img src=x onerror=alert(1)&gt;')
     })
   })
 })

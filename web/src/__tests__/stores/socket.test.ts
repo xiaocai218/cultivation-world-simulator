@@ -22,6 +22,7 @@ const {
   mockUiStore: {
     selectedTarget: null as { type: string; id: string } | null,
     refreshDetail: vi.fn(),
+    openSystemMenu: vi.fn(),
   },
   mockMessage: {
     error: vi.fn(),
@@ -89,6 +90,7 @@ describe('useSocketStore', () => {
     // Reset mocks and callbacks.
     vi.clearAllMocks()
     mockUiStore.selectedTarget = null
+    mockUiStore.openSystemMenu.mockClear()
     mockOn.mockReturnValue(vi.fn())
     mockOnStatusChange.mockReturnValue(vi.fn())
     messageCallback = null
@@ -210,32 +212,19 @@ describe('useSocketStore', () => {
       messageCallback?.({ type: 'game_reinitialized', message: 'Game reinitialized' })
 
       expect(mockWorldStore.initialize).toHaveBeenCalled()
+      expect(mockMessage.success).toHaveBeenCalledWith('Game reinitialized')
     })
 
-    it('should call __openLLMConfig on llm_config_required message', () => {
-      const mockOpenLLMConfig = vi.fn()
-      ;(window as any).__openLLMConfig = mockOpenLLMConfig
+    it('should open llm config menu on llm_config_required message', () => {
       const consoleSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
 
       store.init()
       messageCallback?.({ type: 'llm_config_required', error: 'LLM not configured' })
 
-      expect(mockOpenLLMConfig).toHaveBeenCalled()
+      expect(mockUiStore.openSystemMenu).toHaveBeenCalledWith('llm', false)
+      expect(mockMessage.error).toHaveBeenCalledWith('LLM not configured')
       expect(consoleSpy).toHaveBeenCalled()
 
-      consoleSpy.mockRestore()
-      delete (window as any).__openLLMConfig
-    })
-
-    it('should handle llm_config_required when __openLLMConfig is not defined', () => {
-      delete (window as any).__openLLMConfig
-      const consoleSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
-
-      store.init()
-      // Should not throw.
-      messageCallback?.({ type: 'llm_config_required', error: 'LLM error' })
-
-      expect(consoleSpy).toHaveBeenCalled()
       consoleSpy.mockRestore()
     })
 
@@ -364,68 +353,7 @@ describe('useSocketStore', () => {
       // Should not throw.
       messageCallback?.({ type: 'toast', level: 'info', message: 'Test', language: 'en-US' })
 
-      expect(consoleSpy).toHaveBeenCalledWith('[Socket] Failed to switch language:', expect.any(Error))
-      consoleSpy.mockRestore()
-    })
-  })
-
-  describe('llm_config_required alert handling', () => {
-    it('should call alert after timeout for llm_config_required', async () => {
-      const alertSpy = vi.spyOn(window, 'alert').mockImplementation(() => {})
-      const consoleSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
-
-      store.init()
-      messageCallback?.({ type: 'llm_config_required', error: 'LLM error' })
-
-      // Run the setTimeout.
-      await vi.advanceTimersByTimeAsync(500)
-
-      expect(alertSpy).toHaveBeenCalled()
-      alertSpy.mockRestore()
-      consoleSpy.mockRestore()
-    })
-
-    it('should use default message when error is not provided', async () => {
-      const alertSpy = vi.spyOn(window, 'alert').mockImplementation(() => {})
-      const consoleSpy = vi.spyOn(console, 'warn').mockImplementation(() => {})
-
-      store.init()
-      messageCallback?.({ type: 'llm_config_required' })
-
-      await vi.advanceTimersByTimeAsync(500)
-
-      expect(alertSpy).toHaveBeenCalledWith(expect.stringContaining('LLM 连接失败'))
-      alertSpy.mockRestore()
-      consoleSpy.mockRestore()
-    })
-  })
-
-  describe('game_reinitialized alert handling', () => {
-    it('should call alert after timeout for game_reinitialized', async () => {
-      const alertSpy = vi.spyOn(window, 'alert').mockImplementation(() => {})
-      const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {})
-
-      store.init()
-      messageCallback?.({ type: 'game_reinitialized', message: 'Game restarted' })
-
-      await vi.advanceTimersByTimeAsync(300)
-
-      expect(alertSpy).toHaveBeenCalledWith('Game restarted')
-      alertSpy.mockRestore()
-      consoleSpy.mockRestore()
-    })
-
-    it('should use default message when message is not provided', async () => {
-      const alertSpy = vi.spyOn(window, 'alert').mockImplementation(() => {})
-      const consoleSpy = vi.spyOn(console, 'log').mockImplementation(() => {})
-
-      store.init()
-      messageCallback?.({ type: 'game_reinitialized' })
-
-      await vi.advanceTimersByTimeAsync(300)
-
-      expect(alertSpy).toHaveBeenCalledWith('LLM 配置成功，游戏已重新初始化')
-      alertSpy.mockRestore()
+      expect(consoleSpy).toHaveBeenCalled()
       consoleSpy.mockRestore()
     })
   })

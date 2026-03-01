@@ -3,7 +3,7 @@
  * 纯粹的 Socket 封装，不依赖 Store
  */
 
-export type MessageHandler = (data: any) => void;
+export type MessageHandler = (data: unknown) => void;
 
 export interface SocketOptions {
   url?: string;

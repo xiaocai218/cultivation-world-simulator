@@ -6,7 +6,7 @@ msgstr ""
 "POT-Creation-Date: 2024-01-20 00:00+0000\n"
 "PO-Revision-Date: 2024-01-20 00:00+0000\n"
 "Last-Translator: \n"
-"Language-Team: Chinese\n"
+"Language-Team: zh-TW\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,48 +19,17 @@ msgid "hidden_domain_story_prompt"
 msgstr ""
 "描述探索祕境的過程。可以聚焦於單人的經歷，也可以描述多人問的互動（如相遇、合作、競爭甚至相互攻擊）。內容應涵蓋遭遇的兇險、獲得的機緣，或是空手而歸的失落與遺憾，營造神祕、緊張或充滿變數的氛圍。"
 
-msgid "Hidden Domains opened: {names}"
-msgstr "{names}"
-
-msgid "Hidden Domain {name} opened! Entry restricted to {realm} only."
-msgstr "祕境【{name}】現世！僅限{realm}修士進入。"
-
-msgid "{name} perished in the hidden domain {domain}."
-msgstr "{name} 葬身於祕境【{domain}】。"
-
-msgid "{name} found a treasure {loot} in {domain}!"
-msgstr "{name} 在祕境【{domain}】中覓得寶物【{loot}】！"
+msgid "perished"
+msgstr "葬身於"
 
 msgid "{names} returned from {domain} empty-handed."
 msgstr "{names} 在祕境【{domain}】中一無所獲，空手而歸。"
 
-msgid "Perished in a Hidden Domain"
-msgstr "在祕境中隕落"
+msgid "{name} found a treasure {loot} in {domain}!"
+msgstr "{name} 在祕境【{domain}】中覓得寶物【{loot}】！"
 
-msgid ""
-"Event: Hidden Domain Opening\n"
-"Name: {name}\n"
-"Description: {desc}"
-msgstr ""
-"事件：祕境開啓\n"
-"名稱：{name}\n"
-"描述：{desc}"
-
-msgid ""
-"Hidden Domain {name} opened! Entry restricted to {realm} only. Entrants: "
-"{entrants}"
-msgstr "祕境【{name}】現世！僅限{realm}修士進入。進入者：{entrants}。"
-
-msgid ""
-"Hidden Domain {name} opened! Entry restricted to {realm} only. No one "
-"entered."
-msgstr "祕境【{name}】現世！僅限{realm}修士進入。無修士進入。"
+msgid "{name} perished in the hidden domain {domain}."
+msgstr "{name} 葬身於祕境【{domain}】。"
 
 msgid "{}: {}"
 msgstr "{}：{}"
-
-msgid "found a treasure"
-msgstr "覓得寶物"
-
-msgid "perished"
-msgstr "葬身於"

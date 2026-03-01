@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onUnmounted, watch, ref } from 'vue'
+import { onMounted, onUnmounted } from 'vue'
 import { NConfigProvider, darkTheme, NMessageProvider } from 'naive-ui'
 import { systemApi } from './api/modules/system'
 import { useI18n } from 'vue-i18n'
@@ -21,21 +21,19 @@ import { useGameControl } from './composables/useGameControl'
 import { useAudio } from './composables/useAudio'
 import { useBgm } from './composables/useBgm'
 import { useSidebarResize } from './composables/useSidebarResize'
+import { useAppBootFlow } from './composables/useAppBootFlow'
 
 // Stores
 import { useUiStore } from './stores/ui'
 import { useSettingStore } from './stores/setting'
+import { useSystemStore } from './stores/system'
 
 const uiStore = useUiStore()
 const settingStore = useSettingStore()
-
-const showSplash = ref(false)
-const isAppReady = ref(false)
+const systemStore = useSystemStore()
 
 // Sidebar resizer 状态
 const { sidebarWidth, isResizing, onResizerMouseDown } = useSidebarResize()
-
-const openedFromSplash = ref(false)
 
 // 1. 游戏初始化逻辑
 const { 
@@ -58,55 +56,25 @@ const {
   toggleManualPause
 } = useGameControl(gameInitialized)
 
-// 3. 胶水逻辑：连接 Init 和 Control
-
-watch(initStatus, (newVal, oldVal) => {
-  if (!newVal) return
-
-  // 首次确认后端状态，避免 F5 刷新时闪烁 Splash
-  if (!isAppReady.value) {
-    if (newVal.status === 'ready' && !gameInitialized.value) {
-      // 如果后端已经在运行，前端还没初始化，继续保持 isLoading 状态等待初始化完成
-      // 但我们需要放行 isAppReady 让 Loading 界面接管，而不是全黑
-      isAppReady.value = true
-    } else if (newVal.status === 'idle') {
-      showSplash.value = true
-      isAppReady.value = true
-    } else {
-       isAppReady.value = true
-    }
-  }
-
-  // Idle check (非首次加载时)
-  if (newVal.status === 'idle' && oldVal && oldVal.status !== 'idle') {
-    if (!showMenu.value && !showSplash.value) {
-      performStartupCheck()
-    }
-  }
-
-  // Ready check
-  if (oldVal?.status !== 'ready' && newVal.status === 'ready') {
-    showMenu.value = false
-  }
+const {
+  showSplash,
+  isAppReady,
+  shouldBlockControls,
+  handleSplashNavigate,
+  handleMenuCloseWrapper,
+  returnToSplash,
+} = useAppBootFlow({
+  initStatus,
+  gameInitialized,
+  showLoading,
+  showMenu,
+  menuDefaultTab,
+  isManualPaused,
+  performStartupCheck,
+  handleMenuClose,
+  onGameBgmStart: () => useBgm().play('map'),
+  onResumeGame: () => systemStore.resume(),
 })
-
-// 自动取消暂停：当游戏初始化完成后，自动开始运行
-watch(gameInitialized, (val) => {
-  if (val) {
-    // 切换到游戏背景音乐
-    useBgm().play('map')
-
-    // 如果游戏已初始化完成（可能是刷新页面后恢复），确保关闭 Splash
-    if (showSplash.value) {
-      showSplash.value = false
-    }
-
-    // 设置前端状态并恢复后端
-    isManualPaused.value = false
-    systemApi.resumeGame().catch(console.error)
-    openedFromSplash.value = false // 游戏开始，清除 Splash 来源标记
-  }
-}, { immediate: true })
 
 // 事件处理
 function onKeydown(e: KeyboardEvent) {
@@ -116,8 +84,7 @@ function onKeydown(e: KeyboardEvent) {
     window.location.reload()
     return
   }
-  if (showLoading.value) return
-  if (showSplash.value) return
+  if (shouldBlockControls.value) return
   controlHandleKeydown(e)
 }
 
@@ -137,48 +104,15 @@ async function handleSplashAction(key: string) {
     return
   }
 
-  openedFromSplash.value = true // 标记来源
-  // 关闭 Splash
-  showSplash.value = false
-
-  // 根据按键跳转到对应 Tab
-  if (key === 'start') {
-    performStartupCheck()
-  } else if (key === 'load') {
-    menuDefaultTab.value = 'load'
-    showMenu.value = true
-  } else if (key === 'settings') {
-    menuDefaultTab.value = 'settings'
-    showMenu.value = true
-  } else if (key === 'about') {
-    menuDefaultTab.value = 'about'
-    showMenu.value = true
-  }
-}
-
-function handleMenuCloseWrapper() {
-  // 如果是从 Splash 打开的，关闭菜单时应回到 Splash
-  if (openedFromSplash.value) {
-    showMenu.value = false
-    showSplash.value = true
-    // 保持 openedFromSplash 为 true 或 false?
-    // 如果回到 Splash，下次点击 Start 又是重新流程。
-    // 这里不需要重置，因为下次点击 handleSplashAction 会再次设置。
-  } else {
-    // 正常游戏内关闭
-    handleMenuClose()
+  if (key === 'start' || key === 'load' || key === 'settings' || key === 'about') {
+    handleSplashNavigate(key)
   }
 }
 
 async function handleReturnToMain() {
   try {
     await systemApi.resetGame()
-    // 关闭菜单
-    showMenu.value = false
-    // 显示 Splash
-    showSplash.value = true
-    // 重置来源标记（虽然显示Splash后，点击按钮会重新设置，但这里为了逻辑清晰先重置）
-    openedFromSplash.value = false 
+    returnToSplash()
   } catch (e) {
     console.error('Reset game failed', e)
   }

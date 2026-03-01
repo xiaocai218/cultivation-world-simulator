@@ -3,6 +3,7 @@ import { ref, shallowRef, computed } from 'vue';
 import type { CelestialPhenomenon, HiddenDomainInfo } from '../types/core';
 import type { TickPayloadDTO, InitialStateDTO } from '../types/api';
 import { worldApi } from '../api';
+import { logError, logWarn } from '../utils/appError';
 import { useMapStore } from './map';
 import { useAvatarStore } from './avatar';
 import { useEventStore } from './event';
@@ -23,21 +24,6 @@ export const useWorldStore = defineStore('world', () => {
 
   // Request counter for fetchState
   let fetchStateRequestId = 0;
-
-  // --- Proxies to other stores ---
-  // 注意：Pinia store 自动解包 ref，所以这里 computed 返回值即为实际值
-  const avatars = computed(() => avatarStore.avatars);
-  const avatarList = computed(() => avatarStore.avatarList);
-  
-  const mapData = computed(() => mapStore.mapData);
-  const regions = computed(() => mapStore.regions);
-  const frontendConfig = computed(() => mapStore.frontendConfig);
-  
-  const events = computed(() => eventStore.events);
-  const eventsCursor = computed(() => eventStore.eventsCursor);
-  const eventsHasMore = computed(() => eventStore.eventsHasMore);
-  const eventsLoading = computed(() => eventStore.eventsLoading);
-  const eventsFilter = computed(() => eventStore.eventsFilter);
 
   // --- Actions ---
 
@@ -88,7 +74,7 @@ export const useWorldStore = defineStore('world', () => {
         setTime(timeInfo.year, timeInfo.month);
       }
     } catch (e) {
-      console.warn('[WorldStore] Failed to preload avatars', e);
+      logWarn('WorldStore preload avatars', e);
     }
   }
 
@@ -113,7 +99,7 @@ export const useWorldStore = defineStore('world', () => {
       await eventStore.resetEvents({});
 
     } catch (e) {
-      console.error('Failed to initialize world', e);
+      logError('WorldStore initialize', e);
     }
   }
 
@@ -125,7 +111,7 @@ export const useWorldStore = defineStore('world', () => {
       applyStateSnapshot(stateRes);
     } catch (e) {
       if (currentRequestId !== fetchStateRequestId) return;
-      console.error('Failed to fetch state snapshot', e);
+      logError('WorldStore fetch state', e);
     }
   }
 
@@ -148,7 +134,7 @@ export const useWorldStore = defineStore('world', () => {
       phenomenaList.value = res.phenomena as CelestialPhenomenon[];
       return phenomenaList.value;
     } catch (e) {
-      console.error(e);
+      logError('WorldStore fetch phenomena list', e);
       return [];
     }
   }
@@ -161,6 +147,18 @@ export const useWorldStore = defineStore('world', () => {
     }
   }
 
+  // Backward-compatible proxies (gradually migrated by components/tests).
+  const avatars = computed(() => avatarStore.avatars);
+  const avatarList = computed(() => avatarStore.avatarList);
+  const mapData = computed(() => mapStore.mapData);
+  const regions = computed(() => mapStore.regions);
+  const frontendConfig = computed(() => mapStore.frontendConfig);
+  const events = computed(() => eventStore.events);
+  const eventsCursor = computed(() => eventStore.eventsCursor);
+  const eventsHasMore = computed(() => eventStore.eventsHasMore);
+  const eventsLoading = computed(() => eventStore.eventsLoading);
+  const eventsFilter = computed(() => eventStore.eventsFilter);
+
   return {
     // State
     year,
@@ -169,8 +167,8 @@ export const useWorldStore = defineStore('world', () => {
     phenomenaList,
     activeDomains,
     isLoaded,
-    
-    // Proxies
+
+    // Deprecated proxies.
     avatars,
     avatarList,
     mapData,
@@ -191,8 +189,8 @@ export const useWorldStore = defineStore('world', () => {
     reset,
     getPhenomenaList,
     changePhenomenon,
-    
-    // Event Proxy Actions
+
+    // Deprecated event proxies.
     loadEvents: eventStore.loadEvents,
     loadMoreEvents: eventStore.loadMoreEvents,
     resetEvents: eventStore.resetEvents

@@ -229,9 +229,9 @@ describe('StatusBar', () => {
       const wrapper = mount(StatusBar, globalConfig)
 
       // When phenomenon is null, v-if hides the widget.
-      // Domain widget and Ranking widget should exist.
+      // Domain widget, Ranking widget, and Tournament widget should exist.
       const widgets = wrapper.findAll('.status-widget-stub')
-      expect(widgets.length).toBe(2)
+      expect(widgets.length).toBe(3)
     })
   })
 
@@ -367,9 +367,8 @@ describe('StatusBar', () => {
     const wrapper = mount(StatusBar, globalConfig)
 
     const links = wrapper.findAll('a.author-link')
-    expect(links.length).toBe(2)
-    expect(links[0].attributes('href')).toContain('bilibili')
-    expect(links[1].attributes('href')).toContain('github')
+    expect(links.length).toBe(1)
+    expect(links[0].attributes('href')).toContain('github')
   })
 
   it('should pass correct props to phenomenon StatusWidget', () => {

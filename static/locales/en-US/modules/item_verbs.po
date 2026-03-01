@@ -6,11 +6,33 @@ msgstr ""
 "POT-Creation-Date: 2024-01-20 00:00+0000\n"
 "PO-Revision-Date: 2024-01-20 00:00+0000\n"
 "Last-Translator: \n"
-"Language-Team: English\n"
+"Language-Team: en-US\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+msgid ""
+"\n"
+"【Related Avatars Information】"
+msgstr ""
+"\n"
+"【Related Avatars Information】"
+
+msgid "auxiliary"
+msgstr "auxiliary equipment"
+
+msgid "elixir"
+msgstr "elixir"
+
+msgid "item_label_auxiliary"
+msgstr "Auxiliary"
+
+msgid "item_label_elixir"
+msgstr "Elixir"
+
+msgid "item_label_technique"
+msgstr "Technique"
 
 # Item Verbs
 msgid "item_verb_equip"
@@ -22,17 +44,11 @@ msgstr "equipped"
 msgid "item_verb_practice"
 msgstr "practice"
 
-msgid "item_verb_switched"
-msgstr "switched to"
-
-msgid "item_verb_consume"
-msgstr "consume"
-
-msgid "item_verb_consumed"
-msgstr "consumed"
-
 msgid "item_verb_replace"
 msgstr "replace"
+
+msgid "item_verb_switched"
+msgstr "switched to"
 
 # Auto-equip Message
 msgid "{avatar_name} obtained {grade} {label}『{item_name}』and {action}."

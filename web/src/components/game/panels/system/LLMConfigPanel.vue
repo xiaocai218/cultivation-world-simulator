@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue'
-import { llmApi } from '../../../../api'
-import type { LLMConfigDTO } from '../../../../types/api'
+import { llmApi } from '@/api'
+import type { LLMConfigDTO } from '@/types/api'
 import { useMessage } from 'naive-ui'
 import { useI18n } from 'vue-i18n'
 

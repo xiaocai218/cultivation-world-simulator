@@ -1,9 +1,11 @@
 import { defineStore } from 'pinia';
 import { ref, shallowRef } from 'vue';
 import type { GameEvent } from '../types/core';
-import type { FetchEventsParams } from '../types/api';
+import type { FetchEventsParams, EventDTO } from '../types/api';
 import { eventApi } from '../api';
 import { processNewEvents, mergeAndSortEvents } from '../utils/eventHelper';
+import { mapEventDtosToTimeline } from '../api/mappers/event';
+import { logError } from '../utils/appError';
 
 export const useEventStore = defineStore('event', () => {
   const events = shallowRef<GameEvent[]>([]);
@@ -13,12 +15,15 @@ export const useEventStore = defineStore('event', () => {
   const eventsHasMore = ref(false);
   const eventsLoading = ref(false);
   const eventsFilter = ref<FetchEventsParams>({});
+  const lastMergeDurationMs = ref(0);
+  const lastLoadDurationMs = ref(0);
 
   // 请求计数器
   let eventsRequestId = 0;
 
-  function addEvents(rawEvents: any[], currentYear: number, currentMonth: number) {
+  function addEvents(rawEvents: EventDTO[], currentYear: number, currentMonth: number) {
     if (!rawEvents || rawEvents.length === 0) return;
+    const mergeStart = performance.now();
 
     let newEvents = processNewEvents(rawEvents, currentYear, currentMonth);
 
@@ -39,6 +44,7 @@ export const useEventStore = defineStore('event', () => {
 
     // 使用通用合并排序函数，确保顺序正确（基于 createdAt 或时间戳）
     events.value = mergeAndSortEvents(events.value, newEvents);
+    lastMergeDurationMs.value = performance.now() - mergeStart;
   }
 
   async function loadEvents(filter: FetchEventsParams = {}, append = false) {
@@ -47,6 +53,7 @@ export const useEventStore = defineStore('event', () => {
     // 每次请求增加计数器，只接受最新请求的响应。
     const currentRequestId = ++eventsRequestId;
     eventsLoading.value = true;
+    const loadStart = performance.now();
 
     try {
       const params: FetchEventsParams = { ...filter, limit: 100 };
@@ -61,23 +68,7 @@ export const useEventStore = defineStore('event', () => {
         return;
       }
 
-      // 转换为 GameEvent 格式
-      const newEvents: GameEvent[] = res.events.map(e => ({
-        id: e.id,
-        text: e.text,
-        content: e.content,
-        year: e.year,
-        month: e.month,
-        timestamp: e.month_stamp,
-        monthStamp: e.month_stamp,
-        relatedAvatarIds: e.related_avatar_ids,
-        isMajor: e.is_major,
-        isStory: e.is_story,
-        createdAt: e.created_at,
-      }));
-
-      // API 返回倒序（最新在前），反转成时间正序（最旧在前，最新在后）
-      const sortedNewEvents = newEvents.reverse();
+      const sortedNewEvents: GameEvent[] = mapEventDtosToTimeline(res.events);
 
       if (append) {
         // 加载更旧的事件，添加到顶部。
@@ -90,12 +81,13 @@ export const useEventStore = defineStore('event', () => {
 
       eventsCursor.value = res.next_cursor;
       eventsHasMore.value = res.has_more;
+      lastLoadDurationMs.value = performance.now() - loadStart;
     } catch (e) {
       // 如果不是最新请求，不处理错误。
       if (currentRequestId !== eventsRequestId) {
         return;
       }
-      console.error('Failed to load events', e);
+      logError('EventStore load events', e);
     } finally {
       // 只有最新请求才更新 loading 状态。
       if (currentRequestId === eventsRequestId) {
@@ -135,6 +127,8 @@ export const useEventStore = defineStore('event', () => {
     eventsHasMore,
     eventsLoading,
     eventsFilter,
+    lastMergeDurationMs,
+    lastLoadDurationMs,
     addEvents,
     loadEvents,
     loadMoreEvents,

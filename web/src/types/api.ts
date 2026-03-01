@@ -28,7 +28,7 @@ export interface InitialStateDTO {
     gender?: string;
     pic_id?: number;
   }>;
-  events?: unknown[];
+  events?: EventDTO[];
   phenomenon?: CelestialPhenomenon | null;
 }
 
@@ -37,7 +37,7 @@ export interface TickPayloadDTO {
   year: number;
   month: number;
   avatars?: Array<Partial<InitialStateDTO['avatars'] extends (infer U)[] ? U : never>>;
-  events?: unknown[];
+  events?: EventDTO[];
   phenomenon?: CelestialPhenomenon | null;
   active_domains?: HiddenDomainInfo[];
 }
@@ -52,14 +52,16 @@ export interface MapResponseDTO {
     type: string;
     sect_name?: string;
   }>;
-  config?: {
-    water_speed?: string;
-    cloud_freq?: string;
-  };
+  config?: FrontendConfigDTO;
 }
 
 // 详情接口返回的结构比较动态，通常包含 entity 的所有字段
-export type DetailResponseDTO = Record<string, any>;
+export type DetailResponseDTO = Record<string, unknown>;
+
+export interface FrontendConfigDTO {
+  water_speed?: 'none' | 'low' | 'medium' | 'high';
+  cloud_freq?: 'none' | 'low' | 'high';
+}
 
 export interface SaveFileDTO {
   filename: string;
@@ -192,3 +194,62 @@ export interface InitStatusDTO {
   llm_check_failed: boolean;
   llm_error_message: string;
 }
+
+export interface RankingAvatarDTO {
+  id: string;
+  name: string;
+  sect: string;
+  sect_id?: string;
+  realm: string;
+  stage: string;
+  power: number;
+}
+
+export interface RankingSectDTO {
+  id: string;
+  name: string;
+  alignment: string;
+  member_count: number;
+  total_power: number;
+}
+
+export interface TournamentSummaryDTO {
+  next_year: number;
+  heaven_first?: { id: string; name: string };
+  earth_first?: { id: string; name: string };
+  human_first?: { id: string; name: string };
+}
+
+export interface RankingsDTO {
+  heaven: RankingAvatarDTO[];
+  earth: RankingAvatarDTO[];
+  human: RankingAvatarDTO[];
+  sect: RankingSectDTO[];
+  tournament?: TournamentSummaryDTO;
+}
+
+export type ToastLevel = 'error' | 'warning' | 'success' | 'info' | string;
+export type AppLanguage = 'zh-CN' | 'en-US' | string;
+
+export interface ToastSocketMessage {
+  type: 'toast';
+  level: ToastLevel;
+  message: string;
+  language?: AppLanguage;
+}
+
+export interface LLMConfigRequiredSocketMessage {
+  type: 'llm_config_required';
+  error?: string;
+}
+
+export interface GameReinitializedSocketMessage {
+  type: 'game_reinitialized';
+  message?: string;
+}
+
+export type SocketMessageDTO =
+  | TickPayloadDTO
+  | ToastSocketMessage
+  | LLMConfigRequiredSocketMessage
+  | GameReinitializedSocketMessage;

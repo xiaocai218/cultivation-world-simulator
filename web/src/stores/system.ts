@@ -2,6 +2,7 @@ import { defineStore } from 'pinia';
 import { ref, computed } from 'vue';
 import { systemApi } from '../api';
 import type { InitStatusDTO } from '../types/api';
+import { logError } from '../utils/appError';
 
 export const useSystemStore = defineStore('system', () => {
   // --- State ---
@@ -47,7 +48,7 @@ export const useSystemStore = defineStore('system', () => {
       return res;
     } catch (e) {
       if (currentRequestId === fetchStatusRequestId) {
-        console.error('Failed to fetch init status', e);
+        logError('SystemStore fetch init status', e);
       }
       return null;
     }
@@ -70,7 +71,7 @@ export const useSystemStore = defineStore('system', () => {
     } catch (e) {
       // API 失败时回滚状态
       isManualPaused.value = !newState;
-      console.error(e);
+      logError('SystemStore toggle pause', e);
     }
   }
 
@@ -79,7 +80,7 @@ export const useSystemStore = defineStore('system', () => {
     try {
       await systemApi.pauseGame();
     } catch (e) {
-      console.error(e);
+      logError('SystemStore pause', e);
     }
   }
 
@@ -87,7 +88,7 @@ export const useSystemStore = defineStore('system', () => {
     try {
       await systemApi.resumeGame();
     } catch (e) {
-      console.error(e);
+      logError('SystemStore resume', e);
     }
   }
 

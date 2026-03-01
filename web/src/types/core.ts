@@ -69,6 +69,7 @@ export interface AvatarDetail extends EntityBase {
   hp: { cur: number; max: number };
   magic_stone: number;
   base_battle_strength: number;
+  ranking?: { type: string; rank: number };
   
   // 情绪
   emotion: {

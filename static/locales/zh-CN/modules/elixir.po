@@ -6,11 +6,14 @@ msgstr ""
 "POT-Creation-Date: 2024-01-20 00:00+0000\n"
 "PO-Revision-Date: 2024-01-20 00:00+0000\n"
 "Last-Translator: \n"
-"Language-Team: Chinese\n"
+"Language-Team: zh-CN\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+msgid "earth_essence"
+msgstr "土"
 
 # ============================================================================
 # Elixir 系统 - 丹药
@@ -18,11 +21,14 @@ msgstr ""
 msgid "elixir_type_breakthrough"
 msgstr "破境"
 
-msgid "elixir_type_lifespan"
-msgstr "延寿"
-
 msgid "elixir_type_burn_blood"
 msgstr "燃血"
 
 msgid "elixir_type_heal"
 msgstr "疗伤"
+
+msgid "elixir_type_lifespan"
+msgstr "延寿"
+
+msgid "fire_essence"
+msgstr "火"

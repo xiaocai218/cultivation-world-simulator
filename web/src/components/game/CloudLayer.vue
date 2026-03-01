@@ -2,7 +2,7 @@
 import { ref, onMounted, onUnmounted, watch } from 'vue'
 import { Container, Sprite, Ticker } from 'pixi.js'
 import { useTextures } from './composables/useTextures'
-import { useWorldStore } from '../../stores/world'
+import { useMapStore } from '../../stores/map'
 
 const props = defineProps<{
   width: number
@@ -10,7 +10,7 @@ const props = defineProps<{
 }>()
 
 const { textures } = useTextures()
-const worldStore = useWorldStore()
+const mapStore = useMapStore()
 const container = ref<Container>()
 
 interface Cloud {
@@ -32,7 +32,7 @@ const MAX_CLOUDS = {
 const SPAWN_CHANCE = 0.01 // 稍微提高生成检测频率，因为有最大数量限制
 
 function getCloudFreq() {
-  const freq = worldStore.frontendConfig.cloud_freq || 'none'
+  const freq = mapStore.frontendConfig.cloud_freq || 'none'
   return freq as keyof typeof MAX_CLOUDS
 }
 
@@ -197,7 +197,7 @@ function clearClouds() {
   activeClouds.value = []
 }
 
-watch(() => worldStore.frontendConfig.cloud_freq, (val) => {
+watch(() => mapStore.frontendConfig.cloud_freq, (val) => {
   const freq = val || 'none'
   if (freq === 'none') {
     clearClouds()

@@ -95,6 +95,13 @@ export interface AvatarColorInfo {
   color: string;
 }
 
+export interface EventContentToken {
+  type: 'text' | 'avatar';
+  text: string;
+  avatarId?: string;
+  color?: string;
+}
+
 /**
  * 根据角色列表构建 name -> { id, color } 映射表。
  */
@@ -118,6 +125,70 @@ const HTML_ESCAPE_MAP: Record<string, string> = {
   "'": '&#39;'
 };
 
+export function escapeHtml(text: string): string {
+  return text.replace(/[&<>"']/g, c => HTML_ESCAPE_MAP[c] || c);
+}
+
+/**
+ * 将事件文本拆分为安全渲染 token，避免在组件里使用 v-html。
+ */
+export function tokenizeEventContent(
+  text: string,
+  colorMap: Map<string, AvatarColorInfo>
+): EventContentToken[] {
+  if (!text) return [];
+  if (colorMap.size === 0) {
+    return [{ type: 'text', text }];
+  }
+
+  const names = [...colorMap.keys()].sort((a, b) => b.length - a.length);
+  const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const pattern = new RegExp(names.map(escapeRegex).join('|'), 'g');
+
+  const tokens: EventContentToken[] = [];
+  let lastIndex = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = pattern.exec(text)) !== null) {
+    const start = match.index;
+    const matchedText = match[0];
+
+    if (start > lastIndex) {
+      tokens.push({
+        type: 'text',
+        text: text.slice(lastIndex, start),
+      });
+    }
+
+    const info = colorMap.get(matchedText);
+    if (info) {
+      tokens.push({
+        type: 'avatar',
+        text: matchedText,
+        avatarId: info.id,
+        color: info.color,
+      });
+    } else {
+      // 理论上不会走到这里；保底退化为普通文本，避免渲染异常。
+      tokens.push({
+        type: 'text',
+        text: matchedText,
+      });
+    }
+
+    lastIndex = start + matchedText.length;
+  }
+
+  if (lastIndex < text.length) {
+    tokens.push({
+      type: 'text',
+      text: text.slice(lastIndex),
+    });
+  }
+
+  return tokens;
+}
+
 /**
  * 高亮文本中的角色名，返回 HTML 字符串。
  * 生成的 span 带有 data-avatar-id 属性，可用于点击跳转。
@@ -133,22 +204,15 @@ export function highlightAvatarNames(
   text: string,
   colorMap: Map<string, AvatarColorInfo>
 ): string {
-  if (!text || colorMap.size === 0) return text;
+  if (!text) return text;
 
-  // 按名字长度倒序排列，确保正则中长名字在前，优先匹配。
-  const names = [...colorMap.keys()].sort((a, b) => b.length - a.length);
-
-  // 转义正则特殊字符。
-  const escapeRegex = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-
-  // 构建单一正则: /(name1|name2|name3)/g
-  // 正则引擎从左到右扫描，匹配成功后消费该位置，不会被更短的名字重复匹配。
-  const pattern = new RegExp(names.map(escapeRegex).join('|'), 'g');
-
-  return text.replace(pattern, (match) => {
-    const info = colorMap.get(match)!;
-    const escaped = match.replace(/[&<>"']/g, c => HTML_ESCAPE_MAP[c] || c);
-    return `<span class="clickable-avatar" data-avatar-id="${info.id}" style="color:${info.color};cursor:pointer">${escaped}</span>`;
-  });
+  return tokenizeEventContent(text, colorMap)
+    .map((token) => {
+      if (token.type === 'avatar') {
+        return `<span class="clickable-avatar" data-avatar-id="${token.avatarId}" style="color:${token.color};cursor:pointer">${escapeHtml(token.text)}</span>`;
+      }
+      return escapeHtml(token.text);
+    })
+    .join('');
 }
 

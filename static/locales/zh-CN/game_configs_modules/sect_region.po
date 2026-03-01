@@ -1,124 +1,125 @@
 #
 msgid ""
 msgstr ""
+"Project-Id-Version: cultivation-world-simulator 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-01-20 00:00+0000\n"
+"PO-Revision-Date: 2024-01-20 00:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: zh-CN\n"
 "Language: zh_CN\n"
+"MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-
-#. sect_region.csv: SECT_REGION_401_NAME
-msgid "SECT_REGION_401_NAME"
-msgstr "绝云峰"
+"Content-Transfer-Encoding: 8bit\n"
 
 #. sect_region.csv: SECT_REGION_401_DESC
 msgid "SECT_REGION_401_DESC"
 msgstr "绝云峰高耸入云，四周罡风环绕，唯有剑修可御剑而上。山上设有弟子修炼之地，环境清幽。"
 
+#. sect_region.csv: SECT_REGION_401_NAME
+msgid "SECT_REGION_401_NAME"
+msgstr "绝云峰"
+
+#. sect_region.csv: SECT_REGION_402_DESC
+msgid "SECT_REGION_402_DESC"
+msgstr "万兽窟位于十万大山腹地，洞窟内妖气冲天，在此可闻万兽咆哮。洞内纵横交错，共有九十九层洞天，每层都驯养着不同品阶的灵兽妖兽。"
+
 #. sect_region.csv: SECT_REGION_402_NAME
 msgid "SECT_REGION_402_NAME"
 msgstr "万兽窟"
 
-#. sect_region.csv: SECT_REGION_402_DESC
-msgid "SECT_REGION_402_DESC"
-msgstr ""
-"万兽窟位于十万大山腹地，洞窟内妖气冲天，在此可闻万兽咆哮。洞内纵横交错，共有九十九层洞天，每层都驯养着不同品阶的灵兽妖兽。"
+#. sect_region.csv: SECT_REGION_403_DESC
+msgid "SECT_REGION_403_DESC"
+msgstr "听涛阁悬于海边绝壁之上，终年听潮。阁中玉璧倒映星辰大海，宫殿楼阁皆为寒冰灵玉所筑，通体透明，虚实难辨。"
 
 #. sect_region.csv: SECT_REGION_403_NAME
 msgid "SECT_REGION_403_NAME"
 msgstr "静海涯"
 
-#. sect_region.csv: SECT_REGION_403_DESC
-msgid "SECT_REGION_403_DESC"
-msgstr ""
-"听涛阁悬于海边绝壁之上，终年听潮。阁中玉璧倒映星辰大海，宫殿楼阁皆为寒冰灵玉所筑，通体透明，虚实难辨。"
+#. sect_region.csv: SECT_REGION_404_DESC
+msgid "SECT_REGION_404_DESC"
+msgstr "九幽黄泉道位于死寂海群岛上，海水漆黑如墨，无风起浪。传闻海底直通九幽黄泉。海浪起啸之时，万魂齐哭，遮天蔽日。"
 
 #. sect_region.csv: SECT_REGION_404_NAME
 msgid "SECT_REGION_404_NAME"
 msgstr "死寂海"
 
-#. sect_region.csv: SECT_REGION_404_DESC
-msgid "SECT_REGION_404_DESC"
-msgstr ""
-"九幽黄泉道位于死寂海群岛上，海水漆黑如墨，无风起浪。传闻海底直通九幽黄泉。海浪起啸之时，万魂齐哭，遮天蔽日。"
+#. sect_region.csv: SECT_REGION_405_DESC
+msgid "SECT_REGION_405_DESC"
+msgstr "千机谷中遍布机关陷阱，看似寻常山谷，踏错一步即死无葬身之地。谷中宫殿楼阁看似华丽却处处暗藏杀机。"
 
 #. sect_region.csv: SECT_REGION_405_NAME
 msgid "SECT_REGION_405_NAME"
 msgstr "千机谷"
 
-#. sect_region.csv: SECT_REGION_405_DESC
-msgid "SECT_REGION_405_DESC"
-msgstr ""
-"千机谷中遍布机关陷阱，看似寻常山谷，踏错一步即死无葬身之地。谷中宫殿楼阁看似华丽却处处暗藏杀机。"
+#. sect_region.csv: SECT_REGION_406_DESC
+msgid "SECT_REGION_406_DESC"
+msgstr "醉梦楼建于繁华闹市之中的独立洞天，歌舞升平，终日不散的迷醉香气。宗门建筑极尽奢华，殿宇楼阁之间云雾缭绕，隐约可见成双成对的弟子在其间修炼。"
 
 #. sect_region.csv: SECT_REGION_406_NAME
 msgid "SECT_REGION_406_NAME"
 msgstr "销金窟"
 
-#. sect_region.csv: SECT_REGION_406_DESC
-msgid "SECT_REGION_406_DESC"
-msgstr ""
-"醉梦楼建于繁华闹市之中的独立洞天，歌舞升平，终日不散的迷醉香气。宗门建筑极尽奢华，殿宇楼阁之间云雾缭绕，隐约可见成双成对的弟子在其间修炼。"
+#. sect_region.csv: SECT_REGION_407_DESC
+msgid "SECT_REGION_407_DESC"
+msgstr "位于海域风暴中心，金光漫天。钟声响起时，风暴止息。宗门建筑立于岛上，以金刚塔为中心，钟声可震慑方圆千里之内的妖魂。"
 
 #. sect_region.csv: SECT_REGION_407_NAME
 msgid "SECT_REGION_407_NAME"
 msgstr "普渡岛"
 
-#. sect_region.csv: SECT_REGION_407_DESC
-msgid "SECT_REGION_407_DESC"
-msgstr "位于海域风暴中心，金光漫天。钟声响起时，风暴止息。宗门建筑立于岛上，以金刚塔为中心，钟声可震慑方圆千里之内的妖魂。"
+#. sect_region.csv: SECT_REGION_408_DESC
+msgid "SECT_REGION_408_DESC"
+msgstr "终年迷雾笼罩的剧毒沼泽，这里没有光，只有潜藏在暗处的眼睛。参天巨木、缠绕藤蔓、终日浮游不散的瘴气，将这里与外界完全隔离。"
 
 #. sect_region.csv: SECT_REGION_408_NAME
 msgid "SECT_REGION_408_NAME"
 msgstr "暗影沼泽"
 
-#. sect_region.csv: SECT_REGION_408_DESC
-msgid "SECT_REGION_408_DESC"
-msgstr ""
-"终年迷雾笼罩的剧毒沼泽，这里没有光，只有潜藏在暗处的眼睛。参天巨木、缠绕藤蔓、终日浮游不散的瘴气，将这里与外界完全隔离。"
+#. sect_region.csv: SECT_REGION_409_DESC
+msgid "SECT_REGION_409_DESC"
+msgstr "万宝仙盟建于多宝浮空岛之上，巨大的浮空岛屿群由无数锁链相连，往来飞舟如云，繁华至极。城中高塔林立，每座塔顶都有炼器炉火日夜不息。"
 
 #. sect_region.csv: SECT_REGION_409_NAME
 msgid "SECT_REGION_409_NAME"
 msgstr "多宝浮空岛"
 
-#. sect_region.csv: SECT_REGION_409_DESC
-msgid "SECT_REGION_409_DESC"
-msgstr ""
-"万宝仙盟建于多宝浮空岛之上，巨大的浮空岛屿群由无数锁链相连，往来飞舟如云，繁华至极。城中高塔林立，每座塔顶都有炼器炉火日夜不息。"
+#. sect_region.csv: SECT_REGION_410_DESC
+msgid "SECT_REGION_410_DESC"
+msgstr "特殊的山谷构造使得声音凝而不散。风过之时，如鬼哭神嚎。谷内亭台楼阁错落，丝竹之声终日不绝，看似人间仙境，实则暗藏无数音杀阵法。"
 
 #. sect_region.csv: SECT_REGION_410_NAME
 msgid "SECT_REGION_410_NAME"
 msgstr "回音谷"
 
-#. sect_region.csv: SECT_REGION_410_DESC
-msgid "SECT_REGION_410_DESC"
-msgstr "特殊的山谷构造使得声音凝而不散。风过之时，如鬼哭神嚎。谷内亭台楼阁错落，丝竹之声终日不绝，看似人间仙境，实则暗藏无数音杀阵法。"
+#. sect_region.csv: SECT_REGION_411_DESC
+msgid "SECT_REGION_411_DESC"
+msgstr "看似只有一座山，实则包含无数折叠空间。不懂阵法者寸步难行。整座山脉被无数重叠的阵法大阵覆盖，一步一景，一步一险。"
 
 #. sect_region.csv: SECT_REGION_411_NAME
 msgid "SECT_REGION_411_NAME"
 msgstr "迷踪天"
 
-#. sect_region.csv: SECT_REGION_411_DESC
-msgid "SECT_REGION_411_DESC"
-msgstr "看似只有一座山，实则包含无数折叠空间。不懂阵法者寸步难行。整座山脉被无数重叠的阵法大阵覆盖，一步一景，一步一险。"
+#. sect_region.csv: SECT_REGION_412_DESC
+msgid "SECT_REGION_412_DESC"
+msgstr "位于极北永夜之地，却被万年不灭的极光笼罩，亮如白昼。城池由万年寒冰与玄铁铸就，在漫天极光的映照下流光溢彩，宛如神迹。"
 
 #. sect_region.csv: SECT_REGION_412_NAME
 msgid "SECT_REGION_412_NAME"
 msgstr "极光天境"
 
-#. sect_region.csv: SECT_REGION_412_DESC
-msgid "SECT_REGION_412_DESC"
-msgstr "位于极北永夜之地，却被万年不灭的极光笼罩，亮如白昼。城池由万年寒冰与玄铁铸就，在漫天极光的映照下流光溢彩，宛如神迹。"
+#. sect_region.csv: SECT_REGION_413_DESC
+msgid "SECT_REGION_413_DESC"
+msgstr "位于修真界中腹，古木参天，碑林林立，每块碑文都蕴含圣人微言大义。林中书声琅琅之声可传十里，是天下浩然正气汇聚之地。"
 
 #. sect_region.csv: SECT_REGION_413_NAME
 msgid "SECT_REGION_413_NAME"
 msgstr "圣贤林"
 
-#. sect_region.csv: SECT_REGION_413_DESC
-msgid "SECT_REGION_413_DESC"
-msgstr "位于修真界中腹，古木参天，碑林林立，每块碑文都蕴含圣人微言大义。林中书声琅琅之声可传十里，是天下浩然正气汇聚之地。"
+#. sect_region.csv: SECT_REGION_414_DESC
+msgid "SECT_REGION_414_DESC"
+msgstr "山体呈现暗红色，仿佛被鲜血浸透。宗门建于巨大的地下血池之上。山中常有血雾弥漫，怪石嶙峋，随处可见被吸干精血的兽骨枯尸。"
 
 #. sect_region.csv: SECT_REGION_414_NAME
 msgid "SECT_REGION_414_NAME"
 msgstr "修罗血池"
-
-#. sect_region.csv: SECT_REGION_414_DESC
-msgid "SECT_REGION_414_DESC"
-msgstr "山体呈现暗红色，仿佛被鲜血浸透。宗门建于巨大的地下血池之上。山中常有血雾弥漫，怪石嶙峋，随处可见被吸干精血的兽骨枯尸。"

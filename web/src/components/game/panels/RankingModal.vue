@@ -32,6 +32,7 @@ const rankings = ref<{
   earth: any[]
   human: any[]
   sect: any[]
+  tournament?: any
 }>({
   heaven: [],
   earth: [],
@@ -68,10 +69,12 @@ watch(() => props.show, (newVal) => {
     @update:show="handleShowChange"
     preset="card"
     :title="t('game.ranking.title')"
-    style="width: 800px; max-height: 80vh; overflow-y: auto;"
+    style="width: 750px; max-height: 80vh; overflow-y: auto;"
   >
     <n-spin :show="loading">
-      <n-tabs type="line" animated>
+      <div style="display: flex; gap: 20px;">
+        <div style="flex: 1; min-width: 0;">
+          <n-tabs type="line" animated>
         <n-tab-pane name="heaven" :tab="t('game.ranking.heaven')">
           <n-table :bordered="false" :single-line="false" size="small">
             <thead>
@@ -185,6 +188,8 @@ watch(() => props.show, (newVal) => {
           </n-table>
         </n-tab-pane>
       </n-tabs>
+        </div>
+      </div>
     </n-spin>
   </n-modal>
 </template>

@@ -1,23 +1,18 @@
 <!-- 语言 / Language -->
 <h3 align="center">
-  <a href="README.md">🇨🇳 中文</a> · <a href="EN_README.md">🇺🇸 English</a>
+  <a href="README.md">简体中文</a> · <a href="docs/readme/ZH-TW_README.md">繁體中文</a> · <a href="docs/readme/EN_README.md">English</a>
 </h3>
-<blockquote align="center">
-  This project now supports English. Don't hesitate to give it a try!
-</blockquote>
 <p align="center">— ✦ —</p>
 
 # 修仙世界模拟器 (Cultivation World Simulator)
 
 ![GitHub stars](https://img.shields.io/github/stars/4thfever/cultivation-world-simulator?style=social)
+[![Steam](https://img.shields.io/badge/Steam-%E5%95%86%E5%BA%97%E9%A1%B5%E9%9D%A2-2a475e?logo=steam&logoColor=white)](https://store.steampowered.com/app/4443180)
 [![Bilibili](https://img.shields.io/badge/Bilibili-%E6%9F%A5%E7%9C%8B%E8%A7%86%E9%A2%91-FB7299?logo=bilibili)](https://space.bilibili.com/527346837)
 ![QQ Group](https://img.shields.io/badge/QQ%E7%BE%A4-1071821688-deepskyblue?logo=tencent-qq&logoColor=white)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Us-7289da?logo=discord&logoColor=white)](https://discord.gg/shhRWmZR)
 [![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-lightgrey)](LICENSE)
-![Genre: Xianxia](https://img.shields.io/badge/Genre-Xianxia-red)
-![AI Agent](https://img.shields.io/badge/AI-Agent-orange)
 
-![Powered by LLM](https://img.shields.io/badge/Powered%20by-LLM-0077B5)
 ![Python](https://img.shields.io/badge/Python-3.10%2B-blue?style=flat&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi&logoColor=white)
 ![Vue](https://img.shields.io/badge/Vue.js-3.x-4FC08D?style=flat&logo=vuedotjs&logoColor=white)
@@ -104,6 +99,7 @@
 ## 📞 联系方式
 如果您对项目有任何问题或建议，欢迎提交 Issue。
 
+- **Steam**: [商店页面](https://store.steampowered.com/app/4443180)
 - **Bilibili**: [点击关注](https://space.bilibili.com/527346837)
 - **QQ群**: `1071821688` (入群答案：肥桥今天吃什么)
 - **Discord**: [加入社区](https://discord.gg/shhRWmZR)
@@ -256,13 +252,11 @@ docker-compose up -d --build
 - ✅ 多人大事件：
   - ✅ 拍卖会
   - ✅ 秘境探索
-  - [ ] 比武大会
+  - ✅ 天下武道会
   - ✅ 宗门传道大会
 - [ ] 突发事件
   - [ ] 宝物/洞府出世
-- [ ] 自然事件：
-  - [ ] 自然灾害
-  - [ ] 兽潮
+  - [ ] 天灾
 
 ### ⚔️ 战斗系统
 - ✅ 优劣互克关系

@@ -24,6 +24,21 @@ const objectiveContent = ref('');
 
 // --- Computeds ---
 
+const ZH_NUMBERS = ['', '一', '二', '三', '四', '五', '六', '七', '八', '九', '十'];
+
+const formattedRanking = computed(() => {
+  if (!props.data.ranking) return null;
+  const { type, rank } = props.data.ranking;
+  const listName = t(`game.ranking.${type}`).split(' ')[0];
+  
+  const isZh = t('game.ranking.rank') === '排名';
+  if (isZh) {
+    return `${listName}第${ZH_NUMBERS[rank] || rank}`;
+  } else {
+    return `${listName} Rank ${rank}`;
+  }
+});
+
 const groupedRelations = computed(() => {
   const rels = props.data.relations || [];
   
@@ -193,6 +208,11 @@ async function handleClearObjective() {
         <StatItem :label="t('game.info_panel.avatar.stats.magic_stone')" :value="data.magic_stone" />
         <StatItem :label="t('game.info_panel.avatar.stats.appearance')" :value="data.appearance" />
         <StatItem :label="t('game.info_panel.avatar.stats.battle_strength')" :value="data.base_battle_strength" />
+        <StatItem 
+          v-if="formattedRanking"
+          :label="t('game.info_panel.avatar.stats.ranking')" 
+          :value="formattedRanking" 
+        />
         <StatItem 
           :label="t('game.info_panel.avatar.stats.emotion')" 
           :value="data.emotion.emoji" 

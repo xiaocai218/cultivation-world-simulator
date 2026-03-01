@@ -106,6 +106,22 @@ def get_avatar_info(avatar: "Avatar", detailed: bool = False) -> dict:
         t("Short-term Goal"): avatar.short_term_objective if avatar.short_term_objective else t("None"),
     }
     
+    rank_info = avatar.world.ranking_manager.get_avatar_rank(str(avatar.id))
+    if rank_info:
+        r_type, r_num = rank_info
+        
+        is_zh = any('\u4e00' <= c <= '\u9fff' for c in t("Ranking"))
+        if is_zh:
+            zh_type_map = {"heaven": "天榜", "earth": "地榜", "human": "人榜"}
+            zh_nums = ["", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"]
+            list_name = zh_type_map.get(r_type, r_type)
+            display_num = zh_nums[r_num] if 1 <= r_num <= 10 else str(r_num)
+            info_dict[t("Ranking")] = f"{list_name}第{display_num}"
+        else:
+            en_type_map = {"heaven": "Heaven List", "earth": "Earth List", "human": "Human List"}
+            list_name = en_type_map.get(r_type, r_type)
+            info_dict[t("Ranking")] = f"{list_name} Rank {r_num}"
+    
     if detailed:
         info_dict[t("Current Effects")] = _get_effects_text(avatar)
         if avatar.backstory:
@@ -169,6 +185,10 @@ def get_avatar_structured_info(avatar: "Avatar") -> dict:
         "death_info": avatar.death_info,
         "action_state": t("Performing {action}", action=avatar.current_action_name)
     }
+
+    rank_info = avatar.world.ranking_manager.get_avatar_rank(str(avatar.id))
+    if rank_info:
+        info["ranking"] = {"type": rank_info[0], "rank": rank_info[1]}
 
     # 1. 特质 (Personas)
     info["personas"] = [p.get_structured_info() for p in avatar.personas]

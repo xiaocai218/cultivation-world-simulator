@@ -23,6 +23,9 @@
     *   `system.ts`: 系统级控制（启动、暂停、重置、存档）。
     *   `world.ts`: 获取地图数据、初始状态、天象信息。
     *   `event.ts`: 事件日志的分页拉取。
+*   `mappers/`:
+    *   `event.ts`: `EventDTO -> GameEvent` 的转换与时间线顺序规范化。
+    *   `world.ts`: `rankings/config` 的响应归一化，减少组件和 store 内散乱兼容逻辑。
 
 ### 2.2 组件层 (`src/components/`)
 *   **`game/` (核心游戏画面)**
@@ -42,6 +45,7 @@
 
 ### 2.3 逻辑复用层 (`src/composables/`)
 封装复杂的业务逻辑，使组件保持轻量。
+*   `useAppBootFlow.ts`: 应用启动状态机（`isAppReady/showSplash/menu` 等跃迁规则）。
 *   `useGameInit.ts`: 负责游戏启动流程检查、后端心跳检测。
 *   `useGameControl.ts`: 负责暂停/继续、菜单开关、全局快捷键绑定。
 *   `useSidebarResize.ts`: 负责侧边栏（事件面板）的拖拽调整宽度逻辑。
@@ -52,12 +56,15 @@
 基于 Pinia 的状态管理。
 *   **`world.ts` (聚合层)**: **核心 Store**。
     *   职责：管理全局时间 (Year/Month)、天象、秘境。
-    *   作用：作为 Facade 模式的入口，聚合了 Map、Avatar、Event 三个子 Store 的数据，对外提供统一的 `initialize` 和 `handleTick` 方法。
+    *   作用：作为 Facade 模式入口，负责 world 级编排（`initialize/handleTick`）。  
+        说明：为平滑迁移，仍保留部分兼容代理字段；新代码应优先直接依赖子 Store（`map/avatar/event`）。
 *   **`map.ts`**: 存储地图矩阵 (`mapData`) 和区域数据 (`regions`)。
 *   **`avatar.ts`**: 存储所有角色数据 (`avatars`)，处理增量更新。
 *   **`event.ts`**: 存储事件日志 (`events`)，处理分页加载、筛选、实时推送。
 *   `ui.ts`: 管理当前选中对象 (`selectedAvatarId`, `selectedRegionId`) 和 UI 显隐状态。
 *   `setting.ts`: 管理前端设置及与后端配置的同步。
+*   `socket.ts`: 连接状态与订阅管理（轻业务）。
+*   `socketMessageRouter.ts`: Socket 消息分发与业务响应路由（`tick/toast/llm_config_required/...`）。
 
 ### 2.5 类型定义 (`src/types/`)
 *   `core.ts`: 前端核心领域模型（如 `AvatarSummary`, `RegionSummary`, `GameEvent`）。
@@ -86,7 +93,19 @@
     *   `EventPanel` 检测到新事件 -> 自动滚动到底部。
     *   `InfoPanel` 检测到选中角色属性变化 -> 实时刷新数值。
 
-### 3.3 渲染架构
+### 3.3 启动状态机 (Boot Flow)
+当前启动编排由 `useAppBootFlow` 统一管理，`App.vue` 主要负责布局与事件接线。
+1. `useGameInit` 轮询 `initStatus`，并在 `ready` 且未初始化时触发一次初始化。
+2. `useAppBootFlow` 处理首次黑屏防闪烁、Splash 展示、菜单与返回主界面逻辑。
+3. `useGameControl` 只处理游戏内交互控制（菜单开关、暂停恢复、LLM 校验）。
+
+### 3.4 Socket 消息流 (Transport -> Router -> Store/UI)
+1. `api/socket.ts` 只负责 WebSocket 连接/重连/订阅。
+2. `stores/socket.ts` 维护连接状态并把消息交给 `socketMessageRouter`。
+3. `stores/socketMessageRouter.ts` 按消息类型分发到 world/ui/message 相关动作。
+4. 新增消息类型时，优先修改 router 和 DTO，不在组件层做消息分支。
+
+### 3.5 渲染架构
 *   **Vue3-Pixi**: 使用 Vue 组件声明式地编写 Pixi 对象。
 *   **性能优化**:
     *   地图使用 `shallowRef` 存储，避免 Vue 深度监听 100x100 的地图数组。
@@ -97,12 +116,14 @@
 
 | 文件路径 | 职责描述 | 修改频率 |
 | :--- | :--- | :--- |
-| `web/src/App.vue` | 应用根组件，负责各层级组件的组装、全局快捷键、胶水逻辑。 | 高 |
-| `web/src/stores/world.ts` | **世界状态总线**。处理 Tick 逻辑、初始化聚合。修改游戏核心数据流时必看。 | 高 |
+| `web/src/composables/useAppBootFlow.ts` | 启动状态机核心。处理黑屏防闪、Splash、菜单回退逻辑。 | 高 |
+| `web/src/App.vue` | 根组件装配层。接线与视图编排，不承载复杂业务状态机。 | 高 |
+| `web/src/stores/world.ts` | world 级编排与时间/天象状态。 | 高 |
+| `web/src/stores/socketMessageRouter.ts` | Socket 业务消息路由中心。新增消息类型时优先修改此处。 | 高 |
 | `web/src/components/game/panels/EventPanel.vue` | 事件日志面板。涉及 UI 展示、筛选、性能优化（虚拟滚动/分页）。 | 中 |
 | `web/src/components/game/MapLayer.vue` | 地图渲染核心。涉及 Pixi 绘图、纹理管理、Shader/Mask 特效。 | 中 |
 | `web/src/composables/useGameControl.ts` | 游戏流程控制。涉及暂停、菜单、输入锁定逻辑。 | 低 |
-| `web/src/api/modules/*.ts` | 后端接口定义。新增 API 时需修改对应模块。 | 中 |
+| `web/src/api/modules/*.ts` + `web/src/api/mappers/*.ts` | API 请求与 DTO 归一化。新增接口建议同步补 mapper。 | 中 |
 | `web/src/locales/*.json` | 多语言文本。修改 UI 文字时必改。 | 高 |
 
 ---
@@ -111,6 +132,8 @@
 *   修改 UI 时，优先检查 `stores/ui.ts` 和对应的 Panel 组件。
 *   修改数据逻辑时，先看 `stores/world.ts` 及其拆分出的子 Store。
 *   涉及 Pixi 渲染问题时，直接关注 `web/src/components/game/` 下的 Layer 组件。
+*   Socket 消息逻辑优先改 `stores/socketMessageRouter.ts`，不要把消息分支散到组件中。
+*   新增后端响应字段时，优先在 `types/api.ts` 和 `api/mappers/` 收敛转换。
 
 ## 5. 桌面版与 Steam 适配 (Desktop & Steam)
 
@@ -165,3 +188,19 @@
    *   `TEXTURES_READY`: 与角色就绪同步，此时可以拉取到所有相关角色的头像、以及对应的地块纹理等，直接执行 PixiJS 的 Assets 预加载。
 3. **“白嫖”等待时间**: 在轮询过程中，一旦后端状态进入 `TEXTURES_READY` 阶段（通常对应后端的长时间 LLM 阻塞操作），前端的 `useGameInit` 就会无阻塞地触发 `loadBaseTextures()`。
 4. **无缝进入**: 利用 PixiJS `Assets` 的内置缓存机制，当后端最终发出 `ready` 并将控制权交还给前端 `initializeGame()` 时，再次调用的 `await loadBaseTextures()` 会瞬间命中缓存，耗时降至 0 毫秒，从而实现 Loading 结束后画面的无缝秒进。
+
+## 8. 错误处理与性能基线 (Error Policy & Baseline)
+
+### 8.1 错误处理规范
+*   统一使用 `utils/appError.ts` 中的 `logError/logWarn` 记录上下文，不直接散落 `console.error/warn`。
+*   用户可见提示通过 `message` 统一出口，避免重复提示和风格不一致。
+
+### 8.2 性能基线指标（轻量）
+*   `useGameInit.ts`:  
+    *   `initializeDurationMs`：一次初始化耗时。  
+    *   `lastPollDurationMs`：最近一次状态轮询耗时。
+*   `stores/event.ts`:  
+    *   `lastMergeDurationMs`：tick 事件合并耗时。  
+    *   `lastLoadDurationMs`：历史事件加载耗时。
+
+这些指标用于回归比较，不用于线上用户可见展示。
