@@ -250,7 +250,7 @@ For more contribution details, please see [CONTRIBUTORS.md](../../CONTRIBUTORS.m
 - ✅ Large multiplayer events:
   - ✅ Auctions
   - ✅ Hidden domain exploration
-  - [ ] World Martial Arts Tournament
+  - ✅ World Martial Arts Tournament
   - ✅ Sect preaching convention
 - [ ] Sudden events
   - [ ] Treasure/cave emergence

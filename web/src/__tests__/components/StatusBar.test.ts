@@ -229,9 +229,9 @@ describe('StatusBar', () => {
       const wrapper = mount(StatusBar, globalConfig)
 
       // When phenomenon is null, v-if hides the widget.
-      // Domain widget and Ranking widget should exist.
+      // Domain widget, Ranking widget, and Tournament widget should exist.
       const widgets = wrapper.findAll('.status-widget-stub')
-      expect(widgets.length).toBe(2)
+      expect(widgets.length).toBe(3)
     })
   })
 
