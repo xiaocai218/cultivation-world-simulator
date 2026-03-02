@@ -6,6 +6,7 @@ services:
     build:
       context: .
       dockerfile: deploy/Dockerfile.backend
+      image: cultivation-backend:v1.8.0  # <--- 添加这一行
     container_name: cultivation-backend
     ports:
       - "8002:8002"
@@ -26,6 +27,7 @@ services:
     build:
       context: .
       dockerfile: deploy/Dockerfile.frontend
+      image: cultivation-frontend:v1.8.0 # <--- 添加这一行
     container_name: cultivation-frontend
     ports:
       - "8123:80"
